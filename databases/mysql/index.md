@@ -25,4 +25,4 @@
 ### [MySQL分库分表原理](./distinguish.md)
 
 
-## [databases](../index.md)
+## [](../index.md)回到databases主页

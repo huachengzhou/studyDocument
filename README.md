@@ -3,7 +3,6 @@
 
 
 
-![科技改变未来](blog/img/ddu.jpg)
 
 
 
@@ -15,9 +14,9 @@
 
 #  [**算法**](./algorithm/index.md)
 
-#  [**linux**](./linux/index.md)
+#  [**问题解决**](./problem/index.md)
 
-#  [**信息**](./blog/index.html)
+#  [**linux**](./linux/index.md)
 
 #  [**计算机网络**](./computer_networks/index.md)
 
@@ -27,15 +26,15 @@
 
 #  [**数据库**](./databases/index.md)
 
-#  [**学习计划**](/study/index.md)
+#  [**学习计划**](./study/index.md)
 
-#  [**学习参考网址**](/study/study.web.md)
-
-
+#  [**学习参考网址**](./study/study.web.md)
 
 
 
-![科技改变未来](blog/img/1.jpg)
+
+
+
 
 
 
