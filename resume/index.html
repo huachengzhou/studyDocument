@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zch 简历</title>
+
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-table.css" rel="stylesheet">
+    <script src="bootstrap/js/jquery-1.9.1.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/bootstrap-table.js"></script>
+    <script src="bootstrap/js/bootstrap-table-zh-CN.js"></script>
+    <script src="bootstrap/js/bootstrap-table-locale-all.js"></script>
+
+</head>
+<body class="container">
+<div class="row">
+
+    <div class="col-xs-6  col-sm-6  col-md-6  col-lg-6 col-xs-offset-6 col-sm-offset-6  col-md-offset-6  col-lg-offset-6" style="margin-top:10px;margin-bottom:10px;">
+
+        <a href="resources/李XX.pdf" class="btn btn-primary btn-lg" download="李XX.pdf">下载</a>
+
+        <!--<button type="button" class="btn btn-default" onclick="zchObj.downloadResume('resources/李XX.pdf')">-->
+            <!--下载-->
+        <!--</button>-->
+
+
+    </div>
+
+    <div class="col-xs-6  col-sm-6  col-md-6  col-lg-6 col-xs-offset-6 col-sm-offset-6  col-md-offset-6  col-lg-offset-6" style="margin-top:10px;margin-bottom:10px;">
+        <a href="../README.md" class="btn btn-primary btn-lg">回到首页</a>
+    </div>
+</div>
+</body>
+
+<script>
+    var zchObj = {};
+
+    /*下载简历*/
+    zchObj.downloadResume = function (resourceUrl) {
+        var x = new XMLHttpRequest();
+        //var resourceUrl = "http://static.xuezhong100.com/uploadfile/20190401/45549715ba2e428b8e415a30d9392c97.doc";
+        // var resourceUrl = 'http://static.xuezhong100.com/uploadfile/20190401/59a00a5259004f459f79a541dd05f1c3.pptx';
+        //var resourceUrl = "http://static.shuxuejia.com/img/201708020.gif";
+        x.open("GET", resourceUrl, true);
+        x.responseType = 'blob';
+        x.onload = function (e) {
+            // ie10+
+            if (navigator.msSaveBlob) {
+                var name = resourceUrl.substr(resourceUrl.lastIndexOf("/") + 1);
+                return navigator.msSaveBlob(x.response, name);
+            } else {
+                var url = window.URL.createObjectURL(x.response);
+                var a = document.createElement('a');
+                a.href = url;
+                a.download = '下载';
+                a.click();
+            }
+        };
+        x.send();
+    };
+
+</script>
+
+</html>
