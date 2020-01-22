@@ -30,6 +30,8 @@
 
 #  [**学习参考网址**](./study/study.web.md)
 
+#  [**我的简历**](./resume/index.html)
+
 
 
 
