@@ -2,6 +2,7 @@
 + wing+r  ==> cmd 进入dos控制台
 
 + D:
+
 ```
 进入D盘
 ```
@@ -64,6 +65,7 @@ $
 
 
 + 创建文件 echo >fileName或者 echo [this content] > fileName
+
 ```
 
 echo >d.txt;
@@ -86,12 +88,14 @@ E:\temp>dir
 ```
 
 + 查看文件内容 type fileName
+
 ```
 E:\temp>type d.txt
 this is a text file
 ```
 
 + 创建目录 md pathName
+
 ```
 E:\temp>md cc
 
@@ -111,6 +115,7 @@ E:\temp>dir
 
 
 + 复制文件 copy fileName path+fileName
+
 ```
 E:\temp>copy d.txt E:\temp\cc;
 已复制         1 个文件。
@@ -119,6 +124,7 @@ E:\temp>copy d.txt E:\temp\cc;
 
 
 + 文件重命名命令 ren sourceFileName targetFileName
+
 ```
 E:\temp\cc>ren d.txt d2.txt;
 
@@ -127,6 +133,7 @@ this is a text file
 ```
 
 + 文件移动命令 move fileName path+FileName
+
 ```
 E:\temp\cc>move d2.txt E:\temp\kk
 移动了         1 个文件。
@@ -134,6 +141,7 @@ E:\temp\cc>move d2.txt E:\temp\kk
 
 
 + 文件删除操作 del fileName
+
 ```
 E:\temp\kk>dir
  驱动器 E 中的卷是 新加卷
