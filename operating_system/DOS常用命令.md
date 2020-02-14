@@ -132,7 +132,7 @@ E:\temp\cc>type d2.txt
 this is a text file
 ```
 
-+ 文件移动命令 move fileName path+FileName
++ 文件移动命令(剪贴命令) move fileName path+FileName
 
 ```
 E:\temp\cc>move d2.txt E:\temp\kk
@@ -167,6 +167,14 @@ E:\temp\kk>dir
 2020/02/14  19:12    <DIR>          ..
                0 个文件              0 字节
                2 个目录 264,645,689,344 可用字节
+```
+
+
++ 文件夹删除 rd /s path
+
+```
+E:\temp\kk>rd /s dg
+dg, 是否确认(Y/N)? Y
 ```
 
 # [回到操作系统首页](./index.md)
