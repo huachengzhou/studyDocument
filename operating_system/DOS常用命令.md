@@ -63,17 +63,102 @@ $
 + 继续输入tasklist|findstr "2720"，回车，查看是哪个进程或者程序占用了2720端口，结果是：svchost.exe
 
 
++ 创建文件 echo >fileName或者 echo [this content] > fileName
+```
+
+echo >d.txt;
+
+============>
+E:\temp>echo >d.txt;
+
+E:\temp>dir
+ 驱动器 E 中的卷是 新加卷
+ 卷的序列号是 64E8-4ABF
+
+ E:\temp 的目录
+
+2020/02/14  18:56    <DIR>          .
+2020/02/14  18:56    <DIR>          ..
+2020/02/14  18:56                 3 d.txt
+               1 个文件              3 字节
+               2 个目录 264,645,689,344 可用字节
+
+```
+
++ 查看文件内容 type fileName
+```
+E:\temp>type d.txt
+this is a text file
+```
+
++ 创建目录 md pathName
+```
+E:\temp>md cc
+
+E:\temp>dir
+ 驱动器 E 中的卷是 新加卷
+ 卷的序列号是 64E8-4ABF
+
+ E:\temp 的目录
+
+2020/02/14  19:02    <DIR>          .
+2020/02/14  19:02    <DIR>          ..
+2020/02/14  19:02    <DIR>          cc
+2020/02/14  18:59                19 d.txt
+               1 个文件             19 字节
+               3 个目录 264,645,689,344 可用字节
+```
+
+
++ 复制文件 copy fileName path+fileName
+```
+E:\temp>copy d.txt E:\temp\cc;
+已复制         1 个文件。
+```
 
 
 
++ 文件重命名命令 ren sourceFileName targetFileName
+```
+E:\temp\cc>ren d.txt d2.txt;
+
+E:\temp\cc>type d2.txt
+this is a text file
+```
+
++ 文件移动命令 move fileName path+FileName
+```
+E:\temp\cc>move d2.txt E:\temp\kk
+移动了         1 个文件。
+```
 
 
++ 文件删除操作 del fileName
+```
+E:\temp\kk>dir
+ 驱动器 E 中的卷是 新加卷
+ 卷的序列号是 64E8-4ABF
 
+ E:\temp\kk 的目录
 
+2020/02/14  19:10    <DIR>          .
+2020/02/14  19:10    <DIR>          ..
+2020/02/14  18:59                19 d2.txt
+               1 个文件             19 字节
+               2 个目录 264,645,689,344 可用字节
 
+E:\temp\kk>del d2.txt
 
+E:\temp\kk>dir
+ 驱动器 E 中的卷是 新加卷
+ 卷的序列号是 64E8-4ABF
 
+ E:\temp\kk 的目录
 
-
+2020/02/14  19:12    <DIR>          .
+2020/02/14  19:12    <DIR>          ..
+               0 个文件              0 字节
+               2 个目录 264,645,689,344 可用字节
+```
 
 # [回到操作系统首页](./index.md)
