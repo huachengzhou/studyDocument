@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 #  [**Java技术栈体系**](./java/index.md)
 
 #  [**算法**](./algorithm/index.md)
@@ -20,7 +9,7 @@
 
 #  [**计算机网络**](./computer_networks/index.md)
 
-#  [**操作系统**](./operating_system/index.md)
+#  [**操作系统 DOS**](./operating_system/index.md)
 
 #  [**计算机系统**](./computer_system/index.md)
 
@@ -31,15 +20,3 @@
 #  [**学习参考网址**](./study/study.web.md)
 
 #  [**我的文件**](./resume/index.html)
-
-
-
-
-
-
-
-
-
-
-
-

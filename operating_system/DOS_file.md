@@ -1,4 +1,7 @@
 
+
+# DOS基本文件操作命令
+
 + wing+r  ==> cmd 进入dos控制台
 
 + D:
@@ -169,12 +172,25 @@ E:\temp\kk>dir
                2 个目录 264,645,689,344 可用字节
 ```
 
++ 删除特定文件夹下的文件
+```
+E:\temp>del kk
+E:\temp\kk\*, 是否确认(Y/N)? Y
+删除kk文件夹下所以的文件
+```
+
 
 + 文件夹删除 rd /s path
 
 ```
 E:\temp\kk>rd /s dg
 dg, 是否确认(Y/N)? Y
+```
+
++ dos命令下正则表达式有效
+
+```
+D:\ter>del  *.txt ;
 ```
 
 # [回到操作系统首页](./index.md)
