@@ -75,12 +75,58 @@ CHDIR 命令不把空格当作分隔符，因此有可能将目录名改为一�
 
 
 
+##  DOS窗口中创建用户并设定为管理员
+
++  查看本机用户数量 net user
+
+```
+PS E:\> net user;                                                                                                       
+\\DESKTOP-GN2SF7M 的用户帐户
+
+-------------------------------------------------------------------------------
+Administrator            DefaultAccount           Guest
+WDAGUtilityAccount       zch
+命令成功完成。
+```
+
++ 创建一个新用户 net user name password /add
+
+```
+PS E:\> net user blake 123456 /add ;                                                                                 
+   命令成功完成。
+```
+
++ 提升到管理员权限 net localgroup administrators 用户名 /add
+
+```
+PS E:\> net localgroup administrators blake /add;                                                                  
+     命令成功完成。
+PS E:\> 
+```
+
++ 删除某个用户名 net user user1 /del
+
+```
+PS E:\> net user alice /del                                                                                      
+       命令成功完成。
+PS E:\>    
+```
+
+
++ 修改用户密码 net user user1 （直接输入新密码）即可
+
+```
+PS E:\> net user alice 000000                                                                                          
+ 命令成功完成。
+PS E:\>  
+```
 
 
 
++ dos备份磁盘
 
-
-
-
+```
+ XCOPY D: E:\backup /s/e/c/h/j/g
+```
 
 # [回到上级目录](./index.md)
