@@ -127,6 +127,8 @@ PS E:\>
 
 ```
  XCOPY D: E:\backup /s/e/c/h/j/g
+ 
+ PS E:\> XCOPY D: E:\kao /e/h/k/y/c
 ```
 
 # [回到上级目录](./index.md)
