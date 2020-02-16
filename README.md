@@ -9,7 +9,9 @@
 
 #  [**计算机网络**](./computer_networks/index.md)
 
-#  [**操作系统 DOS**](./operating_system/index.md)
+#  [**操作系统**](./operating_system/index.md)
+
+#  [**windows**](./windows/index.md)
 
 #  [**计算机系统**](./computer_system/index.md)
 

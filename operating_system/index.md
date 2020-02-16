@@ -9,14 +9,6 @@
 
 
 
-## [windows问题](windows_question.md)
-
-
-## [DOS常用命令(文件)](DOS_file.md)
-
-## [DOS常用命令(网络检测)](DOS_network.md)
-
-
 
 
 
