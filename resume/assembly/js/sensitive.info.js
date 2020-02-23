@@ -114,7 +114,7 @@ sensitive.getData = function () {
         key: "****",
         password: "******",
         iv: "****",
-        result: "4n7UEtAsiuQZeUejq143mQ==",
+        result: "my phone number",
         id: ++id,
         name: ' 四川省教育考试院 密码'
     });
@@ -141,6 +141,14 @@ sensitive.getData = function () {
         result: "pHzAdbccC8LVPLkeTOj3pA==",
         id: ++id,
         name: ' 微信公众号 密码'
+    });
+    data.push({
+        key: "****",
+        password: "******",
+        iv: "****",
+        result: "my phone number",
+        id: ++id,
+        name: ' 移动宽带 密码'
     });
     return data;
 };

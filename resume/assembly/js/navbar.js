@@ -17,12 +17,16 @@ navBarTool.getHtml = function () {
     text += "                    <button type=\"button\" class=\"btn btn-success\" onclick=\"navBarTool.calculatorFun(this)\">  <span class=\"fa fa-calculator\"></span> 计算</button>";
     text += "                    <button type=\"button\" class=\"btn btn-success\" onclick=\"navBarTool.threeColumnFun(this)\">  <span class=\"fa fa-tree\"></span>  学习树</button>";
     text += "                    <button type=\"button\" data-toggle=\"modal\" href=\"#modelDataAssetsAppraisalDic\"";
-    text += "                            class=\"btn btn-default\" onclick=\"\" title=\"aes工具\"> ";
-    text += "                        <span class=\"glyphicon glyphicon-asterisk\" aria-hidden=\"true\"></span>aes工具 ";
+    text += "                            class=\"btn btn-default\" onclick=\"\" title=\"aes消费工具\"> ";
+    text += "                        <span class=\"glyphicon glyphicon-asterisk\" aria-hidden=\"true\"></span>aes消费工具 ";
     text += "                    </button>";
 
     text += "                   <button type=\"button\" class=\"btn btn-info\" tilte=\"生活经验\" onclick=\"navBarTool.lifeTreeFun(this)\">";
     text += "                   <span class=\"glyphicon glyphicon-heart\"></span> 生活经验";
+    text += "                   </button>";
+
+    text += "                   <button type=\"button\" class=\"btn btn-default\" tilte=\"aes生成工具\" onclick=\"navBarTool.toolProducer(this)\">";
+    text += "                   <span class=\"glyphicon glyphicon-saved\"></span> aes生成工具";
     text += "                   </button>";
 
     text += "                </form>";
@@ -51,6 +55,26 @@ navBarTool.threeColumnFun = function () {
 };
 
 navBarTool.lifeTreeFun = function () {
-    console.info("dhas");
     window.open("lifeTree.html", "_blank");
+};
+
+navBarTool.toolProducer = function () {
+    var dom = $(document).find(".toolProducer");
+    if (dom.size() == 0) {
+        bootbox.alert("回到主页操作", function () {
+        });
+        return false;
+    }
+    bootbox.prompt("请输入电话号码前7位", function (result) {
+        if (!result) {
+            return false;
+        }
+        if (result == '1838047') {
+            dom.show();
+        } else {
+            dom.hide();
+            bootbox.alert("错误!", function () {
+            });
+        }
+    });
 };
