@@ -22,3 +22,7 @@
 #  [**学习参考网址**](./study/study.web.md)
 
 #  [**我的文件**](./resume/index.html)
+
+#  [**静态博客**](./resume/blog/index.html)
+
+#  [**vue学习**](./resume/blog/example/vue/index.html)
