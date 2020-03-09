@@ -7,7 +7,7 @@ navBarTool.getHtml = function () {
     text += "        <nav class=\"navbar navbar-inverse navbar-fixed-top \" role=\"navigation\">";
     text += "            <div class=\"container\">";
     text += "                <div class=\"navbar-header\">";
-    text += "                    <a class=\"navbar-brand\" onclick=\"window.open('index.html','_blank')\">个人数据</a>";
+    text += "                    <a class=\"navbar-brand btn\" onclick=\"window.open('index.html','_blank')\">个人数据</a>";
     text += "                </div>";
     text += "                <form class=\"navbar-form navbar-left\" role=\"search\">";
     text += "                    <div class=\"form-group\">";
@@ -43,19 +43,23 @@ navBarTool.getHtml = function () {
 };
 
 navBarTool.regionFun = function () {
-    window.open("regionView.html", "_blank");
+    // window.open("regionView.html", "_blank");
+    window.open("regionView.html", "_self");
 };
 
 navBarTool.calculatorFun = function () {
-    window.open("calculationView.html", "_blank");
+    // window.open("calculationView.html", "_blank");
+    window.open("calculationView.html", "_self");
 };
 
 navBarTool.threeColumnFun = function () {
-    window.open("three-column.html", "_blank");
+    // window.open("three-column.html", "_blank");
+    window.open("three-column.html", "_self");
 };
 
 navBarTool.lifeTreeFun = function () {
-    window.open("lifeTree.html", "_blank");
+    // window.open("lifeTree.html", "_blank");
+    window.open("lifeTree.html", "_self");
 };
 
 navBarTool.toolProducer = function () {

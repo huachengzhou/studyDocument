@@ -5,6 +5,9 @@
 
 #  [**vue学习**](/resume/blog/example/vue/index.html)
 
+#  [**vue学习2**](D:/IdeaProjects/studyDoc/resume/blog/example/vue/index.html)
+
+
 
 + vue 官网 https://cn.vuejs.org/
 
