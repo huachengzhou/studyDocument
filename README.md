@@ -25,4 +25,4 @@
 
 #  [**静态博客**](./resume/blog/index.html)
 
-#  [**vue学习**](./resume/blog/example/vue/index.html)
+#  [**web学习**](./web/index.md)
