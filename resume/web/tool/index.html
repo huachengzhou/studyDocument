@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web 工具</title>
+
+
+    <!-- 引入bootstrap样式 -->
+
+    <link href="../../assembly/plugins/bootstrap/bootstrap-table/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assembly/plugins/bootstrap/bootstrap-table/css/bootstrap-theme.css" rel="stylesheet">
+    <!-- 引入bootstrap-table样式 -->
+    <link href="../../assembly/plugins/bootstrap/bootstrap-table/css/bootstrap-table.css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="../../assembly/plugins/jquery/core/jquery-1.9.1.js"></script>
+    <script src="../../assembly/plugins/bootstrap/bootstrap-table/js/bootstrap.js"></script>
+    <!-- bootstrap-table.js -->
+    <script src="../../assembly/plugins/bootstrap/bootstrap-table/js/bootstrap-table.js"></script>
+    <!-- 引入中文语言包 -->
+    <script src="../../assembly/plugins/bootstrap/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
+    <!-- x-editable bootstrap3-editable -->
+    <link href="../../assembly/plugins/x-editable/bootstrap3-editable/css/bootstrap-editable.css"
+          rel="stylesheet">
+    <script src="../../assembly/plugins/x-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
+    <script src="../../assembly/plugins/x-editable/bootstrap3-editable/js/bootstrap-table-editable.js"></script>
+
+    <!-- bootstrap-switch -->
+    <link href="../../assembly/plugins/bootstrap/bootstrap-switch/static/stylesheets/bootstrap-switch.css"
+          rel="stylesheet">
+    <script src="../../assembly/plugins/bootstrap/bootstrap-switch/static/js/bootstrap-switch.js"></script>
+    <!-- bootstrap-timepicker -->
+    <link href="../../assembly/plugins/bootstrap/bootstrap-timepicker/css/bootstrap-timepicker.min.css"
+          rel="stylesheet">
+    <script src="../../assembly/plugins/bootstrap/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+    <!-- bootstrap-datetimepicker 日期组件 -->
+    <link href="../../assembly/plugins/bootstrap/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css"
+          rel="stylesheet">
+    <script src="../../assembly/plugins/bootstrap/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script src="../../assembly/plugins/bootstrap/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+    <!-- bootstrap-treeview -->
+    <link href="../../assembly/plugins/bootstrap/bootstrap-treeview/bootstrap-treeview.min.css" rel="stylesheet">
+    <script src="../../assembly/plugins/bootstrap/bootstrap-treeview/bootstrap-treeview.min.js"></script>
+
+    <!-- select2 -->
+    <link href="../../assembly/plugins/jquery/select2/select2.css" rel="stylesheet">
+    <link href="../../assembly/plugins/jquery/select2/select2-bootstrap.css" rel="stylesheet">
+    <script src="../../assembly/plugins/jquery/select2/select2.js"></script>
+    <script src="../../assembly/plugins/jquery/select2/select2_locale_zh-CN.js"></script>
+    <!-- jquery validation -->
+    <script src="../../assembly/plugins/jquery/jquery-validation-1.17.0/dist/jquery.validate.js"></script>
+    <script src="../../assembly/plugins/jquery/jquery-validation-1.17.0/dist/localization/messages_zh.js"></script>
+
+    <!-- 图标组件 -->
+    <link href="../../assembly/plugins/bootstrap/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+    <!-- 公共js -->
+    <script src="../../assembly/js/common/common.js" type="text/javascript"></script>
+    <script src="../../assembly/plugins/message/bootbox.js" type="text/javascript"></script>
+
+    <link href="resources/css/jquery.scrollbar.min.css" rel="stylesheet">
+    <script src="resources/js/jquery.scrollbar.min.js"></script>
+
+    <script src="resources/js/webTool.js"></script>
+
+    <!-- 选项卡js -->
+    <!--<link href="resources/tab/css/nth.tabs.min.css" rel="stylesheet">-->
+    <!--<script src="resources/tab/js/nth.tabs.min.js" type="text/javascript"></script>-->
+    <style>
+        body {
+            background-color: #b0c4de;
+            /*background-image: url("img/apic2754.jpg");*/
+            /*background-position: 0 0;*/
+            /*background-repeat: no-repeat;*/
+            /*background-attachment: scroll;*/
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin-top: 70px;">
+    <div style="margin-top: 70px;">
+        <div class="navbar-wrapper">
+            <div class="container">
+                <nav class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" onclick="">编码加密</a>
+                        </div>
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group"></div>
+                            <button type="button" class="btn btn-info" onclick=""><i class="fa fa-signal"></i> 网络
+                            </button>
+                            <button type="button" class="btn btn-success" onclick=""><span
+                                    class="fa fa-stack-exchange"></span> 前端
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick=""><span
+                                    class="fa fa-exchange"></span> 转换
+                            </button>
+                            <button type="button" class="btn btn-primary" onclick=""><span
+                                    class="fa fa-exchange"></span> 格式化
+                            </button>
+                        </form>
+                        <div class="navbar-right">
+                            <ul class="nav navbar-nav">
+                                <li><a data-toggle="modal" data-target="#signin">sql 语法</a></li>
+                                <li><a data-toggle="modal" data-target="#signin">常用js方法</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+            <div class="panel">
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active">
+                                        <a href="#toHumpAndToLine" aria-controls="toHumpAndToLine" role="tab"
+                                           data-toggle="tab"><h5>驼峰转下划线,下划线转驼峰</h5></a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a href="#htmlConversionJavascript" aria-controls="profile" role="tab"
+                                           data-toggle="tab">
+                                            <h5>在线html转javascript</h5>
+                                        </a>
+                                    </li>
+                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                                               data-toggle="tab">
+                                        <h5>
+                                        进制转换
+                                    </h5></a></li>
+                                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                                                               data-toggle="tab">
+                                        <h5>大小写转换</h5>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="toHumpAndToLine">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <textarea class="form-control" rows="6" cols="40"
+                                                          name="humpToLine"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="panel ">
+                                            <div class="btn-group" role="group" aria-label="">
+                                                <button type="button" class="btn btn-primary"
+                                                        onclick="toHumpAndToLine(this,'line')">驼峰转下划线
+                                                </button>
+                                                <button type="button" class="btn btn-primary"
+                                                        onclick="toHumpAndToLine(this,'hump')">下划线转驼峰
+                                                </button>
+                                                <button type="button" class="btn btn-danger"
+                                                        onclick="$(this).closest('form').find('[name=humpToLineValue]').val('')">
+                                                    清空结果
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <textarea class="form-control" rows="6" cols="40"
+                                                          name="humpToLineValue"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="htmlConversionJavascript">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <textarea class="form-control" rows="6" cols="40"
+                                                          name="htmlJavascript"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="panel ">
+                                            <div class="btn-group" role="group" aria-label="">
+                                                <button type="button" class="btn btn-primary"
+                                                        onclick="toHtmlJavascript(this,'js');">转js
+                                                </button>
+                                                <button type="button" class="btn btn-primary"
+                                                        onclick="toHtmlJavascript(this,'html');">转html
+                                                </button>
+                                                <button type="button" class="btn btn-danger"
+                                                        onclick="$(this).closest('form').find('[name=htmlJavascriptValue]').val('')">
+                                                    清空结果
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <textarea class="form-control" rows="6" cols="40"
+                                                          name="htmlJavascriptValue"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="messages">
+                                        进制转换
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="settings">
+                                        大小写转换
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    /**
+     * 驼峰和下划线的处理
+     * @param _this
+     * @param param
+     */
+    function toHumpAndToLine(_this, param) {
+        var form = $(_this).closest("form");
+        var data = formSerializeArray(form);
+        var value = null;
+        if (param == 'line') {
+            value = webTool.toLine(data.humpToLine);
+        }
+        if (param == 'hump') {
+            value = webTool.toHump(data.humpToLine);
+        }
+        form.find("textarea[name=humpToLineValue]").val(value);
+    }
+
+    /**
+     * html和js相互转换
+     * @param _this
+     * @param param
+     */
+    function toHtmlJavascript(_this, param) {
+        var form = $(_this).closest("form");
+        var data = formSerializeArray(form);
+        var value = "";
+        var input = data.htmlJavascript;
+        if (param == 'html') {
+            var res = input.replace(/document.writeln\("/g, "").replace(/"\);/g, "").replace(/\\\"/g, "\"").replace(/\\\'/g, "\'").replace(/\\\//g, "\/").replace(/\\\\/g, "\\");
+            value = res;
+        }
+        if (param == 'js') {
+            value = webTool.html2string(input, "js");
+            var res = "document.writeln(\"" + input.replace(/\\/g, "\\\\").replace(/\\/g, "\\/").replace(/\'/g, "\\\'").replace(/\"/g, "\\\"").split('\n').join("\");\ndocument.writeln(\"") + "\");";
+        }
+        form.find("textarea[name=htmlJavascriptValue]").val(value);
+    }
+
+
+</script>
+
+<script type="text/javascript">
+
+</script>
+
+</body>
+</html>
