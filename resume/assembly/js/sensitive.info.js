@@ -2,16 +2,19 @@ var sensitive = {};
 
 sensitive.getData = function () {
     var data = [];
-    var len = 22;
+    var len = 100000;
     var id = Math.round(Math.random() * 100);
     for (var i = 0; i < len; i++) {
+        var name = Math.random()                        // 生成随机数字, eg: 0.123456
+            .toString(36)           // 转化成36进制 : "0.4fzyo82mvyr"
+            .slice(-8);// 截取最后八位 : "yo82mvyr"
         data.push({
             key: Math.round(Math.random() * 100) + Math.random(),
             password: Math.round(Math.random() * 100) * Math.round(Math.random() * 100),
             iv: Math.round(Math.random() * 100),
             result: Math.round(Math.random() * 100) * Math.round(Math.random() * 100) * Math.round(Math.random() * 100),
             id: ++id,
-            name: new Date().toString() + new Date().getTime()
+            name: name
         });
     }
     data.push({
@@ -58,15 +61,23 @@ sensitive.getData = function () {
         key: "****",
         password: "******",
         iv: "****",
-        result: "YZmTjSJvTrsYb5eGfzoedQ==",
+        result: "身份证号码",
         id: ++id,
-        name: '成都市社保卡账号'
+        name: '成都市社保卡账号 == > 社会保障号码'
     });
     data.push({
         key: "****",
         password: "******",
         iv: "****",
-        result: "6M65Y/inP+pPG+iyb9O7BA==",
+        result: "IXSFOv0GdotN99B8CYOzbw==",
+        id: ++id,
+        name: '成都市社保卡账号 == > 银行密码'
+    });
+    data.push({
+        key: "****",
+        password: "******",
+        iv: "****",
+        result: "wNHKCtyWlfeqiYQ3ls6qWg==",
         id: ++id,
         name: '成都市社保卡密码'
     });
@@ -150,6 +161,27 @@ sensitive.getData = function () {
         id: ++id,
         name: ' 移动宽带 密码'
     });
+    data.push({
+        key: "****",
+        password: "******",
+        iv: "****",
+        result: "HAx0wbu0RkuLZyFdvLUuwQ==",
+        id: ++id,
+        name: ' 163 授权码(登录密码)'
+    });
+    for (var i = 0; i < 100; i++) {
+        var name = Math.random()                        // 生成随机数字, eg: 0.123456
+            .toString(36)           // 转化成36进制 : "0.4fzyo82mvyr"
+            .slice(-8);// 截取最后八位 : "yo82mvyr"
+        data.push({
+            key: Math.round(Math.random() * 100) + Math.random(),
+            password: Math.round(Math.random() * 100) * Math.round(Math.random() * 100),
+            iv: Math.round(Math.random() * 100),
+            result: Math.round(Math.random() * 100) * Math.round(Math.random() * 100) * Math.round(Math.random() * 100),
+            id: ++id,
+            name: name
+        });
+    }
     return data;
 };
 
