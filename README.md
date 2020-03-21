@@ -17,14 +17,10 @@
 
 #  [**数据库**](./databases/index.md)
 
-#  [**学习计划**](./study/index.md)
-
-#  [**学习参考网址**](./study/study.web.md)
+#  [**学习**](./study/index.md)
 
 #  [**我的文件**](./resume/index.html)
 
 #  [**静态博客**](./resume/blog/index.html)
-
-#  [**web学习**](./web/index.md)
 
 #  [**web工具**](./resume/web/tool/index.html)
