@@ -1,7 +1,3 @@
-
-
-
-
 <!-- 引入bootstrap样式 -->
 document.writeln(" <link href='../../../assembly/plugins/bootstrap/bootstrap-table/css/bootstrap.css ' rel='stylesheet'> ");
 document.writeln(" <link href='../../../assembly/plugins/bootstrap/bootstrap-table/css/bootstrap-theme.css ' rel='stylesheet'> ");
@@ -68,8 +64,9 @@ document.writeln("<script  src='../../../assembly/plugins/crypto-js/rabbit-legac
 document.writeln("<script  src='../../../assembly/plugins/crypto-js/sha256.js'></script>");
 
 
-
 document.writeln("<script  src='../../../assembly/plugins/vue/vue.min.js'></script>");
+
+document.writeln("<script  src='nav.js'></script>");
 
 
 
