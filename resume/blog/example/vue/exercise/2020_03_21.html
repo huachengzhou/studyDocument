@@ -55,6 +55,7 @@
             </div>
             <div class="form-group">
                 <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+                    <label>{{nameTo}}</label>
                     <p v-text="timeName">
                     </p>
                 </div>
@@ -72,25 +73,37 @@
                     </p>
                 </div>
             </div>
+            <div class="form-group">
+                <div class="col-xs-12  col-sm-12  col-md-12  col-lg-12">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-success">Dapibus ac facilisis in</li>
+                        <li class="list-group-item list-group-item-info">Cras sit amet nibh libero</li>
+                        <li class="list-group-item list-group-item-warning">Porta ac consectetur ac</li>
+                        <li v-bind:class="dangerClass">Vestibulum at eros</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script>
-
     var vm = new Vue({
         el: "#frmApp",
         data: {
             timeName: getCurrentDate(),
             msg: "时间显示",
             htmlName: "html显示",
-            htmlContent: "<button type='button' class='btn-primary btn'>测试按钮</button>"
+            nameTo: Math.random().toString(36).slice(-8),
+            htmlContent: "<button type='button' class='btn-primary btn'>测试按钮</button>",
+            dangerClass:"list-group-item list-group-item-danger"
         }
     });
 
     setInterval(function () {
         //vue 获取绑定的数据名称
         vm.$data.timeName = getCurrentDate();
+        vm.$data.nameTo = Math.random().toString(36).slice(-8);
         var num = Math.round(Math.random() * 10) % 2;
         if (num == 0) {
             vm.$data.htmlContent = "<button type='button' class='btn-info btn'>0</button>";
@@ -98,7 +111,7 @@
         if (num == 1) {
             vm.$data.htmlContent = "<button type='button' class='btn-default btn'>1</button>";
         }
-    }, 2000);
+    }, 1000);
 
 
 </script>
