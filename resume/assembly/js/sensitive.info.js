@@ -169,6 +169,14 @@ sensitive.getData = function () {
         id: ++id,
         name: ' 163 授权码(登录密码)'
     });
+    data.push({
+        key: "****",
+        password: "******",
+        iv: "****",
+        result: "jJ0/nagswSTFSN08rwI5dQ==",
+        id: ++id,
+        name: ' oracle(登录密码)'
+    });
     for (var i = 0; i < 100; i++) {
         var name = Math.random()                        // 生成随机数字, eg: 0.123456
             .toString(36)           // 转化成36进制 : "0.4fzyo82mvyr"
