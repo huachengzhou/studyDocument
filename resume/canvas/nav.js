@@ -35,23 +35,39 @@ function exampleData() {
         data.push({
             id: ++id,
             name: name,
+            pid:0,
             href: "#"
         });
     }
     data.unshift({
         id: ++id,
+        pid:202004,
         name: "canvas 第一个例子",
         href: "exercise/2020_04_05.html"
     });
     data.unshift({
         id: ++id,
+        pid:202004,
         name: "canvas 2020_04_05绘制平行线",
         href: "exercise/2020_04_05绘制平行线.html"
     });
     data.unshift({
         id: ++id,
+        pid:202004,
         name: "canvas 2020_04_06绘制三条不同颜色平行线",
         href: "exercise/2020_04_06绘制三条不同颜色平行线.html"
+    });
+    data.unshift({
+        id: ++id,
+        pid:202004,
+        name: "canvas 2020_04_06绘制填充的三角形",
+        href: "exercise/2020_04_06绘制填充的三角形.html"
+    });
+    data.unshift({
+        id: ++id,
+        pid:202004,
+        name: "canvas 2020_04_06绘制镂空的正方形",
+        href: "exercise/2020_04_06绘制镂空的正方形.html"
     });
 
     return data;
