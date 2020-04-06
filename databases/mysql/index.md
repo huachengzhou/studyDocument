@@ -3,6 +3,10 @@
 
 ## mysql
 
+### [windows下 Mysql安装](./install.md)
+
+### [windows下 Mysql安装的一些问题解决方法](./install_problem.md)
+
 ### [mysql查询数据准备](./data.md)
 
 ### [mysql事务](./mysql事务.md)
@@ -25,4 +29,4 @@
 ### [MySQL分库分表原理](./distinguish.md)
 
 
-## [](../index.md)回到databases主页
+## [回到上级](../index.md)

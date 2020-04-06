@@ -4,6 +4,8 @@
 
 #  [**vue**](vue/index.md)
 
+#  [**canvas**](../resume/canvas/index.html)
+
 
 
 
