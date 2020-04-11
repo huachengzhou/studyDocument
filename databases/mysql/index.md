@@ -20,6 +20,8 @@
 
 ### [网易云课堂MySQL微专业学习笔记](./cloud/README.md)
 
+### [mysql必知会笔记](./mysql必知会/readme.md)
+
 ### [mysql用户与权限](./mysql用户与权限.md)
 
 ### [开发规范](./开发规范.md)
