@@ -2,7 +2,7 @@ var sensitive = {};
 
 sensitive.getData = function () {
     var data = [];
-    var len = 100000;
+    var len = 10000;
     var id = Math.round(Math.random() * 100);
     for (var i = 0; i < len; i++) {
         var name = Math.random()                        // 生成随机数字, eg: 0.123456
@@ -173,12 +173,20 @@ sensitive.getData = function () {
         key: "****",
         password: "******",
         iv: "****",
+        result: "KiERY/nCdvVROFZce8GnlXlrGSN9s1gXFZWkOi2N0MQ=",
+        id: ++id,
+        name: ' qq 授权码(登录密码)'
+    });
+    data.push({
+        key: "****",
+        password: "******",
+        iv: "****",
         result: "jJ0/nagswSTFSN08rwI5dQ==",
         id: ++id,
         name: ' oracle(登录密码)'
     });
-    for (var i = 0; i < 100; i++) {
-        var name = Math.random()                        // 生成随机数字, eg: 0.123456
+    for (var j = 0; j < 100; j++) {
+        var nameN1 = Math.random()                        // 生成随机数字, eg: 0.123456
             .toString(36)           // 转化成36进制 : "0.4fzyo82mvyr"
             .slice(-8);// 截取最后八位 : "yo82mvyr"
         data.push({
@@ -187,7 +195,7 @@ sensitive.getData = function () {
             iv: Math.round(Math.random() * 100),
             result: Math.round(Math.random() * 100) * Math.round(Math.random() * 100) * Math.round(Math.random() * 100),
             id: ++id,
-            name: name
+            name: nameN1
         });
     }
     return data;
