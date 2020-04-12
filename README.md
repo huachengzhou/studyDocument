@@ -17,7 +17,7 @@
 
 #  [**数据库**](./databases/index.md)
 
-#  [**学习**](./study/index.md)
+#  [**我的学习**](./study/index.md)
 
 #  [**我的文件**](./resume/index.html)
 
