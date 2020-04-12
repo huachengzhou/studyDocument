@@ -21,6 +21,6 @@
 
 #  [**我的文件**](./resume/index.html)
 
-#  [**静态博客**](./resume/blog/index.html)
+#  [**数据信息**](./resume/blog/index.html)
 
 #  [**web工具**](./resume/web/tool/index.html)
