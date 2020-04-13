@@ -1,9 +1,11 @@
 # spring工具类
+
 > Spring-core中提供了大量的工具类，常用的有StringUtils、ObjectUtils、NumberUtils、Base64Utils等，Spring工具类在spring-core.jar中的org.springframework.util包下。
 
 + 1:StringUtils
-方法名	              返回值类型	            作用	                        备注
+
 ```
+方法名	              返回值类型	            作用	                        备注
 isEmpty(Object str)	boolean	                 判断字符串是否为Null或者空字符串	null和''都为true
 hasLength(CharSequence str)	boolean	         判断字符串长度是否大于1	null和''都为false
 hasText(CharSequence str)	boolean	          判断字符串中是否有字符	null和空字白符都为false
@@ -40,7 +42,10 @@ System.out.println(org.springframework.util.StringUtils.getFilename("D://Java"))
 System.out.println(org.springframework.util.StringUtils.getFilenameExtension("D:/Java.fdsdf"));//获取路劲下的后缀名 fdsdf
 System.out.println(org.springframework.util.StringUtils.stripFilenameExtension("D:/Java.fdsdf"));//获取路劲下的后缀名之前的部分 D:/Java
 ```
+
 + 2:ObjectUtils
+
+
 ```
 isEmpty(Object obj)	boolean	           判断对象是否为空	对象为null或者数组Map为空等都为true
 isEmpty(Object[] array)	boolean	       判断数组是否为空	
@@ -49,7 +54,10 @@ containsElement(Object[] array, Object element)	boolean	    判断数据组中�
 addObjectToArray(A[] array, O obj)
 
 ```
+
 + 3:NumberUtils
+
+
 ```
 convertNumberToTargetClass(Number number, Class targetClass)	<T extends Number> T	将Number转为指定的类型
 parseNumber(String text, Class targetClass)	<T extends Number> T	将字符串转为数值类型
@@ -57,6 +65,8 @@ parseNumber(String text, Class targetClass, NumberFormat numberFormat)	<T extend
 ```
 
 + 4:Base64Utils
+
+
 ```
 encode(byte[] src)	byte[]	编码
 decode(byte[] src)	byte[]	解码
@@ -68,4 +78,4 @@ decode(byte[] src)	byte[]	解码
 
 
 
-## [回到Java首页](../index.md)
+## [回到上级](../index.md)

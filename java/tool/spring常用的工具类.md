@@ -1,6 +1,8 @@
 # spring常用的工具类
 
 ## 内置的resouce类型 
+
+
 ```
 UrlResource
 ClassPathResource
@@ -15,6 +17,8 @@ org.springframework.util.xml.ResourceUtils 用于处理表达资源字符串前�
 ```
 
 ## 工具类 
+
+
 ```
 org.springframework.core.annotation.AnnotationUtils   处理注解
 org.springframework.core.io.support.PathMatchingResourcePatternResolver  用 于处理 ant 匹配风格(com/*.jsp, com/**/*.jsp),找出所有的资源, 结合上面的resource的概念一起使用,对于遍历文件很有用. 具体请详细查看javadoc
@@ -26,6 +30,8 @@ org.springframework.core.NestedExceptionUtils
 ```
 
 ## xml工具 
+
+
 ```
 org.springframework.util.xml.AbstractStaxContentHandler
 org.springframework.util.xml.AbstractStaxXMLReader
@@ -40,6 +46,8 @@ org.springframework.util.xml.TransformerUtils
 ```
 
 ## 其它工具集 
+
+
 ```
 org.springframework.util.xml.AntPathMatcherant风格的处理
 org.springframework.util.xml.AntPathStringMatcher
@@ -73,6 +81,8 @@ org.springframework.util.xml.WeakReferenceMonitor弱引用的监控
 ```
 
 ## 和web相关的工具 
+
+
 ```
 org.springframework.web.util.CookieGenerator
 org.springframework.web.util.HtmlCharacterEntityDecoder
@@ -92,4 +102,4 @@ org.springframework.web.util.
 
 
 
-## [回到Java首页](../index.md)
+## [回到上级](../index.md)
