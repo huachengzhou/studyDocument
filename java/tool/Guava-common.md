@@ -15,6 +15,7 @@
 　　com.google.common.reflect：反射工具包。 
 　　com.google.common.util.concurrent：多线程工具包。
 ```
+
 + 常见Object方法
 > hashCode
 > compare/compareTo 实现一个比较器[Comparator]，或者直接实现Comparable接口有时也伤不起
@@ -52,8 +53,10 @@ public class ProjectInfo implements Serializable,Comparable<ProjectInfo> {
     }
 }
 ```
+
 > 当一个对象中的字段可以为null时，实现Object.equals方法会很痛苦，因为不得不分别对它们进行null检查。
 使用Objects.equal帮助你执行null敏感的equals判断，从而避免抛出NullPointerException
+
 ```
 public void testA(){
     System.out.println(Objects.equal("a","a"));// -->true
@@ -64,7 +67,9 @@ public void testA(){
     System.out.println(Objects.equal(null,""));// -->false
 }
 ```
+
 > toString 好的toString方法在调试时是无价之宝，但是编写toString方法有时候却很痛苦。使用MoreObjects(低版本还是Objects)
+
 ```
 System.out.println(MoreObjects.toStringHelper(this).add("x",2).
                 add("y",Math.round(Math.random()*10)).toString());
@@ -72,7 +77,9 @@ System.out.println(MoreObjects.toStringHelper(this).add("x",2).
 ```
 
 + Preconditions
+
 > 前置条件Preconditions提供静态方法来检查方法或构造函数，被调用是否给定适当的参数。它检查的先决条件。其方法失败抛出IllegalArgumentException
+
 
 ```
 public class PreconditionsDemo {
@@ -119,7 +126,9 @@ public class PreconditionsDemo {
 ```
 
 + Joiner
+
 > Joiner 提供了各种方法来处理字符串加入操作，对象等(Joiner的实例不可变的，因此是线程安全的)
+
 ```
 public static void testA() {
          /*
@@ -144,7 +153,9 @@ public static void testA() {
     a,b,c,--HH--,d
     key1=value1,key2=value2,key3=value3
 ```
+
 + Splitter 能够将一个字符串按照指定的分隔符拆分成可迭代遍历的字符串集合，Iterable
+
 ```
  public static void testA() {
     /*
@@ -164,8 +175,11 @@ public static void testA() {
         System.out.println(Splitter.on(";").withKeyValueSeparator(":").split("a:1;b:2;c:3"));//{a=1, b=2, c=3}
     }
 ```
+
 + Collection 不可变集合
+
 * 不可变对象有很多优点，包括
+
 <ul>
 <li>当对象被不可信的库调用时，不可变形式是安全的；</li>
 <li>不可变对象被多个线程调用时，不存在竞态条件问题</li>
@@ -192,6 +206,7 @@ public class ImmutableDemo {
 ```
 
 + Multiset Multiset可统计一个词在文档中出现了多少次
+
 ```
 public class MultiSetDemo {
     public static void main(String[] args) {
@@ -214,6 +229,7 @@ public class MultiSetDemo {
 ```
 
 + Multimap可以很容易地把一个键映射到多个值。换句话说，Multimap是把键映射到任意多个值的一般方式。
+
 ```
 public class MultiMapDemo {
     public static void main(String[] args) {
@@ -231,6 +247,7 @@ public class MultiMapDemo {
 ```
 
 + Table它有两个支持所有类型的键：”行”和”列”。
+
 ```
 public class TableDemo {
     public static void main(String[] args) {
@@ -254,6 +271,7 @@ public class TableDemo {
 ```
 
 + 集合操作：交集、差集、并集
+
 ```
 public class CollectionsDemo {
     public static void main(String[] args) {

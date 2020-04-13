@@ -26,7 +26,9 @@
 |     Net     |  Net 是一个网络工具集，基于 NetComponents 代码，包括 FTP 客户端等等  |
 
 # 一:org.apache.commons.lang
+
 + ArrayUtils – 用于对数组的操作，如添加、查找、删除、子数组、倒序、元素类型转换等；
+
 ```
 ArrayUtils类
 ArrayUtils.toString(array)  将数组转为为字符串，格式如：{2,4,8,16}
@@ -41,6 +43,7 @@ ArrayUtils.toMap(array); 将一个二维数组转换为map，二维数组中至�
 + BitField – 用于操作位元，提供了一些方便而安全的方法；
 
 + BooleanUtils – 用于操作和转换 boolean 或者 Boolean 及相应的数组；
+
 ```
  boolean[] booleans = new boolean[]{true, false, true};
 //和，并且
@@ -56,6 +59,7 @@ System.out.println(BooleanUtils.toBooleanObject(integer));//false
 ```
 
 + CharEncoding – 包含了 Java 环境支持的字符编码，提供是否支持某种编码的判断；
+
 ```
 System.out.println(CharEncoding.ISO_8859_1);
 System.out.println(CharEncoding.US_ASCII);
@@ -66,6 +70,7 @@ System.out.println(CharEncoding.UTF_16LE);
 ```
 
 + CharRange – 用于设定字符范围并做相应检查；
+
 ```
 System.out.println(CharUtils.toChar("hello",'o'));
 int assii = CharUtils.toIntValue('2');//检查字符是否在0-9
@@ -73,6 +78,7 @@ System.out.println(assii);
 ```
 
 + CharSet – 用于设定一组字符作为范围并做相应检查；(我的理解是可以用作正则表达式的判断)
+
 ```
 System.out.println(CharSet.ASCII_ALPHA.toString());//[a-z, A-Z]
 System.out.println(CharSet.ASCII_ALPHA.contains('B'));//判断char是否在这个范围内
@@ -82,6 +88,7 @@ System.out.println(CharSet.getInstance("s"));//[s]
 ```
 
 + CharSetUtils – 用于操作 CharSet ；
+
 ```
  /*这里面所以的输入字符串都会被拆成char[]来判定*/
 //删除指定的字符(假如删除的这个会重复那么也会被删除掉)
@@ -97,6 +104,7 @@ System.out.println(CharSetUtils.count("hello world", "o"));
 ```
 
 + CharUtils – 用于操作 char 值和 Character 对象；
+
 ```
 System.out.println(CharUtils.toChar("hello",'o'));
 int num = CharUtils.toIntValue('2');//获取int类型的char但是char必须在Ascii码中
@@ -107,6 +115,7 @@ System.out.println(CharUtils.isAscii('h'));//判断是否在Ascii 128 范围类,
 ```
 
 + ClassUtils – 用于对 Java 类的操作，不使用反射；
+
 ```
 System.out.println(ClassUtils.getShortClassName(UserDO.class));//返回 UserDO
 System.out.println(ClassUtils.getName(UserDO.class));//返回 包名.UserDO
@@ -119,6 +128,8 @@ ClassUtils.getAllInterfaces(UserDO.class).stream().forEachOrdered(System.out::pr
 ```
 
 + ObjectUtils – 用于操作 Java 对象，提供 null 安全的访问和其他一些功能；
+
+
 ```
 UserDO userDO = new UserDO(Zhou_Word.getEnglishName());
 UserDO userDO1 = ObjectUtils.clone(userDO);
@@ -150,7 +161,11 @@ ObjectUtils.compare(a, b, true);
 //获取最大的值,默认null为最小
 ObjectUtils.max(a, b);
 ```
+
+
+
 + RandomStringUtils – 用于生成随机的字符串；
+
 ```
 System.out.println(RandomStringUtils.random(4).length());
 System.out.println(RandomStringUtils.random(23));//生成指定长度任意的随机字符
@@ -161,7 +176,11 @@ System.out.println(RandomStringUtils.randomAlphabetic(21));//生成大写或者�
 
 + SerializationUtils – 用于处理对象序列化，提供比一般 Java 序列化更高级的处理能力；
 
+
+
 + StringEscapeUtils – 用于正确处理转义字符，产生正确的 Java 、 JavaScript 、 HTML 、 XML 和 SQL 代码；
+
+
 ```
 String str = "thi is a test 这是一个测试";
 String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
@@ -185,7 +204,11 @@ System.out.println("用escapeJavaScript方法转义之后的字符串为:" + org
 System.out.println("用unescapeJavaScript方法反转义之后的字符串为:" + org.apache.commons.lang.StringEscapeUtils.unescapeJavaScript(org.apache.commons.lang.StringEscapeUtils.unescapeJavaScript(str)));
 ```
 
+
+
 + StringUtils – 处理 String 的核心类，提供了相当多的功能；
+
+
 ```
 System.out.println(StringUtils.isNotEmpty(" ")); //true
 System.out.println(StringUtils.isNotBlank(" "));//这个方法里面字符串空白会删除空白 false
@@ -251,7 +274,11 @@ StringUtils.removeEndIgnoreCase("china", "NA")); // chi (忽略大小写)
 StringUtils.deleteWhitespace(null)); //null
 StringUtils.deleteWhitespace(" c h  i\tn\ra")); // china
 ```
+
+
+
 + SystemUtils – 在 java.lang.System 基础上提供更方便的访问，如用户路径、 Java 版本、时区、操作系统等判断；
+
 ```
 System.out.println(SystemUtils.getHostName());//DESKTOP-AS9FA6P
 System.out.println(SystemUtils.getUserDir().getPath());//E:\IdeaProjects\z-utils
@@ -273,6 +300,7 @@ System.out.println(SystemUtils.USER_HOME);//C:\Users\noatn
 # 二:org.apache.commons.lang.math
 
 + 处理分数的Fraction类；
+
 ```
 {
     Fraction fraction = Fraction.getFraction(1,2);// first prams 分子 ,second params 分母
@@ -309,15 +337,27 @@ System.out.println(SystemUtils.USER_HOME);//C:\Users\noatn
     System.out.println(Fraction.getFraction(1, 2).pow(2));
 }
 ```
+
+
+
+
 + 处理数值的NumberUtils和IEEE754rUtils类，这里IEEE745r代表的是IEEE 754的标准，是一种浮点数的处理标准。
 + 处理随机数的JVMRandom和RandomUtils类。
+
+
 ```
 // JVMRandom继承了java.util.Random类，其功能和Random差不多，只不过封装了返回不同数据类型的方法而已。而RandomUtils则把JVMRandom的方法静态化了。
 for (int i = 0; i < 5; i++) {
     System.out.println(RandomUtils.nextInt(100));
 }
 ```
+
+
+
+
 + 处理数值范围的Range, DoubleRange, FloatRange, IntRange, LangRange, NumberRange类
+
+
 ```
  Range normalScoreRange = new DoubleRange(90, 120);
 double score1 = 102.5;
