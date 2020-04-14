@@ -50,14 +50,21 @@
 + Swing 中容器可以分为两类：顶层容器和中间容器。
 
 + 顶层容器是进行图形编程的基础，一切图形化的东西都必须包括在顶层容器中。顶层容器是任何图形界面程序都要涉及的主窗口，是显示并承载组件的容器组件。在 Swing 中有三种可以使用的顶层容器，分别是 JFrame、JDialog 和 JApplet。
+
 + JFrame：用于框架窗口的类，此窗口带有边框、标题、关闭和最小化窗口的图标。带 GUI 的应用程序至少使用一个框架窗口。
+
 + JDialog：用于对话框的类。
+
 + JApplet：用于使用 Swing 组件的 Java Applet 类。
 
 + 中间容器是容器组件的一种，也可以承载其他组件，但中间容器不能独立显示，必须依附于其他的顶层容器。常见的中间容器有 JPanel、JScrollPane、JTabbedPane 和 JToolBar。
+
 + JPanel：表示一个普通面板，是最灵活、最常用的中间容器。
+
 + JScrollPane：与 JPanel 类似，但它可在大的组件或可扩展组件周围提供滚动条。
+
 + JTabbedPane：表示选项卡面板，可以包含多个组件，但一次只显示一个组件，用户可在组件之间方便地切换。
+
 + JToolBar：表示工具栏，按行或列排列一组组件（通常是按钮）。
 
 + 在 Java 程序中容器类都是继承自 Container 类。中间容器和顶层容器在，AWT 包和 Swing 包中继承 Container 类的继承关系，如图 2 所示。
@@ -84,4 +91,4 @@ http://c.biancheng.net/view/1206.html
 
 
 
-## [回到swing首页](./index.md)
+## [回到swing首页](index.md)

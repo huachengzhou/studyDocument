@@ -5,7 +5,7 @@
 
 
 
-### **[swing介绍](./readme.md)**
+### **[swing介绍](readme.md)**
 
 
 
@@ -19,4 +19,4 @@
 
 
 
-## [回到Java首页](../index.md)
+## [回到上级](../index.md)
