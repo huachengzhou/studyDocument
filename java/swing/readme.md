@@ -1,3 +1,4 @@
+
 # Swing 类库结构
 
 
@@ -72,23 +73,6 @@
 
 
 ![Container](./swing_Container.gif)
-
-
-
-```
-http://c.biancheng.net/view/1206.html
-```
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## [回到swing首页](index.md)
