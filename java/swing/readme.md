@@ -2,14 +2,20 @@
 # Swing 类库结构
 
 
-> Swing 是新一代的图形界面工具。使用 Swing 来开发图形界面比 AWT 更加优秀，因为 Swing 是一种轻量级组件，它采用纯 Java 实现，不再依赖于本地平台的图形界面，所以可以在所有平台上保持相同的运行效果，对跨平台支持比较出色。除此之外，Swing 提供了比 AWT 更多的图形界面组件，因此可以开发出美观的图形界面程序。
+```
+
+Swing 是新一代的图形界面工具。使用 Swing 来开发图形界面比 AWT 更加优秀，因为 Swing 是一种轻量级组件，它采用纯 Java 实现，不再依赖于本地平台的图形界面，所以可以在所有平台上保持相同的运行效果，对跨平台支持比较出色。除此之外，Swing 提供了比 AWT 更多的图形界面组件，因此可以开发出美观的图形界面程序。
+
+```
+
+
 
 
 + Swing 组件都采用 MVC（Model-View-Controller，即模型-视图-控制器）的设计，实现 GUI 组件的显示逻辑和数据逻辑的分离，从而允许程序员自定义 Render 来改变 GUI 组件的显示外观，以提供更多的灵活性。
 
 + Swing 围绕 JComponent 组件构建，JComponent 则由 AWT 的容器类扩展而来。Swing 组织结构如图 1 所示。
 
-# Swing 包
+# Swing包
 
 
 ![swing](./swing_java_info.gif)
@@ -75,4 +81,4 @@
 ![Container](./swing_Container.gif)
 
 
-## [回到swing首页](index.html)
+## [回到swing首页](/index.md)
