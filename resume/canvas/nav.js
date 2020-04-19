@@ -136,3 +136,16 @@ function loadSensitiveTable(target) {
     };
     target.bootstrapTable(init);
 }
+
+
+//https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Basic_usage
+
+// https://blog.csdn.net/gertyy/article/details/53637951
+
+
+//https://www.w3school.com.cn/tags/html_ref_canvas.asp
+
+
+//https://www.runoob.com/w3cnote/html5-canvas-intro.html
+
+//https://github.com/827652549/CanvasStudy
