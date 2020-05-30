@@ -44,3 +44,5 @@ sudo su postgres -c psql template1
 然后输入(退出)
 postgres=# \q
 ```
+
+## [回到上级](./index.md)

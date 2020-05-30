@@ -47,7 +47,7 @@
 #  [**web学习**](.././web/index.md)
 
 
-
+#  [**记忆法**](./memoryPath/memory.md)
 
 
 
