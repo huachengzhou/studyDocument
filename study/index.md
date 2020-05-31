@@ -49,6 +49,10 @@
 
 #  [**记忆法**](./memoryPath/memory.md)
 
+#  [**冥想**](./meditation/info.md)
+
+#  [**学习方法**](./method/studyInfo.md)
+
 
 
 
