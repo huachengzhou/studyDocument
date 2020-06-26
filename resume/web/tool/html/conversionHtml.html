@@ -51,7 +51,7 @@
                                     onclick="toHumpAndToLine(this,'hump')">下划线转驼峰
                             </button>
                             <button type="button" class="btn btn-danger"
-                                    onclick="$(this).closest('form').find('[name=humpToLineValue]').val('')">
+                                    onclick="$(this).closest('form').find('[name=humpToLineValue]').val('').end().closest('form').find('[name=humpToLine]').val('')">
                                 清空结果
                             </button>
                         </div>
@@ -79,7 +79,7 @@
                                     onclick="toHtmlJavascript(this,'html');">转html
                             </button>
                             <button type="button" class="btn btn-danger"
-                                    onclick="$(this).closest('form').find('[name=htmlJavascriptValue]').val('')">
+                                    onclick="$(this).closest('form').find('[name=htmlJavascriptValue]').val('').end().closest('form').find('[name=htmlJavascript]').val('')">
                                 清空结果
                             </button>
                         </div>
@@ -125,7 +125,7 @@
                                     onclick="toBinaryHandle(this,'10-16');">十进制转十六进制
                             </button>
                             <button type="button" class="btn btn-danger"
-                                    onclick="$(this).closest('form').find('[name=binaryValue]').val('')">
+                                    onclick="$(this).closest('form').find('[name=binaryValue]').val('').end().closest('form').find('[name=binary]').val('')">
                                 清空结果
                             </button>
                         </div>
@@ -162,7 +162,7 @@
                                     onclick="toUpperLowerHandle(this,'sentence');"> 一句话首字母转大写
                             </button>
                             <button type="button" class="btn btn-danger"
-                                    onclick="$(this).closest('form').find('[name=UpperLowertValue]').val('')">
+                                    onclick="$(this).closest('form').find('[name=UpperLowertValue]').val('').end().closest('form').find('[name=UpperLower]').val('')">
                                 清空结果
                             </button>
                         </div>
