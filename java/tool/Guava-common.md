@@ -176,6 +176,46 @@ public static void testA() {
     }
 ```
 
+```
+//连接器[Joiner]
+    @Test
+    public void testJoiner() {
+        //创建连接器
+        Joiner joiner = Joiner.on("; ").skipNulls();//skipNulls 跳过null
+
+        String join = joiner.join("Harry", null, "Ron", "Hermione");
+        System.out.println(join);
+
+        //apache 下的连接器
+        String join1 = StringUtils.join(Arrays.asList("Harry", "Ron", "Hermione"), ";");
+        System.out.println(join1);
+
+        //useForNull 当连接的字符串有null值那么使用yes代替
+        String join2 = Joiner.on("=").useForNull("yes").join(Arrays.asList("Harry", null, "Ron", "Hermione"));
+        System.out.println(join2);
+
+        //把连接后的字符串放入StringBuilder里面
+        StringBuilder builder = new StringBuilder();
+        StringBuilder stringBuilder = Joiner.on("=").useForNull("yes2").appendTo(builder, "Harry", "Ron", null,"Hermione");
+
+        System.out.println(builder.toString());
+        System.out.println(stringBuilder.toString());
+    }
+
+    @Test
+    public void testSplitter() {
+        String text = "the ,quick, , brown         , fox,              jumps, over, the, lazy, little dog" ;
+//        "dsdh".split() ;
+        Iterable<String> split = Splitter.on(",").trimResults().omitEmptyStrings().limit(4).split(text);
+        split.spliterator().forEachRemaining(s -> System.out.println(s));
+    }
+    
+    omitEmptyStrings()	从结果中自动忽略空字符串
+    trimResults()	移除结果字符串的前导空白和尾部空白
+    trimResults(CharMatcher)	给定匹配器，移除结果字符串的前导匹配字符和尾部匹配字符
+    limit(int)	限制拆分出的字符串数量
+```
+
 + Collection 不可变集合
 
 * 不可变对象有很多优点，包括
