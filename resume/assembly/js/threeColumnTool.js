@@ -120,6 +120,48 @@ threeColumn.handleEvent = function (key, _this) {
             threeColumn.target.empty().append(html);
             break;
         }
+        case "technology.stack":{
+            var html = "";
+            var tree = new ThreeObj("h2", {"class": "article-title"}, "技术栈");
+            html += tree.toString();
+
+            var tempA = "";
+            tree.setName("li").setAttribute({}).setText("<P> 入门就是熟悉各种框架，进阶就是能根据问题场景选择使用什么技术，高阶就是内功的修炼了，核心就是是网络、安全和存储</p>");
+            tempA += tree.toString();
+            tree.setName("ul").setAttribute({}).setText(tempA);
+            html += tree.toString();
+
+            var tempE1 = "";
+            tree.setName("li").setAttribute({}).setText("<P> 进程线程+配置+数据库+网络->各种新名词</p>");
+            tempE1 += tree.toString();
+            tree.setName("ul").setAttribute({}).setText(tempE1);
+            html += tree.toString();
+
+
+            var tempB = "";
+            tree.setName("li").setAttribute({}).setText("<P> 入门就是熟悉各种框架 （因为刚入门的你还没有遇上什么难题，难题都是dalao们扛下来的，你只能多学点框架，但是不知道他们将会用在哪些场景，太细节的坑也没遇到过）</p>");
+            tempB += tree.toString();
+            tree.setName("ul").setAttribute({}).setText(tempB);
+            html += tree.toString();
+
+            var tempC = "";
+            tree.setName("li").setAttribute({}).setText("<P>  进阶就是能根据问题场景选择使用什么技术 （你可能已经完成了一个或多个项目，能够独立处理项目中遇到的很多大小坑，甚至你这时候已经是团队的项目经理，遇到问题老板第一个会追责你，你不得不努力解决遇到的坑，下次见到这个坑时，你就知道用什么方法解决了）</p>");
+            tempC += tree.toString();
+            tree.setName("ul").setAttribute({}).setText(tempC);
+            html += tree.toString();
+
+            var tempD = "";
+            tree.setName("li").setAttribute({}).setText("<P>  高阶就是内功的修炼了，核心就是是网络、安全和存储。 （你早已经坐稳团队的leader位置，自己的项目经历过无数的恶劣的场景，也加班熬夜解决了团队各种棘手的问题，但你并不非常高兴，因为遇到的坑多了，就想深入仔细研究一下这些坑到底是什么，你决定往深入了研究，你终于明白不同系统的网络之间怎么连接才最稳定，系统怎么设计才安全，自己的存储系统的IO为什么老是突然飙高。）</p>");
+            tempD += tree.toString();
+            tree.setName("ul").setAttribute({}).setText(tempD);
+            html += tree.toString();
+
+            //end
+            tree.setName("article").setAttribute({}).setText(html);
+            html = tree.toString();
+            threeColumn.target.empty().append(html);
+            break;
+        }
         case "Java.structure": {
             var html = "";
             var tree = new ThreeObj("h2", {"class": "article-title"}, "程序结构");
