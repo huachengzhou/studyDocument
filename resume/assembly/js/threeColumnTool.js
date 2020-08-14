@@ -120,7 +120,7 @@ threeColumn.handleEvent = function (key, _this) {
             threeColumn.target.empty().append(html);
             break;
         }
-        case "technology.stack":{
+        case "technology.stack": {
             var html = "";
             var tree = new ThreeObj("h2", {"class": "article-title"}, "技术栈");
             html += tree.toString();
@@ -163,21 +163,25 @@ threeColumn.handleEvent = function (key, _this) {
             break;
         }
         case "Java.structure": {
-            var html = "";
-            var tree = new ThreeObj("h2", {"class": "article-title"}, "程序结构");
-            html += tree.toString();
-            var tempB = "";
-            tree.setName("li").setAttribute({}).setText("<P> Java是区分大小写的</p>");
-            tempB += tree.toString();
-            tree.setName("ul").setAttribute({}).setText(tempB);
-            html += tree.toString();
-            //end
-            tree.setName("article").setAttribute({}).setText(html);
-            html = tree.toString();
-            threeColumn.target.empty().append(html);
+            threeColumn.target.empty().append(threeColumn.handleEvent.print(
+                [new ThreeObj("h2", {"class": "article-title"}, "程序结构"),
+                    new ThreeObj("ul", {}, new ThreeObj("li", {"class": "article-title"}, "<P> Java是区分大小写的</p>").toString())
+                ]
+            ));
             break;
         }
         default:
             break;
     }
+};
+
+
+threeColumn.handleEvent.print = function (arr) {
+    var text = "";
+    if ($.isArray(arr)) {
+        $.each(arr, function (k, obj) {
+            text += obj.toString();
+        });
+    }
+    return text;
 };
