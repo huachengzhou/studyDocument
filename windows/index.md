@@ -27,6 +27,8 @@ Windows 10 Mobile是微软发发布的一个手机系统 [5]  。
 
 ## [DOS基础](DOS_basic.md)
 
+## [FTP](FTP.md)
+
 
 ## [DOS常用命令(文件)](DOS_file.md)
 
