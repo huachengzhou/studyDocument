@@ -6,11 +6,37 @@
     <script src="resources.js"></script>
     <style>
         body {
-            background-color: #b0c4de;
-            /*background-image: url("img/apic2754.jpg");*/
-            /*background-position: 0 0;*/
-            /*background-repeat: no-repeat;*/
-            /*background-attachment: scroll;*/
+            background-color: #000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+
+        span {
+            width: 30px;
+            height: 30px;
+            background: url("resources/img/star.png") no-repeat;
+            position: absolute;
+            background-size: 100% 100%;
+            animation: flash 1s alternate infinite;
+        }
+
+        @keyframes flash {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        span:hover {
+            transform: scale(3, 3) rotate(180deg) !important;
+            transition: all 1s;
         }
     </style>
 </head>
@@ -27,15 +53,21 @@
                         </div>
                         <form class="navbar-form navbar-left" role="search">
                             <div class="form-group"></div>
-                            <button type="button" class="btn btn-info" onclick="$('.viewHtml').children().hide();"><i
+                            <button type="button" class="btn btn-info"
+                                    onclick="$('.viewHtml').children().hide(); $('#internet_include').show() ;"><i
                                     class="fa fa-signal"></i> 网络
                             </button>
-                            <button type="button" class="btn btn-success" onclick="$('.viewHtml').children().hide();"><span
+                            <button type="button" class="btn btn-success"
+                                    onclick="$('.viewHtml').children().hide();$('#frontEnd_include').show() ;"><span
                                     class="fa fa-stack-exchange"></span> 前端
                             </button>
                             <button type="button" class="btn btn-primary"
                                     onclick="$('.viewHtml').children().hide();$('#conversionHtml_include').show() ; "><span
                                     class="fa fa-exchange"></span> 转换
+                            </button>
+                            <button type="button" class="btn btn-primary"
+                                    onclick="$('.viewHtml').children().hide();$('#jsonHtml_include').show() ; "><span
+                                    class="fa fa-exchange"></span> json转换
                             </button>
                             <button type="button" class="btn btn-primary"
                                     onclick="$('.viewHtml').children().hide();$('#format_include').show() ; "><span
@@ -44,8 +76,8 @@
                         </form>
                         <div class="navbar-right">
                             <ul class="nav navbar-nav">
-                                <li><a >sql 语法</a></li>
-                                <li><a >常用js方法</a></li>
+                                <li><a>sql 语法</a></li>
+                                <li><a>常用js方法</a></li>
                             </ul>
                         </div>
                     </div>
@@ -65,6 +97,8 @@
                         <div id="conversionHtml_include" style="display: none;"></div>
                         <div id="format_include" style="display: none;"></div>
                         <div id="internet_include" style="display: none;"></div>
+                        <div id="frontEnd_include" style="display: none;"></div>
+                        <div id="jsonHtml_include" style="display: none;"></div>
                         <canvas id="drawingModel" width="300" height="390">没有金刚钻就不要揽瓷器活</canvas>
                     </div>
                 </div>
@@ -75,11 +109,50 @@
 
 
 <script>
+
+    function loadStarEvent() {
+        // 屏幕的尺寸
+        var screenW = document.body.clientWidth + 1000;
+        var screenH = window.screen.height * 3.6 + 20;
+
+        // 2. 动态创建多个星星
+        for (var i = 0; i < 1250; i++) {
+            var d = new Date();
+
+            var span = document.createElement('span');
+            document.body.appendChild(span);
+
+            //位置随机
+            var x = parseInt(Math.random() * screenW + d.getMinutes());
+            var y = parseInt(Math.random() * screenH + d.getSeconds() / 2);
+            span.style.left = x + 'px';
+            span.style.top = y + 'px';
+
+            //大小随机
+            var scale = Math.random() * 1.5;
+            span.style.transform = 'scale(' + scale + ', ' + scale + ')';
+
+            //频率随机
+            var rate = Math.random() * 2;
+            span.style.animationDelay = rate + 's';
+        }
+    }
+
+    // document.addEventListener("DOMSubtreeModified", function () {
+    //     loadStarEvent();
+    // }, false);
+
+    window.onload = function () {
+        loadStarEvent();
+    };
+
     $(document).ready(function () {
         /* 发生跨域错误  浏览器 快捷栏 目标添加 --allow-file-access-from-files*/
         $("#conversionHtml_include").load("html/conversionHtml.html");
         $("#format_include").load("html/format_include.html");
         $("#internet_include").load("html/internet.html");
+        $("#frontEnd_include").load("html/frontEnd_include.html");
+        $("#jsonHtml_include").load("html/jsonHtml_include.html");
     });
 </script>
 

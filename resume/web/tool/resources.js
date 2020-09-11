@@ -48,6 +48,9 @@ document.writeln("<script src='../../assembly/plugins/message/bootbox.js'></scri
 document.writeln(" <link href='resources/css/jquery.scrollbar.min.css ' rel='stylesheet'> ");
 document.writeln("<script src='resources/js/jquery.scrollbar.min.js'></script>");
 
+document.writeln("<script src='resources/js/jsoneditor.min.js'></script>");
+document.writeln(" <link href='resources/css/jsoneditor.min.css ' rel='stylesheet'> ");
+
 document.writeln("<script src='resources/js/webTool.js'></script>");
 
 <!-- 选项卡js -->
@@ -190,9 +193,61 @@ function formatCode(_this) {
     if (js_source && js_source.charAt(0) === '<') {
         value = style_html(js_source, tabSize, tabChar, 80);
     } else {
-       value = js_beautify(js_source, tabSize, tabChar);
+        value = js_beautify(js_source, tabSize, tabChar);
     }
     form.find("textarea[name=code]").val(value);
+}
+
+
+function json_formatCode(_this) {
+
+    var form = $(_this).closest("form");
+    var data = formSerializeArray(form);
+
+// create the editor
+    var container1 = document.getElementById('jsoneditor1');
+    var container2 = document.getElementById('jsoneditor2');
+
+    var optionsOutput1 = {
+        mode : 'code',
+        error : function(err) {
+            alert('EF1 ->' + err.toString());
+        }
+    };
+
+    var optionsOutput2 = {
+        mode : 'tree',
+        modes : [ 'view', 'form', 'text','code', 'tree'], // allowed modes
+        error : function(err) {
+            alert('EF1 ->' + err.toString());
+        }
+    };
+
+    var json = data.code ;
+
+    var editor1 = new JSONEditor(container1, optionsOutput1, json);
+    var editor2 = new JSONEditor(container2, optionsOutput2, json);
+
+    try {
+
+        var jsonStr = editor1.getText();
+
+        var jsonObject = JSON.parse(jsonStr);
+        editor1.setMode("code");
+        editor1.setText(JSON.stringify(jsonObject, null, 2));
+
+
+        editor2.setText(JSON.stringify(jsonObject, null, 0));
+        editor2.setMode("tree");
+        editor2.expandAll();
+
+
+        $("#jsoneditor3").text(jsonObject) ;
+        // $("#jsoneditor3").text(jsonObject.toString()) ;
+
+    } catch (e) {
+
+    }
 }
 
 
