@@ -2,19 +2,6 @@
 
 
 
-
-### Java se 完整学习
-
-### 计算机基础学习
-
-### 计算机网络
-
-### 操作系统
-
-### 算法&&多线程
-
-### 数据库
-
 ##  [**自考**](./selfEducation/index.md)
 
 
@@ -31,6 +18,8 @@
 #  [**冥想**](./meditation/info.md)
 
 #  [**学习方法**](./method/studyInfo.md)
+
+#  [**英语**](./English/index.md)
 
 
 
