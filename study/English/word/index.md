@@ -1,6 +1,4 @@
-
-# 英语
-
+# 单词
 
 
 
@@ -10,9 +8,8 @@
 
 
 
-# [新概念英语](NewConceptEnglish/index.md)
 
-# [单词](word/index.md)
+
 
 
 
