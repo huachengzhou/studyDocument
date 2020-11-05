@@ -41,6 +41,8 @@ document.writeln("<script src='../../assembly/plugins/jquery/jquery-validation-1
 
 <!-- 图标组件 -->
 document.writeln(" <link href='../../assembly/plugins/bootstrap/font-awesome-4.7.0/css/font-awesome.css ' rel='stylesheet'> ");
+document.writeln(" <link href='../../assembly/plugins/jsonedit/jsonedit.css' rel='stylesheet'> ");
+document.writeln("<script src='../../assembly/plugins/jsonedit/jsonedit.js'></script>");
 <!-- 公共js -->
 document.writeln("<script src='../../assembly/js/common/common.js'></script>");
 document.writeln("<script src='../../assembly/plugins/message/bootbox.js'></script>");
