@@ -25,7 +25,8 @@
 
 
 > 操作都是原子的
->> 所有 Redis 的操作都是原子的，从而确保当两个客户同时访问 Redis 服务器时，得到的是更新后的值（最新值）。在需要高并发的场合可以考虑使用 Redis 的事务，处理一些需要锁的业务。
+>
+> > 所有 Redis 的操作都是原子的，从而确保当两个客户同时访问 Redis 服务器时，得到的是更新后的值（最新值）。在需要高并发的场合可以考虑使用 Redis 的事务，处理一些需要锁的业务。
 
 
 # 二.Redis安装
@@ -33,6 +34,28 @@
 
 
 # 三.Redis命令
+
+```
+ keys * 获取所有的key
+ clear 清除屏幕
+ quit ,exit 退出
+ set name blake 设置值
+  setex ip 5 192.1.1.168 设置值并且设置过期时长
+ get name 取出值
+  del name 删除key所对应的值
+   exists key 判断是否存在key
+   mset key1,key2...设置多个值
+   mget key1,key2...取出多个值
+    append age 1 追加key的value
+    strlen key 获取某个key的value的长度
+  
+  select index 选择数据库 (注意redis一共16个数据库 并且从0开始)
+  move key db或者 move key index (redis一共16个数据库  move age 7) 将某个key移动到某个数据库中
+   flushdb 清除当前数据库
+   flushall 清除16个数据库
+  type key 获取数据类型 (type name == > string)
+```
+
 
 ### 3.1 redis存储数据结构
 
