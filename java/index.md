@@ -2,6 +2,15 @@
 
 ## **Java技术体系**
 
+```
+消息队列,nosql,sql,dubbo,zookeeper,nginx,springcloud,springboot,spring,jpa,mybatis
+java语法，java多线程与并发,jdbc,设计模式
+```
+
+![A1](img/arch-overview-2-1.png)
+![A2](img/arch-overview-2-2.png)
+![A3](img/java-concurrent-overview-1.png)
+
 ## [java基础总结大全](java基础总结大全.md)
 
 ## [Java的程序结构](programStructure.md)
