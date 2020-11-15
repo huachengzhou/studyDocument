@@ -21,6 +21,8 @@ java语法，java多线程与并发,jdbc,设计模式
 
 ## [jsp el 表达式](./jsp/index.md)
 
+## [Java多线程编程](./thread/index.md)
+
 
 ## JVM体系
 
