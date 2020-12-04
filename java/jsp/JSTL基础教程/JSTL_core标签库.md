@@ -258,6 +258,84 @@ code
 	<c:url value="/index.jsp" var="varname"></c:url>
 	<c:out value="${varname }"></c:out>
 
+13. 表格合并
 
+```
+            <div class="page-inner mt--5" style="margin-bottom: 1rem;">
+                <div class="row mt--2">
+                    <div class="col-md-12">
+                        <div class="card full-height">
+                            <div class="card-header">
+                                <div class="card-head-row">
+                                    <div class="card-title">工作事项配置</div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <form class="form-horizontal">
+                                    <div class="row form-group">
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>阶段</th>
+                                                    <th>工作事项</th>
+
+                                                    <th>名称</th>
+                                                    <th>排序</th>
+                                                    <th>责任人</th>
+                                                    <th>描述</th>
+                                                    <th>编辑</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                <c:forEach items="${projectWorkStageConfigVoList}" var="ProjectWorkStageConfigVo" varStatus="StatusWorkStageConfigVo">
+
+                                                    <c:forEach items="${ProjectWorkStageConfigVo.projectPhaseConfigVoList}" var="ProjectPhaseConfigVo" varStatus="StatusPhaseConfigVo">
+                                                        <c:forEach items="${ProjectPhaseConfigVo.projectPhaseConfigList}" var="ProjectPhaseConfig" varStatus="StatusConfig">
+                                                            <tr>
+                                                                <c:choose>
+                                                                    <c:when test="${ StatusConfig.first && StatusPhaseConfigVo.first}">
+                                                                        <td  rowspan="${fn:length(ProjectWorkStageConfigVo.projectPhaseConfigVoList) * fn:length(ProjectPhaseConfigVo.projectPhaseConfigList)}">
+                                                                                ${ProjectWorkStageConfigVo.workStageName}
+                                                                        </td>
+                                                                    </c:when>
+                                                                </c:choose>
+                                                                <c:choose>
+                                                                    <c:when test="${ StatusConfig.first}">
+                                                                        <td  rowspan="${fn:length(ProjectPhaseConfigVo.projectPhaseConfigList)}">
+                                                                                ${ProjectPhaseConfigVo.projectPhaseName}
+                                                                        </td>
+                                                                    </c:when>
+                                                                </c:choose>
+                                                                <td >${ProjectPhaseConfig.parName} </td>
+                                                                <td >${ProjectPhaseConfig.sorting} </td>
+                                                                <td >${ProjectPhaseConfig.parValues} </td>
+                                                                <td >${ProjectPhaseConfig.remark} </td>
+                                                                <td>
+                                                                    <button type="button" onclick="editProjectPhaseConfig('${ProjectPhaseConfig.id}');"
+                                                                            style="margin-left: 5px;"
+                                                                            class="btn  btn-primary  btn-xs tooltips"
+                                                                            data-placement="bottom" data-original-title="编辑">
+                                                                        <i class="fa fa-pen"></i>
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </c:forEach>
+                                                    </c:forEach>
+                                                </c:forEach>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+```
 
 ## [回到上级目录](../index.md)
