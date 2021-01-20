@@ -1,8 +1,1 @@
 theme: jekyll-theme-dinky
-github:
-  is_project_page: true
-  title: Hexo
-  subtitle:blog
-  description:
-  author: zch
-  timezone: Asia/Shanghai
