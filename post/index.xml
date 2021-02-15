@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jane-主题-Hugo</title>
+    <link>https://huachengzhou.github.io/studyDocument/post/</link>
+    <description>Recent content in Posts on Jane-主题-Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Mar 2018 16:01:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://huachengzhou.github.io/studyDocument/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jane 主题预览</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/jane%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</link>
+      <pubDate>Tue, 06 Mar 2018 16:01:23 +0800</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/jane%E4%B8%BB%E9%A2%98%E9%A2%84%E8%A7%88/</guid>
+      <description>Jane 是一个专注于阅读体验的 Hugo 主题。最早的版本基于hugo-theme-even，在它的基础上进行了重新改造。简约、可定制性强。主要特色：响应式</description>
+    </item>
+    
+    <item>
+      <title>10个Java经典的List面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84list%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84list%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1、你知道的 List 都有哪些？ ArrayList、LinkedList、Vector 等。 2、List 和 Vector 有什么区别？ Vector 是 List 接口下线程安全的集合。 3</description>
+    </item>
+    
+    <item>
+      <title>10个Java经典的Main方法面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84main%E6%96%B9%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84main%E6%96%B9%E6%B3%95%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1.main方法是做什么用的？ main方法是Java程序的入口方法，JVM在运行的时候会首先查找main方法。 2.不用main方法如何运行一</description>
+    </item>
+    
+    <item>
+      <title>10个Java经典的String面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84string%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84string%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1 、String是基本数据类型吗？ String不是基本数据类型。 2 、String是可变的话？ String是final类型的，不可变。 3 、怎么</description>
+    </item>
+    
+    <item>
+      <title>10道Java面试必备的设计模式面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E9%81%93java%E9%9D%A2%E8%AF%95%E5%BF%85%E5%A4%87%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E9%81%93java%E9%9D%A2%E8%AF%95%E5%BF%85%E5%A4%87%E7%9A%84%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1.请列举出在 JDK 中几个常用的设计模式？ 单例模式（Singleton pattern）用于 Runtime，Calendar 和其他的一些类中。工厂</description>
+    </item>
+    
+    <item>
+      <title>10道Java高级必备的Netty面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E9%81%93java%E9%AB%98%E7%BA%A7%E5%BF%85%E5%A4%87%E7%9A%84netty%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_10%E9%81%93java%E9%AB%98%E7%BA%A7%E5%BF%85%E5%A4%87%E7%9A%84netty%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1.BIO、NIO和AIO的区别？ BIO：一个连接一个线程，客户端有连接请求时服务器端就需要启动一个线程进行处理。线 程开销大。 伪异步IO：将</description>
+    </item>
+    
+    <item>
+      <title>15道经典的Tomcat面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_15%E9%81%93%E7%BB%8F%E5%85%B8%E7%9A%84tomcat%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_15%E9%81%93%E7%BB%8F%E5%85%B8%E7%9A%84tomcat%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1、Tomcat 的缺省端口是多少，怎么修改？ 1）找到 Tomcat 目录下的 conf 文件夹2）进入 conf 文件夹里面找到 server.xml 文件3）打开 server.xml 文件 4）在 server.xml 文件里面找到下列信</description>
+    </item>
+    
+    <item>
+      <title>15道面试常问的Java多线程面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_15%E9%81%93%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E7%9A%84java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_15%E9%81%93%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E7%9A%84java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1) 现在有 T1、T2、T3 三个线程，你怎样保证 T2 在 T1 执行完后执行，T3 在 T2 执行完后执行？ 这个线程问题通常会在第一轮或电话面试阶段被问到，目的是</description>
+    </item>
+    
+    <item>
+      <title>17道消息队列Kafka面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_17%E9%81%93%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97kafka%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_17%E9%81%93%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97kafka%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>Kafka 的设计时什么样的呢？ Kafka 将消息以 topic 为单位进行归纳 将向Kafka topic 发布消息的程序成为 producers. 将预订 topics 并消费消息的程序成为 consumer. Kafka 以集群的方式运行，可以由</description>
+    </item>
+    
+    <item>
+      <title>18道非常牛逼的Nginx面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_18%E9%81%93%E9%9D%9E%E5%B8%B8%E7%89%9B%E9%80%BC%E7%9A%84nginx%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_18%E9%81%93%E9%9D%9E%E5%B8%B8%E7%89%9B%E9%80%BC%E7%9A%84nginx%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1、请解释一下什么是 Nginx? Nginx 是一个 web 服务器和反向代理服务器，用于 HTTP、HTTPS、SMTP、POP3 和IMAP 协议。 2、请列举 Nginx 的一些特性。</description>
+    </item>
+    
+    <item>
+      <title>1ch</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E4%BF%A1%E6%81%AF%E5%92%A8%E8%AF%A2_1ch/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E4%BF%A1%E6%81%AF%E5%92%A8%E8%AF%A2_1ch/</guid>
+      <description>信息系统概述 信息 什么是社会的标志 答:信息是当今社会的标志 一:信息的含义 (填空题，单选题，简答题) 1:) 信息的存在不以主体(如人、生物或机器系统)</description>
+    </item>
+    
+    <item>
+      <title>20道面试官常问的JVM面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_20%E9%81%93%E9%9D%A2%E8%AF%95%E5%AE%98%E5%B8%B8%E9%97%AE%E7%9A%84jvm%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_20%E9%81%93%E9%9D%A2%E8%AF%95%E5%AE%98%E5%B8%B8%E9%97%AE%E7%9A%84jvm%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>内存模型以及分区，需要详细到每个区放什么。 堆里面的分区：Eden，survival （from+ to），老年代，各自的特点。 对象创建方法，对象</description>
+    </item>
+    
+    <item>
+      <title>20道顶尖的Springoot面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_20%E9%81%93%E9%A1%B6%E5%B0%96%E7%9A%84springoot%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_20%E9%81%93%E9%A1%B6%E5%B0%96%E7%9A%84springoot%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>面试了一些人，简历上都说自己熟悉 Spring Boot, 或者说正在学习 Spring Boot，一问他们时，都只停留在简单的使用阶段，很多东西都不清楚，也让我对面试者大失所望</description>
+    </item>
+    
+    <item>
+      <title>22道面试常问的SpringMVC面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_22%E9%81%93%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E7%9A%84springmvc%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_22%E9%81%93%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE%E7%9A%84springmvc%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>1、什么是SpringMvc？ 答：SpringMvc 是 spring 的一个模块，基于MVC 的一个框架，无需中间整合层来整合。 2、Spring MVC 的优点： 答</description>
+    </item>
+    
+    <item>
+      <title>24道消息队列RabbitMQ面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_24%E9%81%93%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97rabbitmq%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_24%E9%81%93%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97rabbitmq%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>问题一：RabbitMQ 中的 broker 是指什么？cluster 又是指什么？ 答：broker 是指一个或多个 erlang node 的逻辑分组，且 node 上运行着 RabbitMQ 应用程序。cl</description>
+    </item>
+    
+    <item>
+      <title>24道经典的英语面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_24%E9%81%93%E7%BB%8F%E5%85%B8%E7%9A%84%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_24%E9%81%93%E7%BB%8F%E5%85%B8%E7%9A%84%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>Q： Can you sell yourself in two minutes？ Go for it. （你能在两分钟內自我推荐吗？大胆试试吧！） A： With my qualifications and experience, I feel I am hardworking, responsible and diligent in any project I undertake. Your organization could benefit from my analytical and interpersonal s</description>
+    </item>
+    
+    <item>
+      <title>27道顶尖的Java多线程锁、内存模型面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_27%E9%81%93%E9%A1%B6%E5%B0%96%E7%9A%84java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%94%81%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_27%E9%81%93%E9%A1%B6%E5%B0%96%E7%9A%84java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%94%81%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>Synchronized 相关问题 问题一： Synchronized 用过吗， 其原理是什么？ 这是一道 Java 面试中几乎百分百会问到的问题，因为没有任何写过并发程序的开发者会没听说或者没接触过 Syn</description>
+    </item>
+    
+    <item>
+      <title>29道常见的Spring面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_29%E9%81%93%E5%B8%B8%E8%A7%81%E7%9A%84spring%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_29%E9%81%93%E5%B8%B8%E8%A7%81%E7%9A%84spring%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>以下为 spring 常见面试问题： 1、什么是 Spring 框架？Spring 框架有哪些主要模块？ Spring 框架是一个为 Java 应用程序的开发提供了综合、广泛的基础性支持的 Java 平台。</description>
+    </item>
+    
+    <item>
+      <title>2ch</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E4%BF%A1%E6%81%AF%E5%92%A8%E8%AF%A2_2ch/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E4%BF%A1%E6%81%AF%E5%92%A8%E8%AF%A2_2ch/</guid>
+      <description>信息系统开发方法论 问信息系统开发方法有哪些 生命周期法、原型法、结构化方法、面向对象方法、构件法、面向服务方法、敏捷开发方法 概述 1 信息系统开发</description>
+    </item>
+    
+    <item>
+      <title>30个Java经典的集合面试题</title>
+      <link>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_30%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84%E9%9B%86%E5%90%88%E9%9D%A2%E8%AF%95%E9%A2%98/</link>
+      <pubDate>Mon, 15 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_30%E4%B8%AAjava%E7%BB%8F%E5%85%B8%E7%9A%84%E9%9B%86%E5%90%88%E9%9D%A2%E8%AF%95%E9%A2%98/</guid>
+      <description>Java 集合框架是什么？说出一些集合框架的优点？ 每种编程语言中都有集合，最初的 Java 版本包含几种集合类：Vector、Stack、HashTable 和</description>
+    </item>
+    
+  </channel>
+</rss>

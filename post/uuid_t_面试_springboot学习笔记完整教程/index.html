@@ -1,0 +1,4338 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SpringBoot学习笔记完整教程 - Jane-主题-Hugo</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="zch" /><meta name="description" content="测试博客" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53" />
+
+
+<link rel="canonical" href="https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_springboot%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/" />
+
+
+
+
+
+<link rel="icon" href="/studyDocument/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/studyDocument/sass/jane.min.b3a8813c06e6d785beba22bf8264e174fa2cb3a396b22f9ba24e2c00c18aaf7f.css" integrity="sha256-s6iBPAbm14W&#43;uiK/gmThdPoss6OWsi&#43;bok4sAMGKr38=" media="screen" crossorigin="anonymous">
+
+
+
+
+
+<meta property="og:title" content="SpringBoot学习笔记完整教程" />
+<meta property="og:description" content="测试博客" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://huachengzhou.github.io/studyDocument/post/uuid_t_%E9%9D%A2%E8%AF%95_springboot%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%AE%8C%E6%95%B4%E6%95%99%E7%A8%8B/" /><meta property="article:published_time" content="2021-02-15T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2021-02-15T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="SpringBoot学习笔记完整教程">
+<meta itemprop="description" content="测试博客">
+
+
+<meta itemprop="datePublished" content="2021-02-15T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2021-02-15T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="31021">
+
+
+
+<meta itemprop="keywords" content="面试," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SpringBoot学习笔记完整教程"/>
+<meta name="twitter:description" content="测试博客"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/studyDocument/" class="logo">技术博客</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/">主页</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/post/">归档</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/tags/">标签</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/categories/">分类</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/about/">关于</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://gohugo.io" rel="noopener" target="_blank">
+              外部链接
+              
+              <i class="iconfont">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
+  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
+</svg>
+
+              </i>
+            </a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          <div class="mobile-menu-parent">
+            <span class="mobile-submenu-open"></span>
+            <a href="https://huachengzhou.github.io/studyDocument/">
+              docs
+            </a>
+          </div>
+          <ul class="mobile-submenu-list">
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E7%9F%AD%E7%A0%81%E9%A2%84%E8%A7%88/">短码预览</a>
+              </li>
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/">图片预览</a>
+              </li>
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA/">语法高亮显示</a>
+              </li>
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E6%95%B0%E5%AD%A6%E9%A2%84%E8%A7%88/">数学预览</a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/studyDocument/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/studyDocument/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/studyDocument/" class="logo">
+    
+      技术博客
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/">主页</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/post/">归档</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/tags/">标签</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/categories/">分类</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://huachengzhou.github.io/studyDocument/about/">关于</a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="https://gohugo.io" rel="noopener" target="_blank">
+              外部链接
+              
+              <i class="iconfont">
+                <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M623.36 272.96 473.216 423.04C467.2 429.056 467.072 438.656 472.896 444.416c0 0-6.72-6.656 1.6 1.6C496.064 467.648 528.64 500.224 528.64 500.224 534.464 506.048 544 505.856 550.016 499.904l150.08-150.144 67.328 66.432c9.024 8.96 27.456 4.544 30.4-8.96 19.968-92.608 46.656-227.52 46.656-227.52 6.848-34.496-16.192-56.704-49.92-49.92 0 0-134.656 26.816-227.328 46.784C560.32 178.048 556.352 182.272 554.752 187.136c-3.2 6.208-3.008 14.208 3.776 20.992L623.36 272.96z"></path>
+  <path d="M841.152 457.152c-30.528 0-54.784 24.512-54.784 54.656l0 274.752L237.696 786.56 237.696 237.696l206.016 0c6.656 0 10.752 0 13.248 0C487.68 237.696 512 213.184 512 182.848 512 152.32 487.36 128 456.96 128L183.04 128C153.216 128 128 152.576 128 182.848c0 3.136 0.256 6.272 0.768 9.28C128.256 195.136 128 198.272 128 201.408l0 639.488c0 0.064 0 0.192 0 0.256 0 0.128 0 0.192 0 0.32 0 30.528 24.512 54.784 54.784 54.784l646.976 0c6.592 0 9.728 0 11.712 0 28.736 0 52.928-22.976 54.464-51.968C896 843.264 896 842.304 896 841.344l0-20.352L896 561.408 896 512.128C896 481.792 871.424 457.152 841.152 457.152z"></path>
+</svg>
+
+              </i>
+            </a>
+          
+
+        
+
+      </li>
+    
+        <li class="menu-item">
+        
+          
+          <a class="menu-item-link menu-parent" href="https://huachengzhou.github.io/studyDocument/">docs</a>
+          <ul class="submenu">
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E7%9F%AD%E7%A0%81%E9%A2%84%E8%A7%88/">短码预览</a>
+              </li>
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E5%9B%BE%E7%89%87%E9%A2%84%E8%A7%88/">图片预览</a>
+              </li>
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E8%AF%AD%E6%B3%95%E9%AB%98%E4%BA%AE%E6%98%BE%E7%A4%BA/">语法高亮显示</a>
+              </li>
+            
+              <li>
+                <a href="https://huachengzhou.github.io/studyDocument/post/%E6%95%B0%E5%AD%A6%E9%A2%84%E8%A7%88/">数学预览</a>
+              </li>
+            
+          </ul>
+
+        
+
+      </li>
+    
+
+    
+    
+
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">SpringBoot学习笔记完整教程</h1>
+      
+      <div class="post-meta">
+        <time datetime="2021-02-15" class="post-time">
+          2021-02-15
+        </time>
+        <div class="post-category">
+            <a href="https://huachengzhou.github.io/studyDocument/categories/java/"> java </a>
+            <a href="https://huachengzhou.github.io/studyDocument/categories/index/"> index </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#spring-boot-教-程">Spring boot 教 程</a></li>
+<li><a href="#目录">目录</a>
+<ul>
+<li><a href="#spring-boot-helloworld">Spring boot helloworld</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#默认静态资源处理">默认静态资源处理</a></li>
+<li><a href="#自定义静态资源处理">自定义静态资源处理</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#spring-boot-集成-jsp">Spring boot 集成 JSP</a></li>
+<li><a href="#spring-boot-集-成-servlet">Spring boot 集 成 servlet</a></li>
+<li><a href="#spring-boot-集成-fliter-和-linstener">Spring boot 集成 Fliter 和 Linstener</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#servletcomponentscan-这个就是扫描相应的-servlet-包">@ServletComponentScan//这个就是扫描相应的 Servlet 包;</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#spring-boot-拦截器-handlerinterceptor">Spring boot 拦截器 HandlerInterceptor</a></li>
+<li><a href="#spring-boot-系统启动任务-commandlinerunner">Spring boot 系统启动任务 CommandLineRunner</a></li>
+<li><a href="#spring-boot-热部署">Spring boot 热部署</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#health">health</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#info">info</a></li>
+</ul></li>
+<li><a href="#spring-boot-starter-详解">Spring boot starter 详解</a></li>
+<li><a href="#spring-boot-之-spring-cache">Spring boot 之 spring cache</a></li>
+<li><a href="#spring-boot-集-成-ehcache">Spring boot 集 成 EHCache</a>
+<ul>
+<li>
+<ul>
+<li><a href="#相关配置修改">相关配置修改</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="spring-boot-教-程">Spring boot 教 程</h1>
+
+<h1 id="目录">目录</h1>
+
+<ol>
+<li><h2 id="spring-boot-helloworld">Spring boot helloworld</h2>
+
+<ol>
+<li>介绍</li>
+</ol></li>
+</ol>
+
+<blockquote>
+<p>自从structs2 出现上次的漏洞以后，对spring 的关注度开始越来越浓。</p>
+
+<p>以前 spring 开发需要配置一大堆的 xml,后台 spring 加入了 annotaion，使得 xml 配置简化了很多，当然还是有些配置需要使用xml,比如申明component scan 等。</p>
+
+<p>Spring 开了一个新的model spring boot,主要思想是降低spring 的入门，使得新手可以以最快的速度让程序在spring 框架下跑起来。</p>
+
+<p>那么如何写Hello world 呢？ Hello 之步骤:</p>
+</blockquote>
+
+<p>(1) 新建一个Maven Java 工程</p>
+
+<p>(2) 在pom.xml 文件中添加Spring Boot Maven 依赖(3)编写启动类</p>
+
+<blockquote>
+<p>(4)运行程序</p>
+</blockquote>
+
+<ol>
+<li>Hello 之New</li>
+</ol>
+
+<blockquote>
+<p>这个步骤很简单，相比大家都会，小编在此为了文档的完整性，稍作简单说明：</p>
+
+<p>首先使用 IDE（Eclipse,MyEclipse）工具新建一个 Maven 工程，可以是 Maven Java Project,也可以是 Maven Web Project,随便取一个工程名称。我使用的是STS，工程名是spring-boot-hello1。</p>
+</blockquote>
+
+<ol>
+<li>Hello 之Maven</li>
+</ol>
+
+<blockquote>
+<p>第二步，在 pom.xml 中引入 spring-boot-start-parent,spring 官方的解释叫什么 stater poms,它可以提供dependency management,也就是说依赖管理，引入以后在申明其它 dependency 的时候就不需要 version 了， 后面可以看到。</p>
+</blockquote>
+
+<ol>
+<li>Hello 之maven web</li>
+</ol>
+
+<blockquote>
+<p>第三步，因为我们开发的是 web 工程，所以需要在 pom.xml 中引入 spring-boot-starter-web,spring 官方解释说spring-boot-start-web 包含了spring webmvc 和tomcat 等web 开发的特性。</p>
+</blockquote>
+
+<ol>
+<li>Hello 之Maven Run Application</li>
+</ol>
+
+<blockquote>
+<p>如果我们要直接 Main 启动 spring，那么以下 plugin 必须要添加，否则是无法启动的。如果使用 maven 的spring-boot:run 的话是不需要此配置的。（我在测试的时候，如果不配置下面的 plugin 也是直接在 Main 中运行的。）</p>
+</blockquote>
+
+<ol>
+<li>Hello 之coding</li>
+</ol>
+
+<blockquote>
+<p>第四步，真正的程序开始啦，我们需要一个启动类，然后在启动类申明让 spring boot 自动给我们配置spring 需要的配置，比如：@SpringBootApplication,为了可以尽快让程序跑起来，我们简单写一个通过浏览器访问 hello world 字样的例子：</p>
+
+<p>其中@SpringBootApplication 申明让 spring boot 自动给程序进行必要的配置，等价于以默认属性使用</p>
+
+<p>@Configuration，@EnableAutoConfiguration 和@ComponentScan</p>
+
+<p>@RestController 返回json 字符串的数据，直接可以编写RESTFul 的接口；</p>
+</blockquote>
+
+<ol>
+<li>Hello 之Run</li>
+</ol>
+
+<blockquote>
+<p>第五步，就是运行我们的Application 了，我们先介绍第一种运行方式。第一种方式特别简单：右键Run As</p>
+
+<p>-&gt; Java Application。之后打开浏览器输入地址：[<a href="http://127.0.0.1:8080/]{.underline">http://127.0.0.1:8080/]{.underline</a>} 就可以看到Hello world!了。第二种方式右键project &ndash; Run as &ndash; Maven build &ndash; 在Goals 里输入spring-boot:run ,然后Apply,最后点击Run。</p>
+</blockquote>
+
+<ol>
+<li>Hello 之Error</li>
+</ol>
+
+<blockquote>
+<p>顺利的情况下当然是皆大欢喜了，但是程序吧往往会给你开个小玩笑。那么我们要注意什么呢？主要是 jdk 的版本之类的，请看官方说明：</p>
+</blockquote>
+
+<p><img src="media/image1.jpeg" alt="" />{width=&ldquo;5.213333333333333in&rdquo; height=&ldquo;1.4266655730533684in&rdquo;}</p>
+
+<ol>
+<li><strong>Spring boot</strong> 返回 <strong>json</strong> 数据</li>
+</ol>
+
+<blockquote>
+<p>在做如下操作之前，我们对之前的 Hello 进行简单的修改，我们新建一个包 com.hpit.test.web 然后新建一个类HelloControoler, 然后修改App.java 类，主要是的这个类就是一个单纯的启动类。</p>
+
+<p>主要代码如下： App.java</p>
+
+<p><strong>public class</strong> App {</p>
+
+<p>com.hpit.test.web.HelloController ：</p>
+
+<p>运行代码和之前是一样的效果的。</p>
+
+<p>我们在编写接口的时候，时常会有需求返回 json 数据，那么在 spring boot 应该怎么操作呢？主要是在 class 中加入注解@RestController,。</p>
+
+<p>返回 <strong>JSON</strong> 之步骤：</p>
+
+<p>(1)编写一个实体类Demo (2)编写DemoController；</p>
+
+<p>(3)在DemoController 加上@RestController 和@RequestMapping 注解； (4)测试</p>
+
+<p>具 体 代 码 如 下 ： com.hpit.test.bean.Demo :</p>
+
+<p>com.hpit.test.web.DemoController：</p>
+
+<p>那么在浏览器访问地址：[<a href="http://127.0.0.1:8080/demo/getDemo]{.underline">http://127.0.0.1:8080/demo/getDemo]{.underline</a>} 返回如下数据：</p>
+
+<p>{</p>
+
+<p>id: 1,</p>
+
+<p>name: \&ldquo;Zjs\&rdquo;</p>
+
+<p>}</p>
+
+<p>是不是很神奇呢，其实Spring Boot 也是引用了JSON 解析包Jackson，那么自然我们就可以在 Demo 对象上使用Jackson 提供的json 属性的注解，对时间进行格式化，对一些字段进行忽略等等。</p>
+
+<p>Spring boot 热部署</p>
+
+<p>在编写代码的时候，你会发现我们只是简单把打印信息改变了下，就需要重新部署，如果是这样的编码方式，那 么我们估计一天下来之后就真的是打几个 Hello World 之后就下班了。那么如何解决热部署的问题呢？那就是springloaded，加入如下配置：</p>
+
+<p>如果是使用spring-boot:run 的话，那么到此配置结束，现在你就可以体验coding&hellip;coding 的爽了。如果使用的run as &ndash; java application 的话，那么还需要做一些处理哦：</p>
+
+<p>把 spring-loader-1.2.4.RELEASE.jar 下载下来，放到项目的 lib 目录中，然后把 IDEA 的 run 参数里 VM 参数设</p>
+
+<p>置为：</p>
+
+<p>-javaagent:.\lib\springloaded-1.2.4.RELEASE.jar -noverify</p>
+
+<p>然后启动就可以了，这样在run as 的时候，也能进行热部署了。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 使用其他 <strong>json</strong> 转换框架</li>
+</ol>
+
+<blockquote>
+<p>个人使用比较习惯的 json 框架是 fastjson,所以 spring boot 默认的 json 使用起来就很陌生了，所以很自然我就想我能不能使用fastjson 进行json 解析呢？</p>
+
+<p>这里要说下很重要的话，官方文档说的 1.2.10 以后，会有两个方法支持 HttpMessageconvert，一个是FastJsonHttpMessageConverter，支持 4.2 以下的版本，一个是 FastJsonHttpMessageConverter4 支持 4.2 以上的版本，具体有什么区别暂时没有深入研究。这里也就是说：低版本的就不支持了，所以这里最低要求就是1.2.10+。</p>
+
+<p>配 置 fastjon</p>
+
+<p>支持两种方法： 第一种方法：</p>
+</blockquote>
+
+<ol>
+<li><p>启动类继承extends WebMvcConfigurerAdapter</p></li>
+
+<li><p>覆盖方法configureMessageConverters 第二种方法:</p></li>
+</ol>
+
+<blockquote>
+<p>（1）在App.java 启动类中，注入Bean : HttpMessageConverters 具体代码如下：</p>
+
+<p>代码：App.java</p>
+
+<p>import java.util.List;</p>
+
+<p>import org.springframework.boot.SpringApplication;</p>
+
+<p>import org.springframework.boot.autoconfigure.SpringBootApplication;</p>
+
+<p>import org.springframework.http.converter.HttpMessageConverter;</p>
+
+<p>import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;</p>
+
+<p>import com.alibaba.fastjson.serializer.SerializerFeature;</p>
+
+<p>import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;</p>
+
+<p>//如果想集成其他的[json]{.underline}框架需要继承WebMvcConfigurerAdapter，并重写configureMessageConverters @SpringBootApplication</p>
+
+<p>public class App extends WebMvcConfigurerAdapter {</p>
+
+<p>// 第一种方式，重写configureMessageConverters，并将FastJsonConverter设置到系统中</p>
+
+<p>@Override</p>
+
+<p>public void configureMessageConverters(List&lt;HttpMessageConverter&lt;?&gt;&gt; converters) { FastJsonHttpMessageConverter converter = new FastJsonHttpMessageConverter(); converter.setFeatures(SerializerFeature.PrettyFormat);</p>
+
+<p>converters.add(converter);</p>
+
+<p>super.configureMessageConverters(converters);</p>
+
+<p>}</p>
+
+<p>// 第二种方法：注入beanHttpMessageConverters</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 全局异常捕捉</li>
+</ol>
+
+<blockquote>
+<p>在一个项目中的异常我们我们都会统一进行处理的，那么如何进行统一进行处理呢？ 新建一个类GlobalDefaultExceptionHandler，</p>
+
+<p>在class 注解上@ControllerAdvice,</p>
+
+<p>@CONTROLLERADVICE：即把@CONTROLLERADVICE 注解内部使用@EXCEPTIONHANDLER、@INITBINDER、</p>
+
+<p>@MODELATTRIBUTE 注解的方法应用到所有的 @REQUESTMAPPING 注解的方法。非常简单，不过只有当使用@EXCEPTIONHANDLER 最有用，另外两个用处不大。</p>
+
+<p>在方法上注解上@ExceptionHandler(value = Exception.class)，具体代码如下</p>
+
+<p>[com.hpit.test.web]{.underline}.DemoController 加入方法：</p>
+
+<p>访问：[<a href="http://127.0.0.1:8080/zeroException]{.underline">http://127.0.0.1:8080/zeroException]{.underline</a>} 这个方法肯定是抛出异常的,那么在控制台就可以看到我们全局捕捉的异常信息了</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot JPA</strong> 连接数据库</li>
+</ol>
+
+<blockquote>
+<p>在任何一个平台都逃离不了数据库的操作，那么在spring boot 中怎么接入数据库呢？</p>
+
+<p>很简单，我们需要在 application.properties 进行配置一下，application.properties 路径是src/main/resources 下，对于application.properties 更多的介绍请自行百度进行查找相关资料进行查看，在此不进行过多的介绍，以下只是mysql 的配置文件。</p>
+
+<p>大体步骤：</p>
+</blockquote>
+
+<p>(1) 在application.properties 中加入datasouce 的配置</p>
+
+<p>(2) 在pom.xml 加入mysql 的依赖。</p>
+
+<p>(3) 获取DataSouce 的Connection 进行测试。</p>
+
+<blockquote>
+<p>src/main/resouces/application.properties：</p>
+
+<p>pom.xml 配置：</p>
+
+<p>到此相关配置就ok 了，那么就可以在项目中进行测试了，我们可以新建一个 class Demo 进行测试，实体类创建完毕之后，我们可能需要手动进行编写建表语句，这时候我们可能就会想起 Hibernate 的好处了。那么怎么在spring boot 使用Hibernate 好的特性呢？So easy,具体怎么操作，请看下篇之JPA &ndash; Hibernate。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 配 置 <strong>JPA</strong></li>
+</ol>
+
+<blockquote>
+<p>在说具体如何在spring boot 使用Hibernate 前，先抛装引玉些知识点？什么是JPA 呢？</p>
+
+<p>JPA 全称Java Persistence API.JPA 通过JDK 5.0 注解或XML 描述对象－关系表的映射关系，并将运行期的实体[对象持久化]{.underline}到数据库中。</p>
+
+<p><a href="http://baike.baidu.com/link?url=LdqIXvzTr0RDjY2yoRdpogDdzaZ_L-">[http://baike.baidu.com/link?url=LdqIXvzTr0RDjY2yoRdpogDdzaZ_L-]{.underline}</a></p>
+
+<p>[DrIOpLLzK1z38quk6nf2ACoXEf3pWKTElHACS7vTawPTmoFv_QftgT_q]{.underline}</p>
+
+<p>接下里就说本文章重点了，那么怎么操作呢？只需要如下配置就可以了？ pom.xml 配置：</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>application.properties 配置：</p>
+
+<p>那么就可以使用Hibernate 带来的好处了，在实体类注解@Entity 就会自动进行表的DDL 操作了</p>
+
+<p>我们在 [com.hpit.test.bean]{.underline}.Demo 中加入注解：@Entity</p>
+
+<p>这时候运行就会在数据库看到demo 表了。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 整合 <strong>JPA</strong> 保存数据</li>
+</ol>
+
+<blockquote>
+<p>总体步骤：</p>
+</blockquote>
+
+<p>(1) 创建实体类Demo,如果已经存在，可以忽略。</p>
+
+<p>(2) 创建jpa repository 类操作持久化。</p>
+
+<p>(3) 创建service 类。</p>
+
+<p>(4) 创建restful 请求类。</p>
+
+<p>(5) 测试</p>
+
+<blockquote>
+<p>代 码 如 下 ： com.hpit.test.bean.Demo ：</p>
+
+<p>[com.hpit.test.dao]{.underline}.DemoRepository（这是一个接口，没有具体的实现，这就是JPA）:</p>
+
+<p>到这里保存数据的方法就写完了。CrudRepository 类把一些常用的方法都已经进行定义和实现了。那么你现在就可以在别的类引入调用了。</p>
+
+<p>另外就是在Spring Data 的核心接口里面Repository 是最基本的接口了, spring 提供了很多实现了该接口的基本接口,如:CrudRepository，PagingAndSortingRepository，SimpleJpaRepository，QueryDslJpaRepository 等大量查询接口</p>
+
+<p>com.hpit.test.service.DemoService :</p>
+
+<p>开发数据保存控制器：</p>
+
+<p><img src="media/image2.png" alt="" />{width=&ldquo;5.453333333333333in&rdquo; height=&ldquo;1.5in&rdquo;}运行程序，查看效果：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 使用 <strong>JdbcTemplate</strong> 保存数据</li>
+</ol>
+
+<blockquote>
+<p>整体步骤：</p>
+</blockquote>
+
+<p>(1) 在pom.xml 加入jdbcTemplate 的依赖；</p>
+
+<p>(2) 编写DemoDao 类，声明为：@Repository，引入JdbcTemplate</p>
+
+<p>(3) 编写DemoService 类，引入DemoDao 进行使用</p>
+
+<p>(4) 编写Demo2Controller 进行简单测试。具体操作流程如下：</p>
+
+<blockquote>
+<p>使用JdbcTemplate 类需要加入（如果在JPA 已经加入的话，这个步骤就可以忽略了） 那么只需要在需要使用的类中加入：</p>
+
+<p>这样就可以使用jdbcTemplate 进行数据库的操作了。比如：</p>
+
+<p>具体案例</p>
+
+<p>定义Dao 层代码</p>
+</blockquote>
+
+<ol>
+<li><p>开发业务逻辑层</p></li>
+
+<li><p>开发控制器</p></li>
+
+<li><p>启动应用，查看效果</p></li>
+</ol>
+
+<p><img src="media/image3.png" alt="" />{width=&ldquo;5.683287401574803in&rdquo; height=&ldquo;2.1458333333333335in&rdquo;}</p>
+
+<blockquote>
+<p>当前前提是你的数据库中有id=1 的数据了，不然会报错的： org.springframework.dao.EmptyResultDataAccessException</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 常用配置</li>
+</ol>
+
+<!-- -->
+
+<ol>
+<li>程序基本配置</li>
+</ol>
+
+<blockquote>
+<p>Spring boot 默认端口是 8080，如果想要进行更改的话，只需要修改 applicatoin.properties 文件，在配置文件中加入：</p>
+
+<p>常用配置：</p>
+
+<p>######################################################## ###EMBEDDED SERVER CONFIGURATION (ServerProperties) ########################################################</p>
+
+<p>#server.port=8080</p>
+
+<p>#server.address= # bind to a specific NIC #server.session-timeout= # session timeout in seconds #the context path, defaults to \&lsquo;/\&rsquo;</p>
+
+<p>#server.context-path=/spring-boot <strong>#</strong>修改默认访问路径</p>
+
+<p>#server.servlet-path= # the servlet path, defaults to \&lsquo;/\&rsquo; #server.tomcat.access-log-pattern= # log pattern of the access log #server.tomcat.access-log-enabled=false # is access logging enabled #server.tomcat.protocol-header=x-forwarded-proto # ssl forward headers #server.tomcat.remote-ip-header=x-forwarded-for</p>
+
+<p>#server.tomcat.basedir=/tmp # base dir (usually not needed, defaults to tmp) #server.tomcat.background-processor-delay=30; # in seconds #server.tomcat.max-threads = 0 # number of threads in protocol handler</p>
+
+<p>#server.tomcat.uri-encoding = UTF-8 # character encoding to use for URL decoding</p>
+</blockquote>
+
+<ol>
+<li>修改 java 编译版本</li>
+</ol>
+
+<blockquote>
+<p>Spring Boot 在编译的时候，是有默认 JDK 版本的，如果我们期望使用我们要的 JDK 版本的话，那么要怎么配置呢？</p>
+
+<p>这个只需要修改pom.xml 文件的&lt;build&gt; -- &lt;plugins&gt;加入一个plugin 即可。</p>
+
+<p>添加了plugin 之后，需要右键 Maven à Update Projects,这时候你可以看到工程根目录下的JRE System Library 版本更改了。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 静态资源处理</li>
+</ol>
+
+<h6 id="默认静态资源处理">默认静态资源处理</h6>
+
+<blockquote>
+<p>Spring Boot 默认为我们提供了静态资源处理，使用 WebMvcAutoConfiguration 中的配置各种属性。建议大家使用Spring Boot 的默认配置方式，如果需要特殊处理的再通过配置进行修改。</p>
+
+<p>如果想要自己完全控制 WebMVC ，就需要在@Configuration 注解的配置类上增加@EnableWebMvc</p>
+
+<p>（ @SpringBootApplication 注 解 的 程 序 入 口 类 已 经 包 含 @Configuration ）， 增 加 该 注 解 以 后WebMvcAutoConfiguration 中配置就不会生效，你需要自己来配置需要的每一项。这种情况下的配置还是要多看一下WebMvcAutoConfiguration 类。</p>
+
+<p>我们既然是快速使用Spring Boot，并不想过多的自己再重新配置。本文还是主要针对 Spring Boot 的默认处理方</p>
+
+<p>式，部分配置在application 配置文件中（.properties 或 .yml）</p>
+
+<p>默认资源映射</p>
+
+<p>我们在启动应用的时候，可以在控制台中看到如下信息：</p>
+
+<p>2016-01-08 09:29:30.362 INFO 24932 ---[ main]o.s.w.s.handler.SimpleUrlHandlerMapping : MappedURLpath[/webjars/**]ontohandleroftype[class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]</p>
+
+<p>2016-01-08 09:29:30.362 INFO 24932 ---[ main]o.s.w.s.handler.SimpleUrlHandlerMapping : MappedURLpath[/**]ontohandleroftype[class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]</p>
+
+<p>2016-01-08 09:29:30.437 INFO 24932 ---[ main]o.s.w.s.handler.SimpleUrlHandlerMapping :</p>
+
+<p>MappedURLpath[/**/favicon.ico]ont</p>
+
+<p>其中默认配置的 /** 映射到 /static （或/public、/resources、/META-INF/resources） 其中默认配置的 /webjars/** 映射到 classpath:/META-INF/resources/webjars/</p>
+
+<p>PS：上面的 static、public、resources 等目录都在 classpath: 下面（如 src/main/resources/static）。</p>
+
+<p>如果我按如下结构存放相同名称的图片，那么Spring Boot 读取图片的优先级是怎样的呢？</p>
+
+<p><img src="media/image4.png" alt="" />{width=&ldquo;1.886042213473316in&rdquo; height=&ldquo;2.34375in&rdquo;}如下图：</p>
+
+<p>当我们访问地址 [<a href="http://localhost:8080/test.jpg]{.underline">http://localhost:8080/test.jpg]{.underline</a>} 的时候，显示哪张图片？这里可以直接告诉大家，优先级顺序为： META/resources &gt; resources &gt; static &gt; public (已进行测试)</p>
+
+<p>如果我们想访问test2.jpg，请求地址 [<a href="http://localhost:8080/img/test2.jpg]{.underline">http://localhost:8080/img/test2.jpg]{.underline</a>}</p>
+</blockquote>
+
+<h6 id="自定义静态资源处理">自定义静态资源处理</h6>
+
+<blockquote>
+<p>面我们介绍了Spring Boot 的默认资源映射，一般够用了，那我们如何自定义目录？</p>
+
+<p>这些资源都是打包在 jar 包中的，然后实际应用中，我们还有很多资源是在管理系统中动态维护的，并不可能在程序包中，对于这种随意指定目录的资源，如何访问？</p>
+
+<p>自定义目录</p>
+
+<p>以增加 /myres/<em>*</em> 映射到 <em>classpath:/myres/*</em> 为例的代码处理为：</p>
+
+<p>实现类继承 WebMvcConfigurerAdapter 并重写方法 addResourceHandlers （对于访问 myres 文件夹中的test.jpg 图片的地址为 [<a href="http://localhost:8080/myres/test.jpg]{.underline">http://localhost:8080/myres/test.jpg]{.underline</a>}</p>
+
+<p>访问myres 文件夹中的test.jpg 图片的地址为 [<a href="http://localhost:8080/myres/test.jpg]{.underline">http://localhost:8080/myres/test.jpg]{.underline</a>}</p>
+
+<p>这样使用代码的方式自定义目录映射，并不影响Spring Boot 的默认映射，可以同时使用。</p>
+
+<p>如果我们将/myres/<em>*</em> 修改为 <em>/*</em> 与默认的相同时，则会覆盖系统的配置，可以多次使用 addResourceLocations 添加目录，优先级先添加的高于后添加的。</p>
+
+<p>其 中 addResourceLocations 的 参 数 是 动 参 ， 可 以 这 样 写 addResourceLocations(&ldquo;classpath:/img1/&ldquo;,</p>
+
+<p>&ldquo;classpath:/img2/&ldquo;, &ldquo;classpath:/img3/&ldquo;);</p>
+
+<p>使用外部目录</p>
+
+<p>如果我们要指定一个绝对路径的文件夹（如 D:/data/api_files ），则只需要使用 addResourceLocations 指定即可。</p>
+
+<p>// 可以直接使用addResourceLocations 指定磁盘绝对路径，同样可以配置多个位置，注意路径写法需要加上file:</p>
+
+<p>registry.addResourceHandler(\&ldquo;/api_files/**\&ldquo;).addResourceLocations(\&ldquo;file:D:/data/api_files\&ldquo;);</p>
+</blockquote>
+
+<ol>
+<li><strong>Srping boot</strong> 实现任务调度</li>
+</ol>
+
+<blockquote>
+<p>spring boot 实现任务调度非常简单， 只需要在调度类头上添加@Configuration， 然后再调度方法上添加</p>
+
+<p>@Schuldle 注解，并为@Schuldle 指定CronExpress 表达式。代码如下：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 普通类调用 <strong>Bean</strong></li>
+</ol>
+
+<blockquote>
+<p>我们知道如果我们要在一个类使用spring 提供的bean 对象，我们需要把这个类注入到 spring 容器中，交给 spring 容器进行管理，但是在实际当中，我们往往会碰到在一个普通的Java 类中，想直接使用spring 提供的其他对象或者说有一些不需要交给 spring 管理，但是需要用到 spring 里的一些对象。如果这是 spring 框架的独立应用程序，我们通过:</p>
+
+<p>这样的方式就可以很轻易的获取我们所需要的对象。</p>
+
+<p>但是往往我们所做的都是Web Application，这时我们启动 spring 容器是通过在web.xml 文件中配置，这样就不适合使用上面的方式在普通类去获取对象了，因为这样做就相当于加载了两次 spring 容器，而我们想是否可以通过在启动web 服务器的时候，就把Application 放在某一个类中，我们通过这个类在获取，这样就可以在普通类获取spring bean 对象了，让我们接着往下看。</p>
+
+<p>普通类调用 Spring bean 对象:</p>
+
+<p>可以参考：<a href="http://412887952-qq-com.iteye.com/blog/1479445">[http://412887952-qq-com.iteye.com/blog/1479445]{.underline}</a></p>
+
+<p>这里有更多这方面的介绍，比较详细，在这里只是抛装引玉说明在Spring Boot 是如何进行调用的。在Spring Boot 可以扫描的包下</p>
+
+<p>假设我们编写的工具类为SpringUtil。</p>
+
+<p>如果我们编写的 SpringUtil 在 Spring Boot 可以扫描的包下或者使用@ComponentScan 引入自定义的包了，那么原理很简单，只需要使得 SpringUtil 实现接口：ApplicationContextAware，然后加上@Component 注解即可， 具体编码如下：</p>
+
+<p>不在Spring Boot 的扫描包下方式一</p>
+
+<p>这种情况处理起来也很简单，先编写SpringUtil 类，同样需要实现接口：ApplicationContextAware，具体编</p>
+
+<p>码 如 下 ： simple.plugin.spring.SpringUtil package simple.plugin.spring;</p>
+
+<p>import org.springframework.beans.BeansException;</p>
+
+<p>import org.springframework.context.ApplicationContext;</p>
+
+<p>import org.springframework.context.ApplicationContextAware;</p>
+</blockquote>
+
+<p>public class SpringUtil implements ApplicationContextAware{</p>
+
+<p>private static ApplicationContext applicationContext = null;</p>
+
+<blockquote>
+<p>@Override</p>
+
+<p>public void setApplicationContext(ApplicationContext applicationContext) throws BeansException</p>
+
+<p>{</p>
+
+<p>if(SpringUtil.applicationContext == null){ SpringUtil.applicationContext = applicationContext;</p>
+
+<p>}</p>
+
+<p>System.out.println(\&rdquo; \&ldquo;); System.out.println(\&rdquo; \&ldquo;); System.out.println(\&rdquo;---------------simple.plugin.spring.SpringUtil--------------------------------------</p>
+
+<p>\&ldquo;);</p>
+
+<p>System.out.println(\&ldquo;========ApplicationContext 配 置 成 功 , 在 普 通 类 可 以 通 过 调 用SpringUtils.getAppContext() 获 取 applicationContext 对象,applicationContext=\&ldquo;+SpringUtil.applicationContext+\&ldquo;========\&ldquo;);</p>
+
+<p>System.out.println(\&rdquo; \&ldquo;);</p>
+
+<p>}</p>
+
+<p>//获取 applicationContext</p>
+
+<p>public static ApplicationContext getApplicationContext() {</p>
+
+<p>returnapplicationContext;</p>
+
+<p>}</p>
+
+<p>//通过 name 获取 Bean.</p>
+
+<p>public static Object getBean(String name){</p>
+
+<p>之后这一步才是关键，使用@Bean 注解，在App.java 类中将SpringUtil 注解进来，代码如下：</p>
+
+<p>不在Spring Boot 的扫描包下方式二</p>
+
+<p>代码基本和上面都是相同的，主要是在App.java 中使用@Import 进行导入。</p>
+
+<p>而且在SpringUtil 是不需要添加@Component 注解</p>
+
+<p>说明以上 3 中方式都生效了，这 3 中方式根据实际情况选择一种方式就可以了。那么这样子在普通类既可以使用:</p>
+
+<p>SpringUtil.getBean() 获取到Spring IOC 容器中的bean。当然也可以在Spring 管理的类中使用：</p>
+
+<p>@Resouce 或者@Autowired 进行注入使用，当然我们这个类的核心是普通类可以调用 spring 的bean 进行使用了，是不是很神奇呢。</p>
+</blockquote>
+
+<ol>
+<li><strong>spring boot</strong> 使用模板引擎</li>
+</ol>
+
+<blockquote>
+<p>使用 thymeleaf 模板引擎</p>
+
+<p>整体步骤：</p>
+</blockquote>
+
+<ol>
+<li><p>在pom.xml 中引入thymeleaf;</p></li>
+
+<li><p>如何关闭thymeleaf 缓存</p></li>
+
+<li><p>编写模板文件.html</p></li>
+</ol>
+
+<blockquote>
+<p>Spring Boot 默认就是使用thymeleaf 模板引擎的，所以只需要在pom.xml 加入依赖即可：</p>
+
+<p>Thymeleaf 缓存在开发过程中， 肯定是不行的，那么就要在开发的时候把缓存关闭， 只需要在application.properties 进行配置即可：</p>
+
+<p>编写模板文件src/main/resouces/templates/helloHtml.html</p>
+
+<p>编写访问路径(com.hpit.test.web. ThymeleafController)：</p>
+
+<p><img src="media/image5.png" alt="" />{width=&ldquo;5.326610892388452in&rdquo; height=&ldquo;2.03125in&rdquo;}启动应用，输入地址：<a href="http://127.0.0.1:8080/helloHtml">http://127.0.0.1:8080/helloHtml</a> 会输出：</p>
+
+<p>使用 freemarker 模板引擎</p>
+
+<p>使用freemarker 也很简单，</p>
+
+<p>在pom.xml 加入freemarker 的依赖</p>
+
+<p>剩下的编码部分都是一样的，说下application.properties 文件：</p>
+
+<p>开发freemarker 模板</p>
+
+<p>helloHtml1.ftl</p>
+
+<p>开发控制器：</p>
+
+<p><img src="media/image6.png" alt="" />{width=&ldquo;7.13303258967629in&rdquo; height=&ldquo;1.2179166666666668in&rdquo;}访问地址：[<a href="http://localhost:8080/freemarker/hello]{.underline">http://localhost:8080/freemarker/hello]{.underline</a>}</p>
+
+<p>thymeleaf 和freemarker 是可以共存的。</p>
+</blockquote>
+
+<h2 id="spring-boot-集成-jsp">Spring boot 集成 JSP</h2>
+
+<blockquote>
+<p>这个部分比较复杂，所以单独创建一个工程来进行讲解；</p>
+
+<p>大体步骤：</p>
+</blockquote>
+
+<ol>
+<li><p>创建Maven web project；</p></li>
+
+<li><p>在pom.xml 文件添加依赖；</p></li>
+
+<li><p>配置application.properties 支持jsp</p></li>
+
+<li><p>编写测试Controller</p></li>
+
+<li><p>编写JSP 页面</p></li>
+
+<li><p>编写启动类App.java 1，FreeMarker 2，Groovy</p></li>
+</ol>
+
+<blockquote>
+<p>3，Thymeleaf （Spring 官网使用这个） 4，Velocity</p>
+
+<p>5，JSP （貌似 Spring Boot 官方不推荐，STS 创建的项目会在 src/main/resources 下有个 templates 目录，这里就是让我们放模版文件的，然后并没有生成诸如 SpringMVC 中的webapp 目录）</p>
+
+<p>不过本文还是选择大家都熟悉的 JSP 来举例，因为使用 JSP 与默认支持的模版需要特殊处理，所以拿来举例更好。</p>
+</blockquote>
+
+<ol>
+<li>创建Maven web project</li>
+</ol>
+
+<blockquote>
+<p>使用Eclipse 新建一个Maven Web Project ，项目取名为： springboot02</p>
+</blockquote>
+
+<ol>
+<li>在pom.xml 文件添加依赖</li>
+</ol>
+
+<blockquote>
+<p>依赖包：</p>
+
+<p>Jdk 编译版本：</p>
+</blockquote>
+
+<ol>
+<li>application.properties 配置</li>
+</ol>
+
+<blockquote>
+<p>上面说了spring-boot 不推荐JSP，想使用JSP 需要配置application.properties。添加src/main/resources/application.properties 内容：</p>
+</blockquote>
+
+<ol>
+<li>编写测试Controller</li>
+</ol>
+
+<blockquote>
+<p>编写类：com.hpit.sb.controller. HelloJSPController：</p>
+</blockquote>
+
+<ol>
+<li>编写JSP 页面</li>
+</ol>
+
+<blockquote>
+<p>在 src/main 下面创建 webapp/WEB-INF/views 目录用来存放我们的jsp 页面：index.jsp</p>
+
+<p>(6)编写启动类</p>
+
+<p>编写App.java 启动类：</p>
+
+<p><img src="media/image7.png" alt="" />{width=&ldquo;5.257905730533683in&rdquo; height=&ldquo;1.3854166666666667in&rdquo;}运行程序，访问页面：</p>
+
+<p>附注：关于集成 JSP 几个问题：</p>
+
+<p>1、Spring Boot 使用 jsp 时，仍旧可以打成 jar 包的形式吗？</p>
+
+<p>2、Spring Boot 使用 jsp 时，比如说 css，image，js 等三种静态资源文件，应该放在什么目录下？这些静态资源映射，在 spring boot 中具体应该怎么做？</p>
+
+<p>例如，下面是 spring 中做的静态资源映射，但是在 spring boot 中不知道怎么处理：</p>
+
+<p>&lt;!-- springmvc.xml 资源映射 --&gt;</p>
+
+<p>&lt;mvc:resources location=\&ldquo;/WEB-INF/css/\&rdquo; mapping=\&ldquo;/css/**\&ldquo;/&gt;</p>
+
+<p>&lt;mvc:resources location=\&ldquo;/WEB-INF/js/\&rdquo; mapping=\&ldquo;/js/**\&ldquo;/&gt;</p>
+
+<p>&lt;mvc:resources location=\&ldquo;/WEB-INF/image/\&rdquo; mapping=\&ldquo;/image/**\&ldquo;/&gt;</p>
+
+<p>3、下面这个 tomcat 的包必须导入吗，spring-boot-starter-web 中不是有一个内嵌的 tomcat 吗？</p>
+
+<p>&lt;1&gt;、针对第一个问题，答案是不可以的。</p>
+
+<p>我们先看一段英文描述，如下：</p>
+
+<p>When running a Spring Boot application that uses an embedded servlet container (and is packaged as an executable archive), there are some limitations in the JSP support.</p>
+
+<p>With Tomcat it should work if you use war packaging, i.e. an executable war will work, and will also be deployable to a standard container (not limited to, but including Tomcat). An executable jar will not work because of a hard coded file pattern in Tomcat.</p>
+
+<p>Jetty does not currently work as an embedded container with JSPs.</p>
+
+<p>Undertow does not support JSPs.</p>
+
+<p>原文的大体意思就是：Tomcat 支持 war 的打包方式，spring boot 支持 war 打包方式。Jetty 现在不支持JSP 嵌入容器。Undertow 根本就不支持JSP。</p>
+
+<p>所以答案就是打包成war，jsp 会自然按照servlet 的标准部署。但也就意味着你不可以用嵌入式的方式运行，而是Tomcat Server + war 的部署方式。</p>
+
+<p>看到这里有些网友肯定会有疑问那什么是嵌入式的web 服务器？我们这边就拿jetty 来说明下。Jetty 可以非常容易的嵌入到应用程序当中而不需要程序为了使用 Jetty 做修改。</p>
+
+<p>从某种程度上，你也可以把 Jetty 理解为一个嵌入式的Web 服务器。所以我们经常会说嵌入式jetty。Jetty 有一个口号：不要把你的应用部署到 Jetty 中，把 Jetty 部署到你的应用中。Jetty 可以在 Java 应用</p>
+
+<p>程序中向其他 POJO 一样被实例化，换句话说，以嵌入式的模式运行 Jetty 是指将 Http 模块放入你的应用程序中，而非部署你的程序到一个HTTP 服务器。这就是所谓的嵌入式jetty。</p>
+
+<p>另外在说明一点就是JSP 解析是需要JSP 引擎处理的，tomcat 就提供了JSP 处理引擎。所以很显然 JSP 是依赖容器而存在的，不然就没法访问了。那么既然是依赖于tomcat 的话。</p>
+
+<p>有一网友找到一支持打成jar 包运行的插件： Using Spring Boot with JSPs in Executable Jars <a href="https://github.com/ghillert/spring-boot-jsp-demo">https://github.com/ghillert/spring-boot-jsp-demo</a></p>
+
+<p>经过java -jar xxx.jar 运行后，可以正常访问网页。</p>
+
+<p>这也可以说明原本是不支持的，但是如果非要支持的话，那么需要进行使用插件进行支持。</p>
+
+<p>&lt;2&gt;针对第二个问题</p>
+
+<p>对于第二个问题，如果看过之前的章节就很好解决了，只需要在 src/main/resouces 下新建一个 static 目录，然后在 static 下新建子目录：css,images,js 目录，在 images 放入一张 test.jpg 图片，那么访问路径是： <a href="http://127.0.0.1:8080/images/test.jpg">http://127.0.0.1:8080/images/test.jpg</a></p>
+
+<p>当前目录结构应该是这样子的： (1)--src/java/resources</p>
+
+<p>(2)-- static</p>
+
+<p>(3)-- css</p>
+
+<p>(3)-- images</p>
+
+<p>(3)-- js</p>
+
+<p><img src="media/image8.jpeg" alt="" />{width=&ldquo;3.4266666666666667in&rdquo; height=&ldquo;0.8533333333333334in&rdquo;}那么有人会有疑问这个，打包的时候能打上嘛，答案是可以的，请看实际打包解压图：</p>
+</blockquote>
+
+<h2 id="spring-boot-集-成-servlet">Spring boot 集 成 servlet</h2>
+
+<blockquote>
+<p>Web 开发使用 Controller 基本上可以完成大部分需求，但是我们还可能会用到 Servlet、Filter、Listener、</p>
+
+<p>Interceptor 等等。</p>
+
+<p>当使用Spring-Boot 时，嵌入式Servlet 容器通过扫描注解的方式注册Servlet、Filter 和Servlet 规范的所有监听</p>
+
+<p>器（如HttpSessionListener 监听器）。</p>
+
+<p>Spring boot 的主 Servlet 为 DispatcherServlet，其默认的url-pattern 为&rdquo;/&ldquo;。也许我们在应用中还需要定义更多的Servlet，该如何使用SpringBoot 来完成呢？</p>
+
+<p>在 spring boot 中添加自己的 Servlet 有两种方法，代码注册 Servlet 和注解自动注册（Filter 和 Listener 也是如此）。</p>
+
+<p>在 spring boot 中添加自己的 Servlet 有两种方法，代码注册 Servlet 和注解自动注册（Filter 和 Listener 也是如此）。</p>
+
+<p>一、代码注册通过 ServletRegistrationBean、 FilterRegistrationBean 和 ServletListenerRegistrationBean 获得</p>
+
+<p>控制。</p>
+
+<p>也可以通过实现 ServletContextInitializer 接口直接注册。</p>
+
+<p>二、在 SpringBootApplication 上使用@ServletComponentScan 注解后，Servlet、Filter、Listener 可以直接通过 @WebServlet、@WebFilter、@WebListener 注解自动注册，无需其他代码。</p>
+
+<p>通过代码注册Servlet 示例代码： com.hpit.sb.servlet.MyServlet1</p>
+
+<p>程序入口配置： com.hpit.sb. App</p>
+
+<p>第二种方式：使用注解注册Servlet 示例代码</p>
+
+<p>com.hpit.sb.servlet. MyServlet2</p>
+
+<p>主程序配置： com.hpit.sb.App</p>
+
+<p><img src="media/image9.png" alt="" />{width=&ldquo;7.052595144356955in&rdquo; height=&ldquo;0.8990616797900263in&rdquo;}启动日志：</p>
+</blockquote>
+
+<h2 id="spring-boot-集成-fliter-和-linstener">Spring boot 集成 Fliter 和 Linstener</h2>
+
+<blockquote>
+<p>上一章已经对定义 Servlet 的方法进行了说明，过滤器（Filter）和监听器（Listener）的注册方法和 Servlet 一样，不清楚的可以查看下上一篇文章（20）： 本文将直接使用@WebFilter 和@WebListener 的方式，完成一个 Filter 和一个 Listener；使用注解</p>
+</blockquote>
+
+<h5 id="servletcomponentscan-这个就是扫描相应的-servlet-包">@ServletComponentScan//这个就是扫描相应的 Servlet 包;</h5>
+
+<blockquote>
+<p>开发Filter【：添加@ServletComponentScan 注解之后，使用注解开发的 Filter 和Linstener 将会被自动注册】</p>
+
+<p>具 体 实 现 代 码 ： com.hpit.sb.filter.MyFilter</p>
+
+<p>开发Linstener 具体实现代码：</p>
+
+<p>com.hpit.sb.listener. Mylistener</p>
+
+<p>启动日志，并请求一个有效连接：</p>
+
+<p><img src="media/image10.png" alt="" />{width=&ldquo;7.136555118110236in&rdquo; height=&ldquo;3.65125in&rdquo;}</p>
+</blockquote>
+
+<h2 id="spring-boot-拦截器-handlerinterceptor">Spring boot 拦截器 HandlerInterceptor</h2>
+
+<blockquote>
+<p>上一章对过滤器的定义做了说明，也比较简单。过滤器属于Servlet 范畴的API，与Spring 没什么关系。</p>
+
+<p>Web 开发中，我们除了使用 Filter 来过滤请 web 求外，还可以使用 Spring 提供的 HandlerInterceptor（拦截器）。</p>
+
+<p>HandlerInterceptor 的功能跟过滤器类似，但是提供更精细的的控制能力：在 request 被响应之前、request 被响应之后、视图渲染之前以及 request 全部结束之后。我们不能通过拦截器修改 request 内容，但是可以通过抛出异常（或者返回false）来暂停request 的执行。</p>
+
+<p>实现 UserRoleAuthorizationInterceptor 的拦截器有： ConversionServiceExposingInterceptor CorsInterceptor</p>
+
+<p>LocaleChangeInterceptor PathExposingHandlerInterceptor ResourceUrlProviderExposingInterceptor ThemeChangeInterceptor UriTemplateVariablesHandlerInterceptor UserRoleAuthorizationInterceptor</p>
+
+<p>其中 LocaleChangeInterceptor 和 ThemeChangeInterceptor 比较常用。</p>
+
+<p>配置拦截器也很简单， Spring 为什么提供了基础类 WebMvcConfigurerAdapter ，我们只需要重写addInterceptors 方法添加注册拦截器。</p>
+
+<p>实现自定义拦截器只需要 3 步：</p>
+
+<p>1、创建我们自己的拦截器类并实现 HandlerInterceptor 接口。</p>
+
+<p>2、创建一个Java 类继承WebMvcConfigurerAdapter，并重写 addInterceptors 方法。</p>
+
+<p>2、实例化我们自定义的拦截器，然后将对像手动添加到拦截器链中（在addInterceptors 方法中添加）。PS：本文重点在如何在Spring-Boot 中使用拦截器，关于拦截器的原理请大家查阅资料了解。</p>
+
+<p>代码：</p>
+
+<p>com.hpit.sb.interceptors. MyInterceptor1</p>
+
+<p>com.hpit.sb.interceptors. MyInterceptor2</p>
+
+<p>重写web 配置addInterceptors()方法，添加自定义拦截器： com.hpit.sb.config. MyWebAppConfig</p>
+
+<p>启动日志，请求任意控制器:日志输出：</p>
+</blockquote>
+
+<p><img src="media/image11.png" alt="" />{width=&ldquo;5.643725940507436in&rdquo; height=&ldquo;0.625in&rdquo;}</p>
+
+<h2 id="spring-boot-系统启动任务-commandlinerunner">Spring boot 系统启动任务 CommandLineRunner</h2>
+
+<blockquote>
+<p>实际应用中，我们会有在项目服务启动的时候就去加载一些数据或做一些事情这样的需求。</p>
+
+<p>为了解决这样的问题，Spring Boot 为我们提供了一个方法，通过实现接口 CommandLineRunner 来实现。很简单，只需要一个类就可以，无需其他配置。</p>
+
+<p>创建任务类 1 实现CommandLineRunner 接口： com.hpit.sb.runner. MyCommandRunner1</p>
+
+<p>com.hpit.sb.runner. MyCommandRunner2</p>
+
+<p>Spring Boot 应用程序在启动后，会遍历CommandLineRunner 接口的实例并运行它们的run 方法。也可以利用</p>
+
+<p>@Order 注解（或者实现Order 接口）来规定所有CommandLineRunner 实例的运行顺序。如下我们使用@Order 注解来定义执行顺序。</p>
+
+<p><img src="media/image12.png" alt="" />{width=&ldquo;4.670989720034996in&rdquo; height=&ldquo;0.53125in&rdquo;}启动应用日志输出：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 集成 <strong>Junit</strong> 单元测试</li>
+</ol>
+
+<blockquote>
+<p>Junit 这种老技术，现在又拿出来说，不为别的，某种程度上来说，更是为了要说明它在项目中的重要性。那么先简单说一下为什么要写测试用例</p>
+</blockquote>
+
+<ol>
+<li><p>可以避免测试点的遗漏，为了更好的进行测试，可以提高测试效率</p></li>
+
+<li><p>可以自动测试，可以在项目打包前进行测试校验</p></li>
+
+<li><p>可以及时发现因为修改代码导致新的问题的出现，并及时解决</p></li>
+</ol>
+
+<blockquote>
+<p>那么本文从以下几点来说明怎么使用Junit，Junit4 比 3 要方便很多，细节大家可以自己了解下，主要就是版本 4 中对方法命名格式不再有要求，不再需要继承TestCase，一切都基于注解实现。</p>
+
+<p>那么Spring Boot 如何使用Junit 呢？ 1). 加入Maven 的依赖；</p>
+</blockquote>
+
+<ol>
+<li><p>编写测试service;</p></li>
+
+<li><p>编写测试类;</p></li>
+</ol>
+
+<!-- -->
+
+<ol>
+<li><p>加入Maven 的依赖:</p></li>
+
+<li><p>编 写 测 试 service: com.hpit.sb.service. HelloService</p></li>
+</ol>
+
+<blockquote>
+<p>在src/test/java 下编写测试类：com.hpit.springboot02.test.TestHelloService</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 读取系统环境变量</li>
+</ol>
+
+<blockquote>
+<p>凡是被 Spring 管理的类，实现接口 EnvironmentAware 重写方法 setEnvironment 可以在工程启动时，获取到</p>
+
+<p>系统环境变量和application 配置文件中的变量。</p>
+
+<p>com.hpit.sb.environment.MyEnvironment</p>
+
+<p>import org.apache.log4j.Logger;</p>
+
+<p>import org.springframework.beans.factory.annotation.Value; import org.springframework.boot.bind.RelaxedPropertyResolver; import org.springframework.context.EnvironmentAware;</p>
+
+<p>import org.springframework.context.annotation.Configuration;</p>
+
+<p>import org.springframework.core.env.Environment;</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li>TODO 读取spring以及系统环境变量 主要是@Configuration，实现接口：EnvironmentAware就能获取到系统</li>
+</ul>
+
+<blockquote>
+<p>环境信息;</p>
+
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>@author 郑江山</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+
+<p>*/ @Configuration</p>
+
+<p>public class MyEnvironment implements EnvironmentAware {</p>
+
+<p>@Value(\&rdquo;\${spring.datasource.url}\&ldquo;) // 使用el表达式读取spring主配置文件</p>
+
+<p>private String jdbcUrl;</p>
+
+<p>private Logger logger = Logger.getLogger(getClass()); @Override</p>
+
+<p>public void setEnvironment(Environment environment) {</p>
+
+<p>// springEL表达式获取的值</p>
+
+<p>logger.info(\&ldquo;springel表达式获取的值：\&rdquo; + jdbcUrl);</p>
+
+<p>// 获取系统属性：</p>
+
+<p>logger.info(\&ldquo;JAVA_HOME\&rdquo; + environment.getProperty(\&ldquo;JAVA_HOME\&ldquo;));</p>
+
+<p>// 获取spring主配置文件中的属性</p>
+
+<p>logger.info(\&ldquo;spring.datasource.url:\&rdquo; + environment.getProperty(\&ldquo;spring.datasource.url\&ldquo;));</p>
+
+<p>// 获取前缀是&rdquo;spring.datasource&rdquo;的所有属性值</p>
+
+<p>RelaxedPropertyResolver propertyResolver = new RelaxedPropertyResolver(environment,</p>
+
+<p>\&ldquo;spring.datasource.\&ldquo;);</p>
+
+<p>logger.info(\&ldquo;通过前缀获取的url:\&rdquo; + propertyResolver.getProperty(\&ldquo;url\&ldquo;));</p>
+
+<p>logger.info(\&ldquo;通过前缀获取的driverClassName:\&rdquo; + propertyResolver.getProperty(\&ldquo;driverClassName\&ldquo;));</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>其中application.properties 文件信息是：</p>
+
+<p><img src="media/image13.jpeg" alt="" />{width=&ldquo;6.869482720909886in&rdquo; height=&ldquo;0.7516666666666667in&rdquo;}启动应用，查看日志输出：</p>
+
+<p>@Controller @Service 等被Spring 管理的类都支持，注意重写的方法 setEnvironment 是在系统启动的时候被执行。</p>
+
+<p>或 者 如 下 Controller： com.hpit.sb.controller.SystemEnvironmentController</p>
+
+<p><img src="media/image14.png" alt="" />{width=&ldquo;5.203527996500437in&rdquo; height=&ldquo;0.9479166666666666in&rdquo;}请求控制器：查看效果</p>
+
+<p>日志输出：</p>
+
+<p><img src="media/image15.jpeg" alt="" />{width=&ldquo;6.9262128171478565in&rdquo; height=&ldquo;0.1944925634295713in&rdquo;}我们还可以通过@ConfigurationProperties 读取application 属性配置文件中的属性。具体代码：</p>
+
+<p>com.hpit.sb.config.MyDataConfiguration</p>
+
+<p>com.hpit.sb.config.MySqlConfig</p>
+
+<p>代码解释：</p>
+
+<p>@ConditionOnClass 表明该@Configuration 仅仅在一定条件下才会被加载，这里的条件是 Mongo.class 位于类</p>
+
+<p>路径上</p>
+</blockquote>
+
+<ul>
+<li><p>@EnableConfigurationProperties 将 Spring Boot 的配置文件（ application.properties ）中的spring.data.mongodb.*属性映射为MongoProperties 并注入到MongoAutoConfiguration 中。</p></li>
+
+<li><p>@ConditionalOnMissingBean 说明 Spring Boot 仅仅在当前上下文中不存在对象时，才会实例化一个Bean。这个逻辑也体现了 Spring Boot 的另外一个特性&mdash;&mdash;自定义的Bean 优先于框架的默认配置，我们如果显式的在业务代码中定义了一个对象，那么Spring Boot 就不再创建。</p></li>
+</ul>
+
+<ol>
+<li><strong>Spring boot</strong> 使用自定义 <strong>properties</strong></li>
+</ol>
+
+<blockquote>
+<p>spring boot 使用application.properties 默认了很多配置。但需要自己添加一些配置的时候，我们应该怎么做呢。例如在application.properties 配置文件中加入如下配置：</p>
+
+<p>那么如何在应用程序中进行读取呢？ 首 先 定 义 配 置 读 取 实 体 类 ： com.hpit.sb.properties.MyConfig</p>
+
+<p><a href="mailto:添加@ConfigurationProperties注解用来读取application.properties配置文件中以person">[添加@ConfigurationProperties 注解用来读取application.properties 配置文件中以person]{.underline}</a> 开头的所有配置。2.在spring boot 入口类加入：</p>
+
+<p><img src="media/image16.jpeg" alt="" />{width=&ldquo;7.0881572615923005in&rdquo; height=&ldquo;0.9902077865266842in&rdquo;}如何是定义其他配置文件中，需要将实体类改写为：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 改变默认包扫描</li>
+</ol>
+
+<blockquote>
+<p>在开发中我们知道Spring Boot 默认会扫描启动类同包以及子包下的注解，那么如何进行改变这种扫描包的方式</p>
+
+<p>呢，原理很简单就是：</p>
+
+<p>@ComponentScan 注解进行指定要扫描的包以及要扫描的类。接下来我们简单写个例子进行测试下。</p>
+
+<p>第一步：新建两个新包</p>
+
+<p>我们在项目中新建两个包cn.hpit ; org.hpit ；</p>
+
+<p>第二步：新建两个测试类；</p>
+
+<p>在这里为了方便测试，我们让我们的类在启动的时候就进行执行，所以我们就编写两个类， 实现接口CommandLineRunner，这样在启动的时候我们就可以看到打印信息了。</p>
+
+<p>cn.hpit.sb.MyCommandLineRunner3</p>
+
+<p>cn.hpit.sb.MyCommandLineRunner4</p>
+
+<p>在 spring boot 中添加自定义包扫描的路径</p>
+
+<p>com.hpit.sb.App</p>
+
+<p>启动应用程序：</p>
+
+<p><img src="media/image17.png" alt="" />{width=&ldquo;4.670949256342957in&rdquo; height=&ldquo;0.5in&rdquo;}日志输出：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 自定义启动 <strong>Banner</strong></li>
+</ol>
+
+<blockquote>
+<p>对于使用过Spring Boot 的开发者来说，程序启动的时候输出的由字符组成的Spring 符号并不陌生。这个是Spring Boot 为自己设计的Banner：</p>
+
+<p>如果有人不喜欢这个输出，本章说一下怎么修改。</p>
+
+<p>第一种方式：修改的时候，进行设置,在Application 的main 方法中：</p>
+
+<p>第二种方式：修改banner.txt 配置文件</p>
+
+<p>在src/main/resouces 下新建banner.txt，在文件中加入：</p>
+
+<p>第三种方式：重写接口Banner 实现</p>
+
+<p>SpringBoot 提供了一个接口 org.springframework.boot.Banner，他的实例可以被传给 SpringApplication 的setBanner(banner) 方法。如果你闲得不行非要着重美化这个命令行输出的话，可以重写 Banner 接口的printBanner 方法。</p>
+
+<p>第四种方式：在application.properties 进行配置</p>
+
+<p>在application.proerpties 进行banner 的显示和关闭：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 导入 <strong>spring XML</strong> 配置文件</li>
+</ol>
+
+<blockquote>
+<p>在App.java 类编写HelloService2;</p>
+
+<p>首先我们这里有几个包：com.hpit,org.hpit,我们这里打算把 App.java 启动类放到 com.hpit 中，根据 Spring Boot 扫描（根包到子包的原则），我们把 HelloService2 写在 Spring Boot 可以扫描的位置，HelloService 写在 Spring Boot 无法扫描到的位置，那么我们使用配置文件bean 的方式进行引入，具体代码如下：</p>
+</blockquote>
+
+<ol>
+<li>创建一个App 默认无法扫描到的bean</li>
+</ol>
+
+<blockquote>
+<p>org.hpit.demo.service.HelloService</p>
+</blockquote>
+
+<ol>
+<li><p>在resource 下创建spring 传统配置文件applicationContext.xml(名字任意) src/main/resource/applicationContext.xml</p></li>
+
+<li><p>创建一个系统启动任务类，用于测试App 无法扫描到的Bean 是否能自动装配</p></li>
+</ol>
+
+<blockquote>
+<p>com.hpit.springboot03.runner.TestXMLBeanRunner</p>
+</blockquote>
+
+<ol>
+<li><p>在App.java 中配置引入配置文件的注解 @ImportResource</p></li>
+
+<li><p><img src="media/image18.png" alt="" />{width=&ldquo;7.1322823709536305in&rdquo; height=&ldquo;2.019582239720035in&rdquo;}启动应用，观察日志输出，发现系统可以引入App 无法扫描到的bean</p></li>
+</ol>
+
+<h2 id="spring-boot-热部署">Spring boot 热部署</h2>
+
+<blockquote>
+<p>进行热部署，但是有部分代码修改了，并不会进行部署。今天我们介绍的这个通过重启的机制就可以解决这个问 题了。</p>
+
+<p>我们今天要介绍的就是：spring-boot-devtools。</p>
+
+<p>spring-boot-devtools 是一个为开发者服务的一个模块，其中最重要的功能就是自动应用代码更改到最新的App 上面去。原理是在发现代码有更改之后，重新启动应用，但是比速度比手动停止后再启动还要更快，更快指的不是节省出来的手工操作的时间。</p>
+
+<p>其深层原理是使用了两个 ClassLoader，一个 Classloader 加载那些不会改变的类（第三方 Jar 包），另一个</p>
+
+<p>ClassLoader 加载会更改的类，称为 restart ClassLoader</p>
+
+<p>,这样在有代码更改的时候，原来的restart ClassLoader 被丢弃，重新创建一个restart ClassLoader，由于需要加载的类相比较少，所以实现了较快的重启时间（5 秒以内）。</p>
+
+<p>那如何使用呢，大概两个步骤即可： 第一就是添加相应的依赖：</p>
+
+<p>第二加点：仅仅加入devtools 在我们的eclipse 中还不起作用，这时候还需要添加的spring-boot-maven-plugin：</p>
+
+<p>运行App.java ---- Run Application --- Java Application 即可进行测试。</p>
+
+<p>测试方法：</p>
+</blockquote>
+
+<ul>
+<li><p>修改类--&gt;保存：应用会重启</p></li>
+
+<li><p>修改配置文件--&gt;保存：应用会重启</p></li>
+
+<li><p>修改页面--&gt;保存：应用会重启，页面会刷新（原理是将spring.thymeleaf.cache 设为false）</p></li>
+</ul>
+
+<blockquote>
+<p>不能使用分析：</p>
+</blockquote>
+
+<p>a.  对应的spring-boot 版本是否正确，我这里使用的是 1.3.3 版本；</p>
+
+<p>b.  是否加入plugin 了，以及属性&lt;fork&gt;true&lt;/fork&gt;</p>
+
+<p>c.  Eclipse Project 是否开启了Build Automatically（我自己就在这里栽了坑，不知道为什么我的工具什么时候关闭了自动编译的功能）。</p>
+
+<p>d.  如果设置SpringApplication.setRegisterShutdownHook(false)，则自动重启将不起作用。</p>
+
+<blockquote>
+<p>补充：</p>
+
+<p>默认情况下，/META-INF/maven，/META-INF/resources，/resources，<strong>/static</strong>，<strong>/templates</strong>，/public 这些文件夹下的文件修改不会使应用重启，但是会重新加载（devtools 内嵌了一个LiveReload server，当资源发生改变时，浏览器刷新）。</p>
+</blockquote>
+
+<ul>
+<li><p>如果想改变默认的设置，可以自己设置不重启的目录：spring.devtools.restart.exclude=static/**,public/**， 这样的话，就只有这两个目录下的文件修改不会导致restart 操作了。</p></li>
+
+<li><p>如果要在保留默认设置的基础上还要添加其他的排除目录：spring.devtools.restart.additional-exclude</p></li>
+
+<li><p>如果想要使得当非 classpath 下的文件发生变化时应用得以重启，使用：spring.devtools.restart.additional- paths，这样devtools 就会将该目录列入了监听范围。</p></li>
+</ul>
+
+<blockquote>
+<p>关闭自动重启</p>
+
+<p>设置 spring.devtools.restart.enabled 属性为 false，可以关闭该特性。可以在application.properties 中设置，也可以通过设置环境变量的方式。</p>
+
+<p><strong>public static</strong> void main(String[] args){ System.setProperty(\&ldquo;spring.devtools.restart.enabled\&ldquo;,\&ldquo;false\&ldquo;); SpringApplication.run(MyApp.class, args);</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 监控和管理生产环境</li>
+</ol>
+
+<blockquote>
+<p>spring-boot-actuator 模块提供了一个监控和管理生产环境的模块，可以使用http、jmx、ssh、telnet 等拉管理和监控应用。审计（Auditing）、</p>
+
+<p>健康（health）、数据采集（metrics gathering）会自动加入到应用里面。首先，写一个最基本的spring boot 项目。</p>
+
+<p>基于Maven 的项目添加&rsquo;starter&rsquo;依赖：</p>
+
+<p>以下是所有监控描述：</p>
+</blockquote>
+
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; <strong>HTTP</strong> 方法 | &gt; 路径          | &gt; 描述          | &gt; 鉴权          |
++=================+=================+=================+=================+
+| &gt; GET           | &gt; /autoconfig   | &gt; 查看自动配置的使用情况，该 | &gt; true |
+|                 |                 | 报告展示所有    |                 |
+|                 |                 | &gt; auto-configur |                 |
+|                 |                 | ation           |                 |
+|                 |                 | &gt; 候            |                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
+
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+|                 |                 | &gt; 选者及它们被应用或未被应用 |    |
+|                 |                 | 的原因          |                 |
++=================+=================+=================+=================+
+| &gt; GET           | &gt; /configprops  | &gt; 显 示 一 个   | &gt; true          |
+|                 |                 | &gt; 所 有         |                 |
+|                 |                 | &gt;               |                 |
+|                 |                 | &gt; @Configuratio |                 |
+|                 |                 | nProperties     |                 |
+|                 |                 | &gt; 的整理列表    |                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /beans        | &gt; 显 示 一 个   | &gt; true          |
+|                 |                 | &gt; 应 用 中 所   |                 |
+|                 |                 | &gt; 有 Spring     |                 |
+|                 |                 | &gt; Beans         |                 |
+|                 |                 | &gt; 的完整列表    |                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /dump         | &gt; 打印线程栈    | &gt; true          |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /env          | &gt; 查看所有环境变量 | &gt; true       |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /env/{name}   | &gt; 查看具体变量值 | &gt; true         |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /health       | &gt; 查看应用健康指标 | &gt; false      |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /info         | &gt; 查看应用信息  | &gt; false         |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /mappings     | &gt; 查看所有 url  | &gt; true          |
+|                 |                 | &gt; 映射          |                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /metrics      | &gt; 查看应用基本指标 | &gt; true       |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /metrics/{nam | &gt; 查看具体指标  | &gt; true          |
+|                 | e}              |                 |                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; POST          | &gt; /shutdown     | &gt; 允许应用以优雅的方式关闭（ | &gt; true |
+|                 |                 | 默认情况下不启用） |              |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; GET           | &gt; /trace        | &gt; 查看基本追踪信息 | &gt; true       |
++&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
+
+<h5 id="health">health</h5>
+
+<blockquote>
+<p>比如：<a href="http://localhost:8080/health">http://localhost:8080/health</a></p>
+
+<p>你可以得到结果</p>
+
+<p>可以检查的其他一些情况的健康信息。下面的 HealthIndicators 会被 Spring Boot 自动配置：</p>
+
+<p>自定义当然也可以，你可以注册实现了 HealthIndicator 接口的 Spring beans，Health 响应需要包含一个</p>
+
+<p>status 和可选的用于展示的详情。</p>
+
+<p>trace</p>
+
+<p>访问<a href="http://localhost:8080/trace">http://localhost:8080/trace</a> 可以看到结果，默认为最新的一些HTTP 请求</p>
+</blockquote>
+
+<h3 id="info">info</h3>
+
+<blockquote>
+<p>当执行 <a href="http://localhost:8080/info">http://localhost:8080/info</a> 的时候，结果什么没有</p>
+
+<p>但是，在application.properties 加入一些配置</p>
+
+<p>执行/info 就可以看到有些信息了。</p>
+
+<p>/info 是用来在构建的时候，自动扩展属性的。对于 Maven 项目，可以通过 @..@ 占位符引用 Maven 的&rsquo;project properties&rsquo;。</p>
+
+<p>更多的细节和探索，需要自己看看源码和spring boot 的官方文档。</p>
+</blockquote>
+
+<h2 id="spring-boot-starter-详解">Spring boot starter 详解</h2>
+
+<blockquote>
+<p>1）spring-boot-starter</p>
+
+<p>这是Spring Boot 的核心启动器，包含了自动配置、日志和YAML。2）spring-boot-starter-actuator</p>
+
+<p>帮助监控和管理应用。3）spring-boot-starter-amqp</p>
+
+<p>通过spring-rabbit 来支持AMQP 协议（Advanced Message Queuing Protocol）。 4）spring-boot-starter-aop</p>
+
+<p>支持面向方面的编程即AOP，包括spring-aop 和AspectJ。 5）spring-boot-starter-artemis</p>
+
+<p>通过Apache Artemis 支持JMS 的API（Java Message Service API）。 6）spring-boot-starter-batch</p>
+
+<p>支持Spring Batch，包括HSQLDB 数据库。7）spring-boot-starter-cache</p>
+
+<p>支持Spring 的Cache 抽象。</p>
+</blockquote>
+
+<ol>
+<li>spring-boot-starter-cloud-connectors</li>
+</ol>
+
+<blockquote>
+<p>支持Spring Cloud Connectors，简化了在像Cloud Foundry 或Heroku 这样的云平台上连接服务。</p>
+</blockquote>
+
+<ol>
+<li>spring-boot-starter-data-elasticsearch</li>
+</ol>
+
+<blockquote>
+<p>支持ElasticSearch 搜索和分析引擎，包括spring-data-elasticsearch。10）spring-boot-starter-data-gemfire</p>
+
+<p>支持GemFire 分布式数据存储，包括spring-data-gemfire。11）spring-boot-starter-data-jpa</p>
+
+<p>支持JPA（Java Persistence API），包括 spring-data-jpa、spring-orm、Hibernate。 12）spring-boot-starter-data-mongodb</p>
+
+<p>支持MongoDB 数据，包括spring-data-mongodb。</p>
+
+<p>13）spring-boot-starter-data-rest</p>
+
+<p>通过spring-data-rest-webmvc，支持通过REST 暴露Spring Data 数据仓库。14）spring-boot-starter-data-solr</p>
+
+<p>支持Apache Solr 搜索平台，包括spring-data-solr。15）spring-boot-starter-freemarker</p>
+
+<p>支持FreeMarker 模板引擎。</p>
+
+<p>16）spring-boot-starter-groovy-templates</p>
+
+<p>支持Groovy 模板引擎。17）spring-boot-starter-hateoas</p>
+
+<p>通过spring-hateoas 支持基于HATEOAS 的RESTful Web 服务。18）spring-boot-starter-hornetq</p>
+
+<p>通过HornetQ 支持JMS。19）spring-boot-starter-integration 支持通用的spring-integration 模块。20）spring-boot-starter-jdbc</p>
+
+<p>支持JDBC 数据库。21）spring-boot-starter-jersey</p>
+
+<p>支持Jersey RESTful Web 服务框架。</p>
+
+<p>22）spring-boot-starter-jta-atomikos</p>
+
+<p>通过Atomikos 支持JTA 分布式事务处理。23）spring-boot-starter-jta-bitronix</p>
+
+<p>通过Bitronix 支持JTA 分布式事务处理。24）spring-boot-starter-mail</p>
+
+<p>支持javax.mail 模块。25）spring-boot-starter-mobile 支持spring-mobile。</p>
+
+<p>26）spring-boot-starter-mustache 支持Mustache 模板引擎。27）spring-boot-starter-redis</p>
+
+<p>支持Redis 键值存储数据库，包括spring-redis。28）spring-boot-starter-security</p>
+
+<p>支持spring-security。</p>
+</blockquote>
+
+<ol>
+<li><p>spring-boot-starter-social-facebook 支持spring-social-facebook</p></li>
+
+<li><p>spring-boot-starter-social-linkedin</p></li>
+</ol>
+
+<blockquote>
+<p>支持pring-social-linkedin</p>
+</blockquote>
+
+<ol>
+<li>spring-boot-starter-social-twitter</li>
+</ol>
+
+<blockquote>
+<p>支 持 pring-social-twitter 32）spring-boot-starter-test</p>
+
+<p>支持常规的测试依赖，包括JUnit、Hamcrest、Mockito 以及spring-test 模块。 33）spring-boot-starter-thymeleaf</p>
+
+<p>支持Thymeleaf 模板引擎，包括与Spring 的集成。34）spring-boot-starter-velocity</p>
+
+<p>支持Velocity 模板引擎。35）spring-boot-starter-web</p>
+
+<p>S 支持全栈式Web 开发，包括Tomcat 和spring-webmvc。36）spring-boot-starter-websocket</p>
+
+<p>支持WebSocket 开发。37）spring-boot-starter-ws 支持Spring Web Services。</p>
+
+<p>Spring Boot 应用启动器面向生产环境的还有 2 种，具体如下： 1）spring-boot-starter-actuator</p>
+
+<p>增加了面向产品上线相关的功能，比如测量和监控。2）spring-boot-starter-remote-shell</p>
+
+<p>增加了远程ssh shell 的支持。</p>
+
+<p>最后，Spring Boot 应用启动器还有一些替换技术的启动器，具体如下： 1）spring-boot-starter-jetty</p>
+
+<p>引入了Jetty HTTP 引擎（用于替换Tomcat）。 2）spring-boot-starter-log4j</p>
+
+<p>支持Log4J 日志框架。3）spring-boot-starter-logging</p>
+
+<p>引入了Spring Boot 默认的日志框架Logback。4）spring-boot-starter-tomcat</p>
+
+<p>引入了Spring Boot 默认的HTTP 引擎Tomcat。</p>
+</blockquote>
+
+<ol>
+<li>spring-boot-starter-undertow</li>
+</ol>
+
+<blockquote>
+<p>引入了Undertow HTTP 引擎（用于替换Tomcat）。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 依赖的版本</li>
+</ol>
+
+<blockquote>
+<p>spring-boot 通过maven 的依赖管理为我们写好了很多依赖项及其版本，我们可拿来使用。spring-boot 文档介绍了两种使用方法，一是继承，二是导入。</p>
+
+<p>通过&lt;parent&gt;继承：</p>
+
+<p>或者在&lt;dependencyManagement&gt;中导入：</p>
+
+<p>此外，在其 文档 里说到， 继承时可简单地通过属性定制依赖项版本。比如， 改为使用较新的 spring- 4.1.6.RELEASE 版本：</p>
+
+<p>不过，此法只对继承有效，导入无效。以下摘自其文档说明：</p>
+
+<p>This only works if your Maven project inherits (directly or indirectly) from spring-boot- dependencies. If you have added spring-boot-dependencies in your own dependencyManagement section with &lt;scope&gt;import&lt;/scope&gt; you have to redefine the artifact yourself instead of overriding the property.</p>
+
+<p>导入时有没有较简单的方法呢？我们可先继承后导入！</p>
+
+<p>1、先建一个过渡性工程，继承后定制依赖项的版本。</p>
+
+<p>2、然后导入到自己的工程里。</p>
+
+<p>这样，虽然多建了一个过渡性工程，但定制依赖项版本同继承时一样简单。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 文件上传</li>
+</ol>
+
+<blockquote>
+<p>文件上传主要分以下几个步骤：</p>
+</blockquote>
+
+<ol>
+<li><p>新建maven java project；</p></li>
+
+<li><p>在pom.xml 加入相应依赖；</p></li>
+
+<li><p>新建一个表单页面（这里使用thymleaf）;</p></li>
+
+<li><p>编写controller;</p></li>
+
+<li><p>测试；</p></li>
+
+<li><p>对上传的文件做一些限制；</p></li>
+
+<li><p>多文件上传实现</p></li>
+</ol>
+
+<!-- -->
+
+<ol>
+<li>新建maven java project</li>
+</ol>
+
+<blockquote>
+<p>新建一个名称为spring-boot-fileupload maven java 项目；</p>
+</blockquote>
+
+<ol>
+<li>在pom.xml 加入相应依赖；</li>
+</ol>
+
+<blockquote>
+<p>加入相应的maven 依赖，具体看以下解释： POM.XML</p>
+
+<p>&lt;project xmlns=\&rdquo;<a href="http://maven.apache.org/POM/4.0.0">http://maven.apache.org/POM/4.0.0</a>\&rdquo; xmlns:xsi=\&rdquo;<a href="http://www.w3.org/2001/XMLSchema-instance">http://www.w3.org/2001/XMLSchema-instance</a>\&rdquo; xsi:schemaLocation=\&rdquo;[<a href="http://maven.apache.org/POM/4.0.0">http://maven.apache.org/POM/4.0.0</a> <a href="http://maven.apache.org/maven-v4_0_0.xsd">http://maven.apache.org/maven-v4_0_0.xsd</a>]{.underline}\&rdquo;&gt;</p>
+
+<p>&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</p>
+
+<p>&lt;groupId&gt;com.hpit&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;springboot03&lt;/artifactId&gt;</p>
+
+<p>&lt;packaging&gt;war&lt;/packaging&gt;</p>
+
+<p>&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</p>
+
+<p>&lt;name&gt;springboot03 [Maven Webapp]{.underline}&lt;/name&gt;</p>
+
+<p>&lt;url&gt;<a href="http://maven.apache.org/">http://maven.apache.org</a>&lt;/url&gt;</p>
+
+<p>&lt;properties&gt;</p>
+
+<p>&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</p>
+
+<p>&lt;/properties&gt;</p>
+
+<p>&lt;!-- spring boot 项目依赖 --&gt;</p>
+
+<p>&lt;parent&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</p>
+
+<p>&lt;version&gt;1.4.0.RELEASE&lt;/version&gt;</p>
+
+<p>&lt;/parent&gt;</p>
+
+<p>&lt;dependencies&gt;</p>
+
+<p>&lt;!-- spring boot web支持: 1、web [mvc]{.underline}; 2、restful; 3、[jackjson]{.underline}支持; 4、[aop]{.underline} .. --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!--spring boot 集成[Junit]{.underline}依赖 --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;</p>
+
+<p>&lt;scope&gt;test&lt;/scope&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- spring boot [thymeleaf]{.underline}模板引擎支持 --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-[thymeleaf]{.underline}&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- spring boot 配置文件解析处理支持 --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-configuration-processor&lt;/artifactId&gt;</p>
+
+<p>&lt;optional&gt;true&lt;/optional&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- [servlet]{.underline} 依赖. --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;javax.servlet&lt;/groupId&gt;</p>
+</blockquote>
+
+<ol>
+<li>新建一个表单页面（这里使用thymleaf）</li>
+</ol>
+
+<blockquote>
+<p>在 src/main/resouces 新建 templates(参照前面的章节，应该知道，templates 是 spring boot 存放模板文件的路径)，在templates 下新建一个file.html:</p>
+</blockquote>
+
+<ol>
+<li>编写controller;</li>
+</ol>
+
+<blockquote>
+<p>编写controller 进行测试，这里主要实现两个方法：其一就是提供访问的/file 路径；其二就是提供post 上</p>
+
+<p>传 的 /upload 方 法 ， 具 体 看 代 码 实 现 ： com.hpit.springboot03.web.FileUploadController import java.io.BufferedOutputStream;</p>
+
+<p>import java.io.File;</p>
+
+<p>import java.io.FileOutputStream;</p>
+
+<p>import java.io.IOException;</p>
+
+<p>import org.apache.log4j.Logger;</p>
+
+<p>import org.springframework.stereotype.Controller;</p>
+
+<p>import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RequestMethod; import org.springframework.web.bind.annotation.RequestParam; import org.springframework.web.bind.annotation.ResponseBody; import org.springframework.web.multipart.MultipartFile;</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li>TODO 文件上传控制器</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>@author 郑江山</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+
+<p>*/ @Controller</p>
+
+<p>public class FileUploadController {</p>
+
+<p>private Logger logger = Logger.getLogger(getClass()); @RequestMapping(value = \&ldquo;/upload\&ldquo;, method = RequestMethod.GET)</p>
+
+<p>public String file() {</p>
+
+<p>logger.info(\&ldquo;跳转文件上传控制器\&ldquo;);</p>
+
+<p>return \&ldquo;file\&ldquo;;</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li>TODO 文件上传控制器</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p>@param file</p></li>
+
+<li><p>@return</p></li>
+
+<li><p>@throws IOException</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @ResponseBody</p>
+
+<p>@RequestMapping(value = \&ldquo;/upload\&ldquo;, method = RequestMethod.POST)</p>
+
+<p>public String upload(@RequestParam(\&ldquo;file\&ldquo;) MultipartFile file) throws IOException {// 文 件 上 传BufferedOutputStream outputStream = new BufferedOutputStream(</p>
+
+<p>new FileOutputStream(new File(file.getOriginalFilename())));</p>
+
+<p>logger.info(\&ldquo;文件名称：\&rdquo; + file.getOriginalFilename()); outputStream.write(file.getBytes()); outputStream.flush();</p>
+
+<p>outputStream.close();</p>
+
+<p>return \&ldquo;文件上传成功\&ldquo;;</p>
+
+<p>}</p>
+
+<p>}</p>
+</blockquote>
+
+<ol>
+<li>编写App.java 然后测试</li>
+</ol>
+
+<blockquote>
+<p>App.java 没什么代码，就是Spring Boot 的启动配置，具体如下：</p>
+
+<p><img src="media/image19.png" alt="" />{width=&ldquo;4.469998906386702in&rdquo; height=&ldquo;1.1666666666666667in&rdquo;}然后你就可以访问：<a href="http://127.0.0.1/">http://127.0.0.1</a> /upload 进行测试了，文件上传的路径是在工程的跟路径下，请刷新查看， 其它的请查看代码中的注释进行自行思考。</p>
+</blockquote>
+
+<ol>
+<li>对上传的文件做一些限制；</li>
+</ol>
+
+<blockquote>
+<p>对文件做一些限制是有必要的，在App.java 进行编码配置： 在App 主程序入口处添加如下配置：</p>
+
+<p>（7）多文件上传实现</p>
+
+<p>多文件对于前段页面比较简单，具体代码实现： 在src/main/resource 下面创建multifile.html</p>
+
+<p>添加控制实现：com.hpit.springboot03.web.MultiFileUploadController</p>
+
+<p>启动浏览器输入路径进行测试。</p>
+
+<p><img src="media/image20.png" alt="" />{width=&ldquo;2.7425371828521437in&rdquo; height=&ldquo;3.7124989063867018in&rdquo;}项目结构图：</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 集成 <strong>redis</strong> 缓存</li>
+</ol>
+
+<blockquote>
+<p>本章牵涉到的技术点比较多：Spring Data JPA、Redis、Spring MVC,Spirng Cache，所以在看这篇文章的时候， 需要对以上这些技术点有一定的了解或者也可以先看看这篇文章，针对文章中实际的技术点在进一步了解（注意， 您需要自己下载Redis Server 到您的本地，所以确保您本地的Redis 可用，这里还使用了MySql 数据库，当然你也可以内存数据库进行测试）。这篇文章会提供对应的 Eclipse 代码示例，具体大体的分如下几个步骤：</p>
+</blockquote>
+
+<ol>
+<li><p>新建Java Maven Project;</p></li>
+
+<li><p>在pom.xml 中添加相应的依赖包；</p></li>
+
+<li><p>编写Spring Boot 启动类；</p></li>
+
+<li><p>配置application.properties;</p></li>
+
+<li><p>编写RedisCacheConfig 配置类；</p></li>
+
+<li><p>编写DemoInfo 测试实体类；</p></li>
+
+<li><p>编写DemoInfoRepository 持久化类；</p></li>
+
+<li><p>编写DemoInfoService 类；</p></li>
+
+<li><p>编写DemoInfoController 类；</p></li>
+
+<li><p>测试代码是否正常运行了</p></li>
+
+<li><p>自定义缓存key;</p></li>
+</ol>
+
+<!-- -->
+
+<ol>
+<li>新建Java Maven Project;</li>
+</ol>
+
+<blockquote>
+<p>这个步骤就不细说，新建一个spring-boot-redis Java maven project;</p>
+</blockquote>
+
+<ol>
+<li>在pom.xml 中添加相应的依赖包；</li>
+</ol>
+
+<blockquote>
+<p>在Maven 中添加相应的依赖包,主要有：spring boot 父节点依赖；spring boot web 支持；缓存服务 spring-context- support；添加redis 支持；JPA 操作数据库；mysql 数据库驱动，具体pom.xml 文件如下：</p>
+
+<p>&lt;/properties&gt;</p>
+
+<p>&lt;!-- spring boot 父节点依赖,</p>
+
+<p>引入这个之后相关的引入就不需要添加 version 配置，</p>
+
+<p>spring boot 会自动选择最合适的版本进行添加。</p>
+
+<p>--&gt;</p>
+
+<p>&lt;parent&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</p>
+
+<p>&lt;version&gt;1.4.0.RELEASE&lt;/version&gt;</p>
+
+<p>&lt;/parent&gt;</p>
+
+<p>&lt;dependencies&gt;</p>
+</blockquote>
+
+<p>&lt;dependency&gt;</p>
+
+<blockquote>
+<p>&lt;groupId&gt;[junit]{.underline}&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;[junit]{.underline}&lt;/artifactId&gt;</p>
+
+<p>&lt;scope&gt;test&lt;/scope&gt;</p>
+</blockquote>
+
+<p>&lt;/dependency&gt;</p>
+
+<blockquote>
+<p>&lt;!-- spring boot web 支持：[mvc]{.underline},[aop]{.underline}... --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!--</p>
+
+<p>包含支持 UI 模版（Velocity，FreeMarker，JasperReports）， 邮件服务，</p>
+
+<p>脚本服务(JRuby)，</p>
+
+<p>缓存 Cache（EHCache），</p>
+
+<p>任务计划 Scheduling（[uartz]{.underline}）。</p>
+
+<p>--&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>上面是完整的pom.xml 文件，每个里面都进行了简单的注释。</p>
+</blockquote>
+
+<ol>
+<li><p>编写Spring Boot 启动类（com.hpit.App）；</p></li>
+
+<li><p>配置application.properties;</p></li>
+</ol>
+
+<blockquote>
+<p>这里主要是配置两个资源，第一就是数据库基本信息；第二就是redis 配置；第三就是JPA 的配置；</p>
+
+<p>Src/main/resouces/application.properties：</p>
+</blockquote>
+
+<ol>
+<li>编写RedisCacheConfig 配置类；</li>
+</ol>
+
+<blockquote>
+<p>缓存主要有几个要实现的类：其一就是 CacheManager 缓存管理器；其二就是具体操作实现类；其三就是CacheManager 工厂类（这个可以使用配置文件配置的进行注入，也可以通过编码的方式进行实现）；其四就是缓存 key 生产策略（当然 Spring 自带生成策略，但是在 Redis 客户端进行查看的话是系列化的 key,对于我们肉眼来说就是感觉是乱码了，这里我们先使用自带的缓存策略）。</p>
+
+<p>com.hpit.config/RedisCacheConfig：</p>
+
+<p><strong>import</strong> org.springframework.data.redis.cache.RedisCacheManager;</p>
+
+<p><strong>import</strong> org.springframework.data.redis.connection.RedisConnectionFactory;</p>
+
+<p><strong>import</strong> org.springframework.data.redis.core.RedisTemplate;</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li>[redis]{.underline} 缓存配置;</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>注意：RedisCacheConfig 这里也可以不用继承：CachingConfigurerSupport，也就是直接一个普通的</li>
+</ul>
+
+<blockquote>
+<p>Class 就好了；</p>
+
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>这里主要我们之后要重新实现 key 的生成策略，只要这里修改 KeyGenerator，其它位置不用修改就生效了。</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>普通使用普通类的方式的话，那么在使用@Cacheable 的时候还需要指定 KeyGenerator 的名称;这样编码的时候比较麻烦。</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p><strong>@author</strong> Zjs</p></li>
+
+<li><p><strong>@version</strong> v.0.1</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Configuration</p>
+
+<p>@EnableCaching//启用缓存，这个注解很重要；</p>
+
+<p><strong>publicclass</strong> RedisCacheConfig <strong>extends</strong> CachingConfigurerSupport {</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>缓存管理器.</p></li>
+
+<li><p><strong>@param</strong> redisTemplate</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Bean</p>
+
+<p><strong>public</strong> CacheManager cacheManager(RedisTemplate&lt;?,?&gt; redisTemplate) { CacheManager cacheManager = <strong>new</strong> RedisCacheManager(redisTemplate); <strong>return</strong>cacheManager;</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li>[redis]{.underline} 模板操作类,类似于 jdbcTemplate 的一个类;</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>虽然 CacheManager 也能获取到 Cache 对象，但是操作起来没有那么灵活；</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>这里在扩展下：RedisTemplate 这个类不见得很好操作，我们可以在进行扩展一个我们</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>自己的缓存类，比如：RedisStorage 类;</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p><strong>@param</strong> factory : 通过 Spring 进行注入，参数在 application.properties 进行配置；</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Bean</p>
+
+<p><strong>public</strong> RedisTemplate&lt;String, String&gt; redisTemplate(RedisConnectionFactory factory) { RedisTemplate&lt;String, String&gt; redisTemplate = <strong>new</strong> RedisTemplate&lt;String,</p>
+
+<p>String&gt;();</p>
+
+<p>redisTemplate.setConnectionFactory(factory);</p>
+
+<p>//key 序列化方式;（不然会出现乱码;）,但是如果方法上有 Long 等非 String 类型的话，会报类型转换错误；</p>
+
+<p>//所以在没有自己定义 key 生成策略的时候，以下这个代码建议不要这么写，可以不配置或者自己实现 ObjectRedisSerializer</p>
+
+<p>//或者 JdkSerializationRedisSerializer 序列化方式;</p>
+
+<p>// RedisSerializer&lt;String&gt; redisSerializer = new StringRedisSerializer();//Long 类 型不可以会出现异常信息;</p>
+
+<p>// redisTemplate.setKeySerializer(redisSerializer);</p>
+
+<p>// redisTemplate.setHashKeySerializer(redisSerializer);</p>
+
+<p><strong>return</strong>redisTemplate;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>在以上代码有很详细的注释，在这里还是在简单的提下：</p>
+
+<p>RedisCacheConfig 这里也可以不用继承：CachingConfigurerSupport，也就是直接一个普通的 Class 就好了； 这里主要我们之后要重新实现 key 的生成策略，只要这里修改 KeyGenerator，其它位置不用修改就生效了。普通使用普通类的方式的话，那么在使用@Cacheable 的时候还需要指定KeyGenerator 的名称;这样编码的时候比较麻烦。</p>
+</blockquote>
+
+<ol>
+<li>编写DemoInfo 测试实体类；</li>
+</ol>
+
+<blockquote>
+<p>编写一个测试实体类：com.hpit.bean.DemoInfo：</p>
+
+<p><strong>import</strong> java.io.Serializable;</p>
+
+<p><strong>import</strong> javax.persistence.Entity;</p>
+
+<p><strong>import</strong> javax.persistence.GeneratedValue;</p>
+
+<p><strong>import</strong> javax.persistence.Id;</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>测试实体类，这个随便;</p></li>
+
+<li><p><strong>@author</strong> Zjs</p></li>
+
+<li><p><strong>@version</strong> v.0.1</p></li>
+</ul>
+
+<blockquote>
+<p>*/</p>
+
+<p>@Entity</p>
+
+<p><strong>publicclass</strong> DemoInfo <strong>implements</strong> Serializable{ **privatestaticfinallong*serialVersionUID ***= 1L; @Id@GeneratedValue</p>
+
+<p><strong>privatelong</strong>id; <strong>private</strong> String name; <strong>private</strong> String pwd; <strong>publiclong</strong> getId() {</p>
+
+<p><strong>return</strong>id;</p>
+
+<p>}</p>
+
+<p><strong>publicvoid</strong> setId(<strong>long</strong>id) {</p>
+
+<p><strong>this</strong>.id = id;</p>
+
+<p>}</p>
+
+<p><strong>public</strong> String getName() {</p>
+
+<p><strong>return</strong>name;</p>
+
+<p>}</p>
+
+<p><strong>publicvoid</strong> setName(String name) {</p>
+
+<p><strong>this</strong>.name = name;</p>
+
+<p>}</p>
+
+<p><strong>public</strong> String getPwd() {</p>
+
+<p><strong>return</strong>pwd;</p>
+
+<p>}</p>
+
+<p><strong>publicvoid</strong> setPwd(String pwd) {</p>
+
+<p><strong>this</strong>.pwd = pwd;</p>
+
+<p>}</p>
+
+<p>@Override</p>
+
+<p><strong>public</strong> String toString() {</p>
+</blockquote>
+
+<ol>
+<li><p>编 写 DemoInfoRepository 持 久 化 类 ； DemoInfoRepository 使用Spirng Data JPA 实现： com.hpit.repository.DemoInfoRepository：</p></li>
+
+<li><p>编写DemoInfoService 类；</p></li>
+</ol>
+
+<blockquote>
+<p>编写DemoInfoService，这里有两个技术方面，第一就是使用 Spring @Cacheable 注解方式和RedisTemplate 对象进行操作，具体代码如下：</p>
+
+<p>com.hpit.service.DemoInfoService:</p>
+
+<p>com.hpit.service.impl.DemoInfoServiceImpl:</p>
+
+<p><strong>package</strong> com.hpit.service.impl;</p>
+
+<p><strong>import</strong> javax.annotation.Resource;</p>
+
+<p><strong>import</strong> org.springframework.cache.annotation.CacheEvict; <strong>import</strong> org.springframework.cache.annotation.Cacheable; <strong>import</strong> org.springframework.data.redis.core.RedisTemplate; <strong>import</strong> org.springframework.data.redis.core.ValueOperations; <strong>import</strong> org.springframework.stereotype.Service;</p>
+
+<p><strong>import</strong> com.hpit.bean.DemoInfo;</p>
+
+<p><strong>import</strong> com.hpit.repository.DemoInfoRepository;</p>
+
+<p><strong>import</strong> com.hpit.service.DemoInfoService;</p>
+
+<p>/**</p>
+
+<p>*</p>
+
+<p>*DemoInfo 数据处理类</p>
+
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p><strong>@author</strong> Zjs</p></li>
+
+<li><p><strong>@version</strong> v.0.1</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Service</p>
+
+<p><strong>publicclass</strong> DemoInfoServiceImpl <strong>implements</strong> DemoInfoService {</p>
+
+<p>@Resource</p>
+
+<p><strong>private</strong> DemoInfoRepository demoInfoRepository;</p>
+
+<p>@Resource</p>
+
+<p><strong>private</strong> RedisTemplate&lt;String,String&gt; redisTemplate;</p>
+
+<p>@Override</p>
+
+<p><strong>publicvoid</strong> test(){</p>
+
+<p>ValueOperations&lt;String,String&gt; valueOperations = redisTemplate.opsForValue(); valueOperations.set(\&ldquo;mykey4\&ldquo;, \&ldquo;random1=\&ldquo;+Math.<em>random</em>()); System.<strong><em>out</em></strong>.println(valueOperations.get(\&ldquo;mykey4\&ldquo;));</p>
+</blockquote>
+
+<ol>
+<li><p>编写DemoInfoController 类；</p></li>
+
+<li><p>测试代码是否正常运行了</p></li>
+</ol>
+
+<blockquote>
+<p>启动应用程序，访问地址：[<a href="http://127.0.0.1:8080/test]{.underline">http://127.0.0.1:8080/test]{.underline</a>}</p>
+
+<p>查看控制台可以查看：</p>
+
+<p>如果你看到以上的打印信息的话，那么说明缓存成功了。</p>
+
+<p>访问地址：[<a href="http://127.0.0.1:8080/test1]{.underline">http://127.0.0.1:8080/test1]{.underline</a>}</p>
+
+<p>random1=0.9985031320746356</p>
+
+<p>DemoInfoController.test1()</p>
+
+<p>二次访问：[<a href="http://127.0.0.1:8080/test]{.underline">http://127.0.0.1:8080/test]{.underline</a>}</p>
+
+<p>这时候所有的数据都是执行缓存的。</p>
+
+<p>这时候执行删除动作：[<a href="http://127.0.0.1:8080/delete?id=1]{.underline">http://127.0.0.1:8080/delete?id=1]{.underline</a>} 然后在访问：[<a href="http://127.0.0.1:8080/test]{.underline">http://127.0.0.1:8080/test]{.underline</a>}</p>
+</blockquote>
+
+<ol>
+<li>自定义缓存key;</li>
+</ol>
+
+<blockquote>
+<p>在com.hpit.config.RedisCacheConfig 类中重写CachingConfigurerSupport 中的keyGenerator ,具体实现代码如下：</p>
+
+<p>}</p>
+
+<p>这时候在redis 的客户端查看key 的话还是序列化的肉眼看到就是乱码了，那么我改变key 的序列方式，这个很简单，redis 底层已经有具体的实现类了，我们只需要配置下：</p>
+
+<p>综上以上分析:RedisCacheConfig 类的方法调整为：</p>
+</blockquote>
+
+<ul>
+<li>普通使用普通类的方式的话，那么在使用@Cacheable 的时候还需要指定 KeyGenerator 的名称;这样编码的时候比较麻烦。</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p><strong>@author</strong> Zjs</p></li>
+
+<li><p><strong>@version</strong> v.0.1</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Configuration</p>
+
+<p>@EnableCaching//启用缓存，这个注解很重要；</p>
+
+<p><strong>publicclass</strong> RedisCacheConfig <strong>extends</strong> CachingConfigurerSupport {</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>缓存管理器.</p></li>
+
+<li><p><strong>@param</strong> redisTemplate</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Bean</p>
+
+<p><strong>public</strong> CacheManager cacheManager(RedisTemplate&lt;?,?&gt; redisTemplate) { CacheManager cacheManager = <strong>new</strong> RedisCacheManager(redisTemplate); <strong>return</strong>cacheManager;</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li>RedisTemplate 缓存操作类,类似于 jdbcTemplate 的一个类;</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>虽然 CacheManager 也能获取到 Cache 对象，但是操作起来没有那么灵活；</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>这里在扩展下：RedisTemplate 这个类不见得很好操作，我们可以在进行扩展一个我们</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>自己的缓存类，比如：RedisStorage 类;</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p><strong>@param</strong> factory : 通过 Spring 进行注入，参数在 application.properties 进行配置；</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Bean</p>
+
+<p><strong>public</strong> RedisTemplate&lt;String, String&gt; redisTemplate(RedisConnectionFactory factory) { RedisTemplate&lt;String, String&gt; redisTemplate = <strong>new</strong> RedisTemplate&lt;String,</p>
+
+<p>String&gt;();</p>
+
+<p>redisTemplate.setConnectionFactory(factory);</p>
+
+<p>//key 序列化方式;（不然会出现乱码;）,但是如果方法上有 Long 等非 String 类型的话，会报类型转换错误；</p>
+
+<p>//所以在没有自己定义 key 生成策略的时候，以下这个代码建议不要这么写，可以不配置或者自己实现 ObjectRedisSerializer</p>
+
+<p>//或者 JdkSerializationRedisSerializer 序列化方式;</p>
+
+<p>RedisSerializer&lt;String&gt; redisSerializer = <strong>new</strong> StringRedisSerializer();//Long 类 型不可以会出现异常信息;</p>
+
+<p>redisTemplate.setKeySerializer(redisSerializer); redisTemplate.setHashKeySerializer(redisSerializer);</p>
+
+<p><strong>return</strong>redisTemplate;</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>自定义 key.</p></li>
+
+<li><p>此方法将会根据类名+方法名+所有参数的值生成唯一的一个 key,即使@Cacheable 中的 value 属性一样，key 也会不一样。</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Override</p>
+
+<p><strong>public</strong> KeyGenerator keyGenerator() { System.<strong><em>out</em></strong>.println(\&ldquo;RedisCacheConfig.keyGenerator()\&ldquo;); <strong>returnnew</strong> KeyGenerator() {</p>
+
+<p>@Override</p>
+
+<p><strong>public</strong> Object generate(Object o, Method method, Object... objects) {</p>
+
+<p>// This will generate a unique key of the class name, the method name</p>
+
+<p>//and all method parameters appended. StringBuilder sb = <strong>new</strong> StringBuilder(); sb.append(o.getClass().getName()); sb.append(method.getName());</p>
+
+<p><strong>for</strong> (Object obj : objects) { sb.append(obj.toString());</p>
+
+<p>}</p>
+
+<p>System.<strong><em>out</em></strong>.println(\&ldquo;keyGenerator=\&rdquo; + sb.toString());</p>
+
+<p><strong>return</strong>sb.toString();</p>
+
+<p>}</p>
+
+<p>};</p>
+
+<p>}</p>
+
+<p>这时候在访问地址：[<a href="http://127.0.0.1:8080/test]{.underline">http://127.0.0.1:8080/test]{.underline</a>}</p>
+
+<p>这时候看到的Key 就是：com.hpit.service.impl.DemoInfoServiceImplfindById1 在控制台打印信息是：</p>
+
+<p>其中@Cacheable,@CacheEvict 下节进行简单的介绍，剩下的就需要靠你们自己进行扩展了。</p>
+</blockquote>
+
+<h2 id="spring-boot-之-spring-cache">Spring boot 之 spring cache</h2>
+
+<blockquote>
+<p>Spring 3.1 引入了激动人心的基于注释（annotation）的缓存（cache）技术，它本质上不是一个具体的缓存实现方案（例如 EHCache 或者 OSCache），而是一个对缓存使用的抽象，通过在既有代码中添加少量它定义的各种 annotation，即能够达到缓存方法的返回对象的效果。</p>
+
+<p>Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL（Spring Expression Language）来定义缓存的 key</p>
+
+<p>和各种 condition，还提供开箱即用的缓存临时存储方案，也支持和主流的专业缓存例如 EHCache 集成。其特点总结如下：</p>
+</blockquote>
+
+<ol>
+<li><p>通过少量的配置 annotation 注释即可使得既有代码支持缓存</p></li>
+
+<li><p>支持开箱即用 Out-Of-The-Box，即不用安装和部署额外第三方组件即可使用缓存</p></li>
+
+<li><p>支持 Spring Express Language，能使用对象的任何属性或者方法来定义缓存的 key 和 condition 4.支持 AspectJ，并通过其实现任何方法的缓存支持</p></li>
+</ol>
+
+<blockquote>
+<p>5.支持自定义 key 和自定义缓存管理者，具有相当的灵活性和扩展性</p>
+
+<p>一、基于注解的支持</p>
+
+<p>Spring 为我们提供了几个注解来支持 Spring Cache。其核心主要是@Cacheable、@CachePut 和@CacheEvict。使用@Cacheable 标记的方法在执行后 Spring Cache 将缓存其返回结果，@CachePut 主要针对方法配置，能够根据方法的请求参数对其结果进行缓存，和 @Cacheable 不同的是，它每次都会触发真实方法的调用，而使用@CacheEvict 标记的方法会在方法执行前或者执行后移除 Spring Cache 中的某些元素。</p>
+</blockquote>
+
+<p>######## 1.@Cacheable</p>
+
+<blockquote>
+<p>@Cacheable 可以标记在一个方法上，也可以标记在一个类上。当标记在一个方法上时表示该方法是支持缓存的，当标记在一个类上时则表示该类所有的方法都是支持缓存的。对于一个支持缓存的方法，Spring 会在其被调用后将其返回值缓存起来，以保证下次利用同样的参数来执行该方法时可以直接从缓存中获取结果，而不需 要再次执行该方法。Spring 在缓存方法的返回值时是以键值对进行缓存的，值就是方法的返回结果，至于键的话，Spring 又支持两种策略，默认策略和自定义策略，需要注意的是当一个支持缓存的方法在对象内部被调用时是不会触发缓存功能的。@Cacheable 可以指定三个属性，value、key 和 condition。</p>
+
+<p>value：缓存的名称，在 spring 配置文件中定义，必须指定至少一个。如@Cacheable(value=&ldquo;mycache&rdquo;) 或者</p>
+
+<p>@Cacheable(value={&ldquo;cache1&rdquo;,&ldquo;cache2&rdquo;}</p>
+
+<p>key：缓存的 key，可以为空，如果指定要按照 SpEL 表达式编写，如果不指定，则缺省按照方法的所有参数进行组合。如@Cacheable(value=&ldquo;testcache&rdquo;,key=&rdquo;#userName&rdquo;)</p>
+
+<p>condition：缓存的条件，可以为空，使用 SpEL 编写，返回 true 或者 false，只有为 true 才进行缓存。如</p>
+
+<p>@Cacheable(value=&ldquo;testcache&rdquo;,condition=&rdquo;#userName.length()&gt;2&rdquo;)</p>
+
+<p>注：除了上述使用方法参数作为 key 之外，Spring 还为我们提供了一个 root 对象可以用来生成 key。通过该root 对象我们可以获取到以下信息。</p>
+
+<p>2.@CachePut</p>
+
+<p>在支持 Spring Cache 的环境下，对于使用@Cacheable 标注的方法，Spring 在每次执行前都会检查 Cache 中是否存在相同 key 的缓存元素，如果存在就不再执行该方法，而是直接从缓存中获取结果进行返回，否则才会执行并将返回结果存入指定的缓存中。@CachePut 也可以声明一个方法支持缓存功能。与@Cacheable 不同的是使用@CachePut 标注的方法在执行前不会去检查缓存中是否存在之前执行过的结果，而是每次都会执行该方法， 并将执行结果以键值对的形式存入指定的缓存中。</p>
+
+<p>@CachePut 也可以标注在类上和方法上。使用@CachePut 时我们可以指定的属性跟@Cacheable 是一样的。</p>
+
+<p>3.@CacheEvict</p>
+
+<p>@CacheEvict 是用来标注在需要清除缓存元素的方法或类上的。当标记在一个类上时表示其中所有的方法的执行都会触发缓存的清除操作。@CacheEvict 可以指定的属性有 value、key、condition、allEntries 和beforeInvocation。其中 value、key 和 condition 的语义与@Cacheable 对应的属性类似。即 value 表示清除操作是发生在哪些 Cache 上的（对应 Cache 的名称）；key 表示需要清除的是哪个 key，如未指定则会使用默认策略生成的 key；condition 表示清除操作发生的条件。下面我们来介绍一下新出现的两个属性 allEntries 和beforeInvocation。</p>
+
+<p>allEntries：是否清空所有缓存内容，缺省为 false，如果指定为 true，则方法调用后将立即清空所有缓存。</p>
+
+<p>如：@CachEvict(value=&ldquo;testcache&rdquo;,allEntries=true)</p>
+
+<p>beforeInvocation：是否在方法执行前就清空，缺省为 false，如果指定为 true，则在方法还没有执行的时候就清空缓存，缺省情况下，如果方法执行抛出异常，则不会清空缓存。如：@CachEvict(value=&rdquo; testcache&rdquo;，beforeInvocation=true)</p>
+
+<p>其他参数和@Cacheable 相同</p>
+
+<p>4.@Caching</p>
+
+<p>@Caching 注解可以让我们在一个方法或者类上同时指定多个 Spring Cache 相关的注解。其拥有三个属性： cacheable、put 和 evict，分别用于指定@Cacheable、@CachePut 和@CacheEvict。如： @Caching(cacheable</p>
+
+<p>= @Cacheable(\&ldquo;users\&ldquo;), evict = { @CacheEvict(\&ldquo;cache2\&ldquo;),@CacheEvict(value = \&ldquo;cache3\&ldquo;, allEntries = true) })</p>
+
+<p>二、实例</p>
+
+<p>使用 map 集合实现缓存管理，演示 spring cache 的使用。</p>
+</blockquote>
+
+<ol>
+<li>创建缓存对象实例</li>
+</ol>
+
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 1. <strong>package</strong>                   | &gt; org.springframework.cache.demo; |
++===================================+===================================+
+| 2.                                |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 3. <strong>import</strong> java.io.Serializab |
+| le;                               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 4.                                |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 5. //缓存对象                    |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 6. <strong>public class</strong> User <strong>imple |
+| ments</strong> Serializable{             |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 7.                                | &gt; /**                           |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 8.                                | &gt; *                              |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 9.                                | &gt; */                             |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 10. *<em>private static final long</em> |
+| * serialVersionUID = 1L;          |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 11. <strong>private int</strong> id;          |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 12. <strong>private</strong> String name;     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 13.                               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 14. <strong>public</strong> User(){           |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 15. }                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 16.                               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 17. <strong>public</strong> User(String name) |
+| {                                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 18. <strong>this</strong>.name= name;         |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 19. }                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 20.                               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 21. <strong>public int</strong> getId() {     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 22. <strong>return</strong> id;               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
+
+<ol>
+<li><p>对象服务实现类</p>
+
+<ol>
+<li><strong>package</strong> org.springframework.cache.demo;</li>
+</ol></li>
+</ol>
+
+<p>2.</p>
+
+<hr />
+
+<p>3. <strong>import</strong> org.springframework.cache.annotation.CacheEvict;
+  4. <strong>import</strong> org.springframework.cache.annotation.Cacheable;
+  5.
+  6. /**
+  7. * 业务服务
+  8. *
+  9. */
+  10. <strong>public class</strong> UserService {
+  11.
+  12. @Cacheable(value = \&ldquo;userCache\&ldquo;,key=\&rdquo;#userName\&ldquo;)
+  13. // 使用了一个缓存名叫 userCache
+  14. <strong>public</strong> User getUserByName(String userName) {
+  15. // 方法内部实现不考虑缓存逻辑，直接实现业务
+  16. <strong>return</strong> getFromDB(userName);
+  17. }
+  18.
+  19. @CacheEvict(value = \&ldquo;userCache\&ldquo;, key = \&rdquo;#user.name\&ldquo;)
+  20. // 清 空 accountCache 缓 存
+  21. <strong>public void</strong> updateUser(User user) {
+  22. updateDB(user);
+  23. }
+  24.
+  25. @CacheEvict(value = \&ldquo;userCache\&ldquo;, allEntries = <strong>true</strong>,beforeInvocation=<strong>true</strong>)
+  26. // 清 空 accountCache 缓 存
+  27. <strong>public void</strong> reload() {
+  28. }
+  29.
+  30. <strong>private</strong> User getFromDB(String userName) {</p>
+
+<p>31. System.out.println(\&ldquo;查询数据库...\&rdquo; + userName);</p>
+
+<hr />
+
+<p>32. <strong>return new</strong> User(userName);
+  33. }
+  34.
+  35. <strong>private void</strong> updateDB(User user) {
+  36. System.out.println(\&ldquo;更新数据库数据...\&rdquo; + user.getName());
+  37. }
+  38. }</p>
+
+<ol>
+<li>缓存实现</li>
+</ol>
+
+<p>1. <strong>package</strong> org.springframework.cache.demo.mycache;</p>
+
+<hr />
+
+<p>2.
+  3. <strong>import</strong> java.util.Map;
+  4. <strong>import</strong> java.util.concurrent.ConcurrentHashMap;
+  5.
+  6. <strong>import</strong> org.springframework.cache.Cache;
+  7. <strong>import</strong> org.springframework.cache.support.SimpleValueWrapper;
+  8.
+  9. <strong>public class</strong> MyCache <strong>implements</strong> Cache {
+  10.
+  11. <strong>private</strong> String name;
+  12. <strong>private</strong> Map&lt;String, Object&gt; store = <strong>new</strong> ConcurrentHashMap&lt;String, Object&gt;();;
+  13.
+  14. <strong>public</strong> MyCache() {
+  15. }
+  16.
+  17. <strong>public</strong> MyCache(String name) {
+  18. <strong>this</strong>.name = name;
+  19. }
+  20.
+  21. <strong>public void</strong> setName(String name) {
+  22. <strong>this</strong>.name = name;
+  23. }
+  24.
+  25. <strong>public void</strong> clear() {
+  26. store.clear();
+  27. }
+  28.
+  29. <strong>public void</strong> evict(Object obj) {
+  30. }
+  31.
+  32. <strong>public</strong> ValueWrapper get(Object key) {
+  33. ValueWrapper result = <strong>null</strong>;
+  34. Object thevalue = store.get(key);</p>
+
+<p>####### spring 配置</p>
+
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 1. <strong>&lt;beans</strong> xmlns=<a href="http://www.springframework.org/schema/beans">\&ldquo;http://www.springframework.org/schema/beans\ |
+| &ldquo;</a>                       |
++=======================================================================+
+| 2. xmlns:xsi=<a href="http://www.w3.org/ |
+| 2001/XMLSchema-">\&ldquo;http://www.w3.org/2001/XMLSchema</a>-                                                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; instance\&rdquo;                                                          |
+| &gt; xmlns:cache=<a href="http: |
+| //www.springframework.org/schema/cache">\&ldquo;http://www.springframework.org/schema/cache\&rdquo;</a>                               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 3. xmlns:p=<a href="http://www. |
+| springframework.org/schema/p">\&ldquo;http://www.springframework.org/schema/p\&rdquo;</a>                                         |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 4. xsi:schemaLocation<a href="http://www.springframework.org/schema/beans">=\&ldquo;http://www.springframework.org/schema/beans |
+| </a>                        |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 5. <a href="http://www.springframework.org/schema/beans/spring-beans.xsd">http://www.springframework.org/schema/beans/spring-beans.xsd</a>    |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 6. <a href="http://www.springframework.org/schema/cache">http://www.springframework.org/schema/cache</a>                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 7. <a href="|
+| http://www.springframework.org/schema/cache/spring-cache.xsd">http://www.springframework.org/schema/cache/spring-cache.xsd\&rdquo;</a><strong>&gt;</strong>   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 8. &lt;!-- 启用缓存注解功能，这个是必须的，否则注解不会生效，另外，该注解一定要声明在 spring 主配置文件中 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; 才会生效 --&gt;                                                      |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 9. <strong>&lt;cache:annotation-driven</strong> cache-manager=\&ldquo;cacheManager\&rdquo; <strong>/\ |
+| &gt;</strong>                                                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 10.                                                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 11. <strong>&lt;bean</strong> id=\&ldquo;userService\&rdquo; class=\&ldquo;org.springframework.cache. |
+| demo.UserService\&rdquo; <strong>/&gt;</strong>                                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 12.                                                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
+
+<p>13. &lt;!-- generic cache manager --&gt;</p>
+
+<hr />
+
+<p>14. <strong>&lt;bean</strong> id=\&ldquo;cacheManager\&rdquo; class=\&ldquo;org.springframework.cache.support.SimpleCacheManager\&rdquo;<strong>&gt;</strong>
+  15. <strong>&lt;property</strong> name=\&ldquo;caches\&rdquo;<strong>&gt;</strong>
+  16. <strong>&lt;set&gt;</strong>
+  17. <strong>&lt;bean</strong> class=\&ldquo;org.springframework.cache.demo.mycache.MyCache\&rdquo;
+  18. p:name=\&ldquo;userCache\&rdquo; <strong>/&gt;</strong>
+  19. <strong>&lt;/set&gt;</strong>
+  20. <strong>&lt;/property&gt;</strong>
+  21. <strong>&lt;/bean&gt;</strong>
+  22. <strong>&lt;/beans&gt;</strong></p>
+
+<ol>
+<li>运行类</li>
+</ol>
+
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 1. <strong>package</strong> org.springframework.cache.demo.mycache;               |
++=======================================================================+
+| 2.                                                                    |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 3. <strong>import</strong> org.springframework.cache.demo.User;                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 4. <strong>import</strong> org.springframework.cache.demo.UserService;            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 5. <strong>import</strong> org.springframework.context.ApplicationContext;        |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 6. <strong>import</strong> org.springframework.context.support.ClassPathXmlApplic |
+| ationContext;                                                         |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 7.                                                                    |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 8. <strong>public class</strong> MyMain {                                         |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 9.                                                                    |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 10. @SuppressWarnings(\&ldquo;resource\&ldquo;)                                  |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 11. <strong>public static void</strong> main(String[] args) {                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 12. ApplicationContext context = <strong>new</strong> ClassPathXmlApplicationCont |
+| ext(\&ldquo;spring-cache-                                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| &gt; mycache.xml\&ldquo;);                                                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 13. UserService userService = context.getBean(UserService.<strong>class</strong>) |
+| ;                                                                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 14. // 第一次查询，应该走数据库                                      |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 15. System.out.print(\&ldquo;第一次查询...\&ldquo;);                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 16. userService.getUserByName(\&ldquo;hello\&ldquo;);                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 17. // 第二次查询，应该不查数据库，直接返回缓存的值                  |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 18. System.out.println(\&ldquo;第二次查询...\&ldquo;);                          |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 19. userService.getUserByName(\&ldquo;hello\&ldquo;);                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 20. System.out.println();                                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 21. System.out.println(\&ldquo;==============\&ldquo;);                          |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 22.                                                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 23. // 更新某个记录的缓存，首先构造两个用户记录，然后记录到缓存中    |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 24. User user1 = userService.getUserByName(\&ldquo;user1\&ldquo;);               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 25. // 开始更新其中一个                                              |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 26. user1.setId(1000);                                               |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 27. userService.updateUser(user1);                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 28. // 因为被更新了，所以会查询数据库                                |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 29. userService.getUserByName(\&ldquo;user1\&ldquo;);                            |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| 30. // 再次查询，应该走缓存                                          |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
+
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 31. userService.getUserByName(\&ldquo;user1\&ldquo;); |
++============================================+================+
+| &gt; 32. //                                  | &gt; 更新所有缓存 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 33. userService.reload();                 |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 34. System.out.println(\&ldquo;清楚所有缓存\&ldquo;); |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| &gt; 35. //                                  | &gt; 查询数据库   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 36. userService.getUserByName(\&ldquo;user1\&ldquo;); |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 37. userService.getUserByName(\&ldquo;user2\&ldquo;); |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| &gt; 38. //                                  | &gt; 查询缓存     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 39. userService.getUserByName(\&ldquo;user1\&ldquo;); |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 40. userService.getUserByName(\&ldquo;user2\&ldquo;); |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 41. }                                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+
+| 42. }                                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+&mdash;&mdash;&mdash;&mdash;&mdash;-+</p>
+
+<blockquote>
+<p>运行结果：</p>
+</blockquote>
+
+<ol>
+<li>第一次查询...查询数据库...hello</li>
+</ol>
+
+<blockquote>
+<p>3.</p>
+
+<p>5. 查询数据库...user1</p>
+
+<p>7. 清楚所有缓存</p>
+
+<p>9. 查询数据库...user2</p>
+</blockquote>
+
+<h2 id="spring-boot-集-成-ehcache">Spring boot 集 成 EHCache</h2>
+
+<blockquote>
+<p>那么我们先说说这一篇文章我们都会学到的技术点： Spring Data JPA,Spring Boot 使用 Mysql,Spring MVC,EHCache,Spring Cache 等（其中@Cacheable 请看上一节的理论知识），具体分如下几个步骤：</p>
+</blockquote>
+
+<ol>
+<li><p>新建Maven Java Project</p></li>
+
+<li><p>在pom.xml 中加入依赖包</p></li>
+
+<li><p>编写Spring Boot 启动类；</p></li>
+
+<li><p>配置application.properties;</p></li>
+
+<li><p>编写缓存配置类以及ehcache.xml 配置文件；</p></li>
+
+<li><p>编写DemoInfo 实体类进行测试；</p></li>
+
+<li><p>编写持久类DemoInfoRepository;</p></li>
+
+<li><p>编写处理类DemoInfoService;</p></li>
+
+<li><p>编写DemoInfoController 测试类；</p></li>
+
+<li><p>运行测试；</p></li>
+</ol>
+
+<blockquote>
+<p>以上就是具体的步骤了，那么接下来我们一起按照这个步骤来进行实现吧。</p>
+</blockquote>
+
+<ol>
+<li>新建Maven Java Project</li>
+</ol>
+
+<blockquote>
+<p>新建一个工程名为spring-boot-ehcache 的maven java project。</p>
+</blockquote>
+
+<ol>
+<li>在pom.xml 中加入依赖包</li>
+</ol>
+
+<blockquote>
+<p>在pom.xml 文件中加入相应的依赖包，Spring Boot 父节点依赖包；spring boot web 支持；缓存依赖 spring-</p>
+
+<p>context-support；集成ehcache 需要的依赖；JPA 操作数据库；mysql 数据库驱动，具体pom.xml 文件：</p>
+
+<p>&lt;project xmlns=<a href="http://maven.apache.org/POM/4.0.0"><em>\&ldquo;http://maven.apache.org/POM/4.0.0\&rdquo;</em></a>xmlns:xsi=<em><a href="http://www.w3.org/2001/XMLS">\&ldquo;http://www.w3.org/2001/XMLS</a> chema-instance\&rdquo;</em></p>
+
+<p>xsi:schemaLocation=<em><a href="http://maven.apache.org/POM/4.0.0">\&ldquo;http://maven.apache.org/POM/4.0.0</a> <a href="http://maven.apache.org/xsd/maven-4.0.0.xsd">http://maven.apache.org/xsd/maven-4.0.0.xsd\&rdquo;</a></em>&gt;</p>
+
+<p>&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</p>
+
+<p>&lt;groupId&gt;com.hpit&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-[ehcache]{.underline}&lt;/artifactId&gt;</p>
+
+<p>&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;</p>
+
+<p>&lt;packaging&gt;jar&lt;/packaging&gt;</p>
+
+<p>&lt;name&gt;spring-boot-[ehcache]{.underline}&lt;/name&gt;</p>
+
+<p>&lt;url&gt;<a href="http://maven.apache.org/">http://maven.apache.org</a>&lt;/url&gt;</p>
+
+<p>&lt;properties&gt;</p>
+
+<p>&lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;</p>
+
+<p>&lt;!-- 配置 JDK 编译版本. --&gt;</p>
+
+<p>&lt;java.version&gt;1.8&lt;/java.version&gt;</p>
+
+<p>&lt;/properties&gt;</p>
+
+<p>&lt;!-- spring boot 父节点依赖,</p>
+
+<p>引入这个之后相关的引入就不需要添加 version 配置，</p>
+
+<p>spring boot 会自动选择最合适的版本进行添加。</p>
+
+<p>--&gt;</p>
+
+<p>&lt;parent&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</p>
+
+<p>&lt;version&gt;1.4.0.RELEASE&lt;/version&gt;</p>
+
+<p>&lt;/parent&gt;</p>
+
+<p>&lt;dependencies&gt;</p>
+
+<p>&lt;!-- 单元测试. --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;[junit]{.underline}&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;[junit]{.underline}&lt;/artifactId&gt;</p>
+
+<p>&lt;scope&gt;test&lt;/scope&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- spring boot web 支持：[mvc]{.underline},[aop]{.underline}... --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!--</p>
+
+<p>包含支持 UI 模版（Velocity，FreeMarker，JasperReports）， 邮件服务，</p>
+
+<p>脚本服务(JRuby)，</p>
+
+<p>缓存 Cache（EHCache），</p>
+
+<p>任务计划 Scheduling（[uartz]{.underline}）。</p>
+
+<p>--&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-context-support&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- 集成 [ehcache]{.underline} 需要的依赖--&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;net.sf.ehcache&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;[ehcache]{.underline}&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- JPA 操作数据库. --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-data-[jpa]{.underline}&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- [mysql]{.underline} 数据库驱动. --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;[mysql]{.underline}&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;[mysql]{.underline}-connector-java&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;!-- Spring boot 单元测试. --&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+</blockquote>
+
+<ol>
+<li><p>编写Spring Boot 启动类（com.hpit.App.java）；</p></li>
+
+<li><p>配置application.properties;</p></li>
+</ol>
+
+<blockquote>
+<p>在application.properties 中主要配置数据库连接和JPA 的基本配置,具体如下： Src/main/resouces/application.properties：</p>
+</blockquote>
+
+<ol>
+<li>编写缓存配置类以及ehcache.xml 配置文件：</li>
+</ol>
+
+<blockquote>
+<p>这个类主要是注册缓存管理对象 EhCacheCacheManager、缓存工厂对象 EhCacheManagerFactoryBean， 具体代码如下：</p>
+
+<p>*/ @Configuration</p>
+
+<p>@EnableCaching//标注启动缓存.</p>
+
+<p><strong>public class</strong> CacheConfiguration {</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>[ehcache]{.underline} 主要的管理器</p></li>
+
+<li><p><strong>@param</strong> bean</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Bean</p>
+
+<p><strong>public</strong> EhCacheCacheManager ehCacheCacheManager(EhCacheManagerFactoryBean bean){ System.<strong><em>out</em></strong>.println(\&ldquo;CacheConfiguration.ehCacheCacheManager()\&ldquo;);</p>
+
+<p><strong>return new</strong> EhCacheCacheManager(bean.getObject());</p>
+
+<p>}</p>
+
+<p>/*</p>
+</blockquote>
+
+<ul>
+<li><p>据 shared 与否的设置,</p></li>
+
+<li><p>Spring 分别通过 CacheManager.create()</p></li>
+
+<li><p>或 new CacheManager()方式来创建一个 [ehcache]{.underline} 基地.</p></li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>也说是说通过这个来设置 cache 的基地是这里的 Spring 独用,还是跟别的(如 [hibernate]{.underline} 的</li>
+</ul>
+
+<blockquote>
+<p>[Ehcache]{.underline} 共享)</p>
+
+<p>*</p>
+
+<p>*/ @Bean</p>
+
+<p><strong>public</strong> EhCacheManagerFactoryBean ehCacheManagerFactoryBean(){ System.<strong><em>out</em></strong>.println(\&ldquo;CacheConfiguration.ehCacheManagerFactoryBean()\&ldquo;); EhCacheManagerFactoryBean cacheManagerFactoryBean = <strong>new</strong> EhCacheManagerFactoryBea</p>
+
+<p>n ();</p>
+
+<p>cacheManagerFactoryBean.setConfigLocation</p>
+
+<p>(<strong>new</strong>ClassPathResource(\&ldquo;conf/ehcache.xml\&ldquo;)); cacheManagerFactoryBean.setShared(<strong>true</strong>); <strong>return</strong> cacheManagerFactoryBean;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>在 src/main/resouces/conf 下编写 ehcache.xml 配置文件，当然这个文件你可以放在其它目录下：</p>
+
+<p>&lt;?xml version=<em>\&ldquo;1.0\&rdquo;</em> encoding=<em>\&ldquo;UTF-8\&rdquo;</em>?&gt;</p>
+
+<p>&lt;ehcache xmlns:xsi=<em><a href="http://www.w3.org/2001/XMLSchema-instance">\&ldquo;http://www.w3.org/2001/XMLSchema</a>-<a href="http://www.w3.org/2001/XMLSchema-instance">instance\&rdquo;</a></em> xsi:noNamespaceSchemaLocation=<em><a href="http://ehcache.org/ehcache.xsd">\&ldquo;http://ehcache.org/ehcache.xsd\&rdquo;</a></em> updateCheck=<em>\&ldquo;false\&rdquo;</em>&gt;</p>
+
+<p>&lt;!--</p>
+
+<p>diskStore：为缓存路径，ehcache 分为内存和磁盘两级，此属性定义磁盘的缓存位置。参数解释如下：</p>
+
+<p>user.home &ndash; 用户主目录</p>
+
+<p>user.dir &ndash; 用户当前工作目录</p>
+
+<p>java.io.tmpdir &ndash; 默认临时文件路径</p>
+
+<p>--&gt;</p>
+
+<p>&lt;diskStore path=<em>\&ldquo;java.io.tmpdir/Tmp_EhCache\&rdquo;</em> /&gt;</p>
+
+<p>&lt;!--</p>
+
+<p>defaultCache：默认缓存策略，当 ehcache 找不到定义的缓存时，则使用这个缓存策略。只能定义</p>
+
+<p>一个。</p>
+
+<p>--&gt;</p>
+
+<p>&lt;!--</p>
+
+<p>name:缓存名称。maxElementsInMemory:缓存最大数目</p>
+
+<p>maxElementsOnDisk：硬盘最大缓存个数。</p>
+
+<p>eternal:对象是否永久有效，一但设置了，timeout 将不起作用。</p>
+
+<p>overflowToDisk:是否保存到磁盘，当系统当机时</p>
+
+<p>timeToIdleSeconds:设置对象在失效前的允许闲置时间（单位：秒）。仅当 eternal=false 对象不是永久有效时使用，可选属性，默认值是 0，也就是可闲置时间无穷大。</p>
+
+<p>timeToLiveSeconds:设置对象在失效前允许存活时间（单位：秒）。最大时间介于创建时间和失效时间之间。仅当 eternal=false 对象不是永久有效时使用，默认是 0.，也就是对象存活时间无穷大。</p>
+
+<p>diskPersistent：是否缓存虚拟机重启期数据 Whether the disk store persists between</p>
+
+<p>restarts of the Virtual Machine. The default value is false. diskSpoolBufferSizeMB：这个参数设置 DiskStore（磁盘缓存）的缓存区大小。默认是 30MB。每</p>
+
+<p>个 Cache 都应该有自己的一个缓冲区。</p>
+
+<p>diskExpiryThreadIntervalSeconds：磁盘失效线程运行时间间隔，默认是 120 秒。</p>
+
+<p>memoryStoreEvictionPolicy：当达到 maxElementsInMemory 限制时，Ehcache 将会根据指定的策略去清理内存。默认策略是 LRU（最近最少使用）。你可以设置为 FIFO（先进先出）或是 LFU（较少使用）。</p>
+
+<p>clearOnFlush：内存数量最大时是否清除。</p>
+
+<p>memoryStoreEvictionPolicy:可选策略有：LRU（最近最少使用，默认策略）、FIFO（先进先 出）、LFU（最少访问次数）。</p>
+
+<p>FIFO，first in first out，这个是大家最熟的，先进先出。</p>
+
+<p>LFU， Less Frequently Used，就是上面例子中使用的策略，直白一点就是讲一直以来最少被使用的。如上面所讲，缓存的元素有一个 hit 属性，hit 值最小的将会被清出缓存。</p>
+
+<p>LRU，Least Recently Used，最近最少使用的，缓存的元素有一个时间戳，当缓存容量满了，而又需要腾出地方来缓存新的元素的时候，那么现有缓存元素中时间戳离当前时间最远的元素将被清出缓 存。</p>
+
+<p>--&gt;</p>
+
+<p>&lt;defaultCache eternal=<em>\&ldquo;false\&rdquo;</em></p>
+
+<p>maxElementsInMemory=<em>\&ldquo;1000\&rdquo;</em> overflowToDisk=<em>\&ldquo;false\&rdquo;</em> diskPersistent=<em>\&ldquo;false\&rdquo;</em> timeToIdleSeconds=<em>\&ldquo;0\&rdquo;</em> timeToLiveSeconds=<em>\&ldquo;600\&rdquo;</em> memoryStoreEvictionPolicy=<em>\&ldquo;LRU\&rdquo;</em> /&gt;</p>
+
+<p>&lt;cache</p>
+
+<p>name=<em>\&ldquo;demo\&rdquo;</em> eternal=<em>\&ldquo;false\&rdquo;</em> maxElementsInMemory=<em>\&ldquo;100\&rdquo;</em> overflowToDisk=<em>\&ldquo;false\&rdquo;</em> diskPersistent=<em>\&ldquo;false\&rdquo;</em> timeToIdleSeconds=<em>\&ldquo;0\&rdquo;</em> timeToLiveSeconds=<em>\&ldquo;300\&rdquo;</em></p>
+
+<p>memoryStoreEvictionPolicy=<em>\&ldquo;LRU\&rdquo;</em> /&gt;</p>
+
+<p>&lt;/ehcache&gt;</p>
+</blockquote>
+
+<ol>
+<li>编写 DemoInfo 实体类进行测试；</li>
+</ol>
+
+<blockquote>
+<p>在 com.hpit.bean 下编写 DemoInfo 实体类进行缓存测试：</p>
+
+<p><strong>package</strong> com.hpit.bean;</p>
+
+<p><strong>import</strong> javax.persistence.Entity;</p>
+
+<p><strong>import</strong> javax.persistence.GeneratedValue;</p>
+
+<p><strong>import</strong> javax.persistence.Id;</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>测试实体类.</p></li>
+
+<li><p><strong>@author</strong> Zjs</p></li>
+
+<li><p><strong>@version</strong> v.0.1</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Entity</p>
+
+<p><strong>public class</strong> DemoInfo { @Id @GeneratedValue</p>
+
+<p><strong>private long</strong>id;//主键.</p>
+
+<p><strong>private</strong> String name;//名称;</p>
+
+<p><strong>private</strong> String pwd;//密码;</p>
+
+<p><strong>private int</strong>state; <strong>public long</strong> getId() {</p>
+
+<p><strong>return</strong>id;</p>
+
+<p>}</p>
+
+<p><strong>public void</strong> setId(<strong>long</strong>id) {</p>
+
+<p><strong>this</strong>.id = id;</p>
+
+<p>}</p>
+
+<p><strong>public</strong> String getName() {</p>
+
+<p><strong>return</strong>name;</p>
+
+<p>}</p>
+
+<p><strong>publicvoid</strong> setName(String name) {</p>
+
+<p><strong>this</strong>.name = name;</p>
+
+<p>}</p>
+
+<p><strong>public</strong> String getPwd() {</p>
+
+<p><strong>return</strong>pwd;</p>
+
+<p>}</p>
+
+<p><strong>public void</strong> setPwd(String pwd) {</p>
+
+<p><strong>this</strong>.pwd = pwd;</p>
+
+<p>}</p>
+
+<p><strong>public int</strong> getState() {</p>
+
+<p><strong>return</strong>state;</p>
+
+<p>}</p>
+</blockquote>
+
+<ol>
+<li>编写持久类 DemoInfoRepository;</li>
+</ol>
+
+<blockquote>
+<p>编 写 持 久 类 DemoInfoRepository： [com.hpit.repository]{.underline}.DemoInfoRepository：</p>
+</blockquote>
+
+<ol>
+<li>编写处理类DemoInfoService;</li>
+</ol>
+
+<blockquote>
+<p>编写增删改查的方法，在这几个方法中都使用注解缓存，进行缓存的创建以及删除，修改等操作：</p>
+
+<p>com.hpit.service.DemoInfoService：</p>
+
+<p>[com.hpit.service.impl]{.underline}.DemoInfoServiceImpl：</p>
+
+<p>/**</p>
+
+<p>* value 属性表示使用哪个缓存策略，缓存策略在 ehcache.xml</p>
+
+<p>*/</p>
+
+<p><strong>public static final</strong> String <strong><em>DEMO_CACHE_NAME</em></strong> = \&ldquo;demo\&ldquo;;</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>保存数据.</p></li>
+
+<li><p><strong>@param</strong> demoInfo</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @CacheEvict(value=<strong><em>DEMO_CACHE_NAME</em></strong>,key=<strong><em>CACHE_KEY</em></strong>) @Override</p>
+
+<p><strong>public</strong> DemoInfo save(DemoInfo demoInfo){</p>
+
+<p><strong>return</strong> demoInfoRepository.save(demoInfo);</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>查询数据.</p></li>
+
+<li><p><strong>@param</strong> id</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*/ @Cacheable(value=<strong><em>DEMO_CACHE_NAME</em></strong>,key=\&rdquo;\&lsquo;demoInfo_\&lsquo;+#id\&ldquo;) @Override</p>
+
+<p><strong>public</strong> DemoInfo findById(Long id){ System.<strong><em>err</em></strong>.println(\&ldquo;没有走缓存！\&ldquo;+id); <strong>return</strong> demoInfoRepository.findOne(id);</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><a href="http://www.mincoder.com/article/2096.shtml">http://www.mincoder.com/article/2096.shtml:</a></li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>修改数据.</li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li>在支持 Spring Cache 的环境下，对于使用@Cacheable 标注的方法，Spring 在每次执行前都会检查Cache 中是否存在相同 key 的缓存元素，如果存在就不再执行该方法，而是直接从缓存中获取结果进行返回， 否则才会执行并将返回结果存入指定的缓存中。@CachePut 也可以声明一个方法支持缓存功能。与@Cacheable 不同的是使用@CachePut 标注的方法在执行前不会去检查缓存中是否存在之前执行过的结果，而是每次都会执行该方法，并将执行结果以键值对的形式存入指定的缓存中。</li>
+</ul>
+
+<blockquote>
+<p>样的。</p>
+
+<p><strong>@CachePut</strong> 也可以标注在类上和方法上。使用@CachePut 时我们可以指定的属性跟@Cacheable 是一</p>
+
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><p><strong>@param</strong> updated</p></li>
+
+<li><p>######## @return</p></li>
+</ul>
+
+<blockquote>
+<p>*</p>
+</blockquote>
+
+<ul>
+<li><strong>@throws</strong> NotFoundException</li>
+</ul>
+
+<blockquote>
+<p>*/</p>
+
+<p>@CachePut(value = <strong><em>DEMO_CACHE_NAME</em></strong>,key = \&rdquo;\&lsquo;demoInfo_\&lsquo;+#updated.getId()\&ldquo;)</p>
+
+<p>//@CacheEvict(value = DEMO_CACHE_NAME,key = \&rdquo;\&lsquo;demoInfo_\&lsquo;+#updated.getId()\&ldquo;)//这是清除缓存.</p>
+
+<p>@Override</p>
+
+<p><strong>public</strong> DemoInfo update(DemoInfo updated) <strong>throws</strong> NotFoundException{ DemoInfo demoInfo = demoInfoRepository.findOne(updated.getId()); <strong>if</strong>(demoInfo == <strong>null</strong>){</p>
+
+<p><strong>thrownew</strong> NotFoundException(\&ldquo;No find\&ldquo;);</p>
+
+<p>}</p>
+
+<p>demoInfo.setName(updated.getName()); demoInfo.setPwd(updated.getPwd()); <strong>return</strong> demoInfo;</p>
+
+<p>}</p>
+
+<p>/**</p>
+</blockquote>
+
+<ul>
+<li><p>删除数据.</p></li>
+
+<li><p><strong>@param</strong> id</p></li>
+</ul>
+
+<blockquote>
+<p>*/</p>
+
+<p>@CacheEvict(value = <strong><em>DEMO_CACHE_NAME</em></strong>,key = \&rdquo;\&lsquo;demoInfo_\&lsquo;+#id\&ldquo;)//这是清除缓存. @Override</p>
+
+<p><strong>public void</strong> delete(Long id){ demoInfoRepository.delete(id);</p>
+
+<p>}</p>
+
+<p>}</p>
+</blockquote>
+
+<ol>
+<li>编写DemoInfoController 测试类； 编写一个rest 进行测试：</li>
+</ol>
+
+<blockquote>
+<p>com.hpit.controller.DemoInfoController：</p>
+
+<p><strong>package</strong> com.hpit.controller;</p>
+
+<p><strong>import</strong> javax.annotation.Resource;</p>
+
+<p><strong>import</strong> org.springframework.web.bind.annotation.RequestMapping;</p>
+
+<p><strong>import</strong> org.springframework.web.bind.annotation.RestController;</p>
+
+<p><strong>import</strong> com.hpit.bean.DemoInfo;</p>
+
+<p><strong>import</strong> com.hpit.service.DemoInfoService;</p>
+
+<p><strong>import</strong> javassist.NotFoundException;</p>
+
+<p>@RestController</p>
+
+<p><strong>public class</strong> DemoInfoController {</p>
+
+<p>@Resource</p>
+
+<p><strong>private</strong> DemoInfoService demoInfoService;</p>
+
+<p>@RequestMapping(\&ldquo;/test\&ldquo;)</p>
+
+<p><strong>public</strong> String test(){</p>
+
+<p>//存入两条数据.</p>
+
+<p>DemoInfo demoInfo = <strong>new</strong> DemoInfo(); demoInfo.setName(\&rdquo; 张 三 \&ldquo;); demoInfo.setPwd(\&ldquo;123456\&ldquo;);</p>
+
+<p>DemoInfo demoInfo2 = demoInfoService.save(demoInfo);</p>
+
+<p>//不走缓存.</p>
+
+<p>System.<strong><em>out</em></strong>.println(demoInfoService.findById(demoInfo2.getId()));</p>
+
+<p>// 走 缓 存 . System.<strong><em>out</em></strong>.println(demoInfoService.findById(demoInfo2.getId()));</p>
+
+<p>demoInfo = <strong>new</strong> DemoInfo(); demoInfo.setName(\&rdquo; 李 四 \&ldquo;); demoInfo.setPwd(\&ldquo;123456\&ldquo;);</p>
+
+<p>DemoInfo demoInfo3 = demoInfoService.save(demoInfo);</p>
+</blockquote>
+
+<ol>
+<li>运行测试；</li>
+</ol>
+
+<blockquote>
+<p>运行App.java 进行测试，访问：[<a href="http://127.0.0.1:8080/test]{.underline">http://127.0.0.1:8080/test]{.underline</a>} 进行测试，主要是观察控制台的打印信息。</p>
+</blockquote>
+
+<ol>
+<li><strong>Spring boot</strong> 分布式 <strong>Session</strong> 共享</li>
+</ol>
+
+<blockquote>
+<p>在使用spring boot 做负载均衡的时候，多个app 之间的session 要保持一致，这样负载到不同的app 时候，在一个app 登录之后，而访问到另外一台服务器的时候，session 丢失。</p>
+
+<p>常规的解决方案都是使用：如apache 使用mod_jk.conf，使用Memcached 进行共享。</p>
+
+<p>在开发spring boot app 的时候可以借助 spring session 和redis 或者ehcache，用外置的 redis 或者ehcache来存储session 的状态,这里使用redis 进行介绍，ehcache 实现是一样的。</p>
+
+<p>增加相关依赖</p>
+</blockquote>
+
+<p>####### &lt;dependency&gt;</p>
+
+<blockquote>
+<p>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-boot-starter-redis&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>&lt;dependency&gt;</p>
+
+<p>&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;</p>
+
+<p>&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;</p>
+
+<p>&lt;/dependency&gt;</p>
+
+<p>RedisSessionConfig.java</p>
+
+<p><strong>package</strong> com.wisely.base;</p>
+</blockquote>
+
+<p>####### <strong>import</strong> org.springframework.context.annotation.Configuration;</p>
+
+<blockquote>
+<p><strong>import</strong> org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHtt pSession;</p>
+
+<p>@Configuration @EnableRedisHttpSession</p>
+
+<p><strong>public class RedisSessionConfig {</strong></p>
+</blockquote>
+
+<p>####### }</p>
+
+<blockquote>
+<p>如果需要添加失效时间可以使用以下的写法：</p>
+
+<p>@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60) //1 分钟失效</p>
+</blockquote>
+
+<h4 id="相关配置修改">相关配置修改</h4>
+
+<blockquote>
+<p>在application.properties 修改redis 配置信息（请自行安装redis），请根据实际修改。如：</p>
+</blockquote>
+
+<p>####### spring.redis.host=127.0.0.1</p>
+
+<blockquote>
+<p>所有实体类实现Serializable 接口</p>
+</blockquote>
+
+<p>######## public class UserInfo implements Serializable</p>
+
+<blockquote>
+<p>查看效果</p>
+
+<p>这时候登录系统在不同的app 之间跳转的时候，session 都是一致了，redis 上可以看到：</p>
+</blockquote>
+
+<h4 id="总结">总结</h4>
+
+<blockquote>
+<p>使用这些代码之后 ，无论你使用nginx 或者apache，都无须在关心多个app 之间的session 一致的问题了。</p>
+
+<p>注意事项</p>
+</blockquote>
+
+<ol>
+<li><p>redis 版本号需要是 2.8 以上否则会抛异常：ERR Unsupported CONFIG parameter: notify-keyspace-events；</p></li>
+
+<li><p>RedisSessionConfig 需要放在App.java 启动类可以扫描的位置；</p></li>
+</ol>
+
+<!-- -->
+
+<ol>
+<li><p><strong>Spring boot</strong> 集成 <strong>shiro</strong> 权限控制</p></li>
+
+<li><p><strong>Spring boot</strong> 使用 <strong>java</strong> 创建 <strong>bean</strong> 并注册到 <strong>spring</strong> 中</p></li>
+
+<li><p><img src="media/image21.jpeg" alt="" />{width=&ldquo;2.9273184601924758in&rdquo; height=&ldquo;2.9273184601924758in&rdquo;}<strong>Spring boot</strong> 多数据源</p></li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">zch</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2021-02-15
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://huachengzhou.github.io/studyDocument/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+          <a class="prev" href="/studyDocument/post/uuid_t_linux_notepad&#43;&#43;%E5%AE%89%E8%A3%85/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">Notepad&#43;&#43;安装</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+          <a class="next" href="/studyDocument/post/uuid_t_linux_ubuntu-16.04%E4%BF%AE%E6%94%B9hosts/">
+            <span class="next-text nav-default">Ubuntu 16.04修改hosts</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+    
+
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="icon-links">
+  
+  
+    <a href="mailto:your@email.com" rel="me noopener" class="iconfont"
+      title="email" >
+      <svg class="icon" viewBox="0 0 1451 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M664.781909 681.472759 0 97.881301C0 3.997201 71.046997 0 71.046997 0L474.477909 0 961.649408 0 1361.641813 0C1361.641813 0 1432.688811 3.997201 1432.688811 97.881301L771.345323 681.472759C771.345323 681.472759 764.482731 685.154773 753.594283 688.65053L753.594283 688.664858C741.602731 693.493018 729.424896 695.068979 718.077952 694.839748 706.731093 695.068979 694.553173 693.493018 682.561621 688.664858L682.561621 688.65053C671.644501 685.140446 664.781909 681.472759 664.781909 681.472759L664.781909 681.472759ZM718.063616 811.603883C693.779541 811.016482 658.879232 802.205449 619.10784 767.734955 542.989056 701.759633 0 212.052267 0 212.052267L0 942.809523C0 942.809523 0 1024 83.726336 1024L682.532949 1024 753.579947 1024 1348.948139 1024C1432.688811 1024 1432.688811 942.809523 1432.688811 942.809523L1432.688811 212.052267C1432.688811 212.052267 893.138176 701.759633 817.019477 767.734955 777.248 802.205449 742.347691 811.03081 718.063616 811.603883L718.063616 811.603883Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="stack-overflow"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M809.714286 932.571429l-638.857143 0 0-274.285714-91.428571 0 0 365.714286 821.714286 0 0-365.714286-91.428571 0 0 274.285714zm-538.285714-299.428571l18.857143-89.714286 447.428571 94.285714-18.857143 89.142857zm58.857143-213.714286l38.285714-83.428571 414.285714 193.714286-38.285714 82.857143zm114.857143-203.428571l58.285714-70.285714 350.857143 293.142857-58.285714 70.285714zm226.857143-216l272.571429 366.285714-73.142857 54.857143-272.571429-366.285714zm-410.285714 840.571429l0-90.857143 457.142857 0 0 90.857143-457.142857 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="twitter"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1264 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M1229.8616 18.043658c0 0-117.852626 63.135335-164.151872 67.344358-105.225559-164.151872-505.082682-92.598492-437.738325 223.078185C278.622548 312.675223 89.216542 47.506814 89.216542 47.506814s-117.852626 189.406006 75.762402 345.139833C127.097743 396.85567 55.544363 371.601535 55.544363 371.601535S26.081207 535.753407 253.368414 615.724832c-21.045112 29.463156-113.643603 8.418045-113.643603 8.418045s25.254134 143.10676 231.496229 180.987961c-143.10676 130.479693-387.230056 92.598492-370.393967 105.225559 206.242095 189.406006 1119.599946 231.496229 1128.01799-643.98042C1179.353331 249.539887 1263.533778 123.269217 1263.533778 123.269217s-130.479693 37.881201-138.897738 33.672179C1225.652577 98.015083 1229.8616 18.043658 1229.8616 18.043658"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="facebook"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M965.7344 2.7648c14.848 0 28.2624 5.5296 40.2432 16.6912C1017.9584 30.5152 1024 43.52 1024 58.2656l0 910.2336c0 14.848-6.0416 27.7504-18.0224 38.8096C993.8944 1018.4704 980.48 1024 965.7344 1024L704.9216 1024 704.9216 629.9648l133.2224 0 19.456-155.4432-152.576 0L705.024 373.0432c0-50.688 25.9072-76.0832 77.7216-76.0832l80.4864 0L863.232 163.5328c-27.7504-5.4272-67.4816-8.192-119.296-8.192-59.1872 0-106.8032 18.0224-142.9504 54.0672C564.736 245.5552 546.7136 296.0384 546.7136 360.7552l0 113.7664L413.4912 474.5216l0 155.4432 133.2224 0L546.7136 1024 55.5008 1024c-14.848 0-27.7504-5.5296-38.8096-16.6912C5.5296 996.2496 0 983.3472 0 968.4992L0 58.2656C0 43.52 5.5296 30.5152 16.6912 19.456c11.0592-11.0592 24.064-16.6912 38.8096-16.6912L965.7344 2.7648z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="linkedin"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="33" height="33">
+  <path d="M872.405333 872.618667h-151.637333v-237.610667c0-56.661333-1.152-129.578667-79.018667-129.578667-79.061333 0-91.136 61.653333-91.136 125.397334v241.792H398.976V384h145.664v66.602667h1.962667c20.352-38.4 69.845333-78.933333 143.786666-78.933334 153.642667 0 182.058667 101.12 182.058667 232.746667v268.202667zM227.712 317.141333a87.978667 87.978667 0 0 1-88.021333-88.106666 88.064 88.064 0 1 1 88.021333 88.106666z m76.032 555.477334H151.68V384h152.064v488.618667zM948.266667 0H75.562667C33.792 0 0 33.024 0 73.770667v876.458666C0 991.018667 33.792 1024 75.562667 1024h872.576C989.866667 1024 1024 991.018667 1024 950.229333V73.770667C1024 33.024 989.866667 0 948.138667 0h0.128z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="google"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M853.333333 85.333333C900.266667 85.333333 938.666667 123.733333 938.666667 170.666667L938.666667 853.333333C938.666667 900.266667 900.266667 938.666667 853.333333 938.666667L170.666667 938.666667C123.733333 938.666667 85.333333 900.266667 85.333333 853.333333L85.333333 170.666667C85.333333 123.306667 123.733333 85.333333 170.666667 85.333333L853.333333 85.333333M853.333333 512 768 512 768 426.666667 725.333333 426.666667 725.333333 512 640 512 640 554.666667 725.333333 554.666667 725.333333 640 768 640 768 554.666667 853.333333 554.666667 853.333333 512M384 481.706667 384 554.666667 506.026667 554.666667C499.626667 584.96 469.333333 645.973333 384 645.973333 311.04 645.973333 253.013333 584.96 253.013333 512 253.013333 439.04 311.04 378.026667 384 378.026667 426.666667 378.026667 453.973333 396.373333 469.333333 411.306667L527.36 356.693333C490.666667 320 442.026667 298.666667 384 298.666667 264.96 298.666667 170.666667 392.96 170.666667 512 170.666667 631.04 264.96 725.333333 384 725.333333 506.026667 725.333333 588.373333 640 588.373333 517.973333 588.373333 503.04 588.373333 493.653333 584.96 481.706667L384 481.706667Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="github"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M512 12.672c-282.88 0-512 229.248-512 512 0 226.261333 146.688 418.133333 350.08 485.76 25.6 4.821333 34.986667-11.008 34.986667-24.618667 0-12.16-0.426667-44.373333-0.64-87.04-142.421333 30.890667-172.458667-68.693333-172.458667-68.693333C188.672 770.986667 155.008 755.2 155.008 755.2c-46.378667-31.744 3.584-31.104 3.584-31.104 51.413333 3.584 78.421333 52.736 78.421333 52.736 45.653333 78.293333 119.850667 55.68 149.12 42.581333 4.608-33.109333 17.792-55.68 32.426667-68.48-113.706667-12.8-233.216-56.832-233.216-253.013333 0-55.893333 19.84-101.546667 52.693333-137.386667-5.76-12.928-23.04-64.981333 4.48-135.509333 0 0 42.88-13.738667 140.8 52.48 40.96-11.392 84.48-17.024 128-17.28 43.52 0.256 87.04 5.888 128 17.28 97.28-66.218667 140.16-52.48 140.16-52.48 27.52 70.528 10.24 122.581333 5.12 135.509333 32.64 35.84 52.48 81.493333 52.48 137.386667 0 196.693333-119.68 240-233.6 252.586667 17.92 15.36 34.56 46.762667 34.56 94.72 0 68.522667-0.64 123.562667-0.64 140.202666 0 13.44 8.96 29.44 35.2 24.32C877.44 942.592 1024 750.592 1024 524.672c0-282.752-229.248-512-512-512"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="weibo"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M385.714286 733.714286q12-19.428571 6.285714-39.428571t-25.714286-28.571429q-19.428571-8-41.714286-0.571429t-34.285714 26.285714q-12.571429 19.428571-7.428571 39.142857t24.571429 28.857143 42.571429 1.428571 35.714286-27.142857zm53.714286-69.142857q4.571429-7.428571 2-15.142857t-10-10.571429q-8-2.857143-16.285714 2.857143t-12.285714 10.571429q-9.714286 17.714286 7.428571 25.714286 8 2.857143 16.571429 2.857143t12.571429-10.571429zm99.428571 61.142857q-25.714286 58.285714-90.285714 85.714286t-128 6.857143q-61.142857-19.428571-84.285714-72.285714t3.714286-107.142857q26.857143-53.142857 86.571429-79.428571t120.285714-10.857143q63.428571 16.571429 90.571429 68.285714t1.428571 108.857143zm178.285714-91.428571q-5.142857-54.857143-50.857143-97.142857t-119.142857-62.285714-156.857143-12q-127.428571 13.142857-211.142857 80.857143t-75.714286 151.142857q5.142857 54.857143 50.857143 97.142857t119.142857 62.285714 156.857143 12q127.428571-13.142857 211.142857-80.857143t75.714286-151.142857zm176 2.285714q0 38.857143-21.142857 79.714286t-62.285714 78.285714-96.285714 67.142857-129.142857 47.428571-154.571429 17.714286-157.142857-19.142857-137.428571-53.142857-98-86.285714-37.142857-114q0-65.714286 39.714286-140t112.857143-147.428571q96.571429-96.571429 195.142857-134.857143t140.857143 4q37.142857 36.571429 11.428571 119.428571-2.285714 8-0.571429 11.428571t5.714286 4 8.285714 2.857143 7.714286-2l3.428571-1.142857q79.428571-33.714286 140.571429-33.714286t87.428571 34.857143q25.714286 36 0 101.714286-1.142857 7.428571-2.571429 11.428571t2.571429 7.142857 6.857143 4.285714 9.714286 3.428571q32.571429 10.285714 58.857143 26.857143t45.714286 46.571429 19.428571 66.571429zm-42.285714-356.571429q24 26.857143 31.142857 62t-3.714286 67.142857q-4.571429 13.142857-16.857143 19.428571t-25.428571 2.285714q-13.142857-4.571429-19.428571-16.857143t-2.285714-25.428571q11.428571-36-13.714286-63.428571t-61.142857-20q-13.714286 2.857143-25.714286-4.571429t-14.285714-21.142857q-2.857143-13.714286 4.571429-25.428571t21.142857-14.571429q34.285714-7.428571 68 3.142857t57.714286 37.428571zm103.428571-93.142857q49.714286 54.857143 64.285714 127.142857t-7.714286 138q-5.142857 15.428571-19.428571 22.857143t-29.714286 2.285714-22.857143-19.428571-2.857143-29.714286q16-46.857143 5.714286-98.285714t-45.714286-90.285714q-35.428571-39.428571-84.571429-54.571429t-98.857143-4.857143q-16 3.428571-29.714286-5.428571t-17.142857-24.857143 5.428571-29.428571 24.857143-16.857143q70.285714-14.857143 139.428571 6.571429t118.857143 76.857143z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="zhihu"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M351.791182 562.469462l192.945407 0c0-45.367257-21.3871-71.939449-21.3871-71.939449L355.897709 490.530013c3.977591-82.182744 7.541767-187.659007 8.816806-226.835262l159.282726 0c0 0-0.86367-67.402109-18.578124-67.402109s-279.979646 0-279.979646 0 16.850783-88.141456 39.318494-127.053698c0 0-83.60514-4.510734-112.121614 106.962104S81.344656 355.077018 76.80834 367.390461c-4.536316 12.313443 24.62791 5.832845 36.941354 0 12.313443-5.832845 68.050885-25.924439 84.252893-103.69571l86.570681 0c1.165546 49.28652 4.596691 200.335724 3.515057 226.835262L109.86113 490.530013c-25.275663 18.147312-33.701566 71.939449-33.701566 71.939449L279.868105 562.469462c-8.497535 56.255235-23.417339 128.763642-44.275389 167.210279-33.05279 60.921511-50.55235 116.65793-169.802314 212.576513 0 0-19.442818 14.257725 40.829917 9.073656 60.273758-5.185093 117.305683-20.739347 156.840094-99.807147 20.553105-41.107233 41.805128-93.250824 58.386782-146.138358l-0.055259 0.185218 167.855986 193.263655c0 0 22.035876-51.847855 5.832845-108.880803L371.045711 650.610918l-42.1244 31.157627-0.045025 0.151449c11.69946-41.020252 20.11206-81.5749 22.726607-116.858498C351.665315 564.212152 351.72876 563.345412 351.791182 562.469462z"></path>
+  <path d="M584.918753 182.033893l0 668.840094 70.318532 0 28.807093 80.512708 121.875768-80.512708 153.600307 0L959.520453 182.033893 584.918753 182.033893zM887.150192 778.934538l-79.837326 0-99.578949 65.782216-23.537066-65.782216-24.855084 0L659.341766 256.673847l227.807403 0L887.149169 778.934538z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="douban"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M926.917973 37.80608C959.65184 37.80608 986.19392 64.34816 986.19392 97.082027L986.19392 926.917973C986.19392 959.65184 959.65184 986.19392 926.917973 986.19392L97.082027 986.19392C64.34816 986.19392 37.80608 959.65184 37.80608 926.917973L37.80608 97.082027C37.80608 64.34816 64.34816 37.80608 97.082027 37.80608zM176.653653 176.19968 176.653653 252.678827 825.658027 252.678827 825.658027 176.19968zM217.719467 316.146347 217.719467 628.08064 273.524053 628.08064 341.292373 770.39616 157.259093 770.39616 157.259093 845.417813 842.949973 845.417813 842.949973 770.39616 654.226773 770.39616 722.899627 628.08064 783.67744 628.08064 783.67744 316.146347zM684.885333 392.891733 684.885333 553.987413 312.576 553.987413 312.576 392.891733zM570.770773 770.39616 426.653013 770.39616 359.621973 628.08064 639.443627 628.08064z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="pocket"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M912.569234 73.142857a88.429714 88.429714 0 0 1 88.576 89.161143v296.557714C1001.145234 732.562286 782.301806 950.857143 510.28352 950.857143A489.837714 489.837714 0 0 1 18.288091 458.861714V162.304A90.002286 90.002286 0 0 1 107.449234 73.142857h805.156572z m-402.285714 608a68.388571 68.388571 0 0 0 46.848-18.870857l230.838857-221.696a68.022857 68.022857 0 0 0 21.138286-48.566857 67.547429 67.547429 0 0 0-114.285714-48.566857l-184.576 177.152-184.576-177.152a67.328 67.328 0 0 0-46.299429-18.870857 67.547429 67.547429 0 0 0-46.884571 116.004571l231.424 221.696c11.995429 11.995429 29.147429 18.870857 46.299428 18.870857z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="tumblr"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M556.716946 378.027729l133.939525 0 0 89.307002L556.716946 467.334731 556.716946 601.318258c0 58.898435 8.290827 92.557022 53.140291 89.809445 10.382465-0.677429 22.25077-1.855254 35.687804-5.586229 13.437034-3.729951 24.257473-7.458879 32.372292-11.190877l12.739139-5.606695 0 82.546018c-3.403516 2.070148-8.463766 4.820796-15.007809 8.048303-6.631024 3.338025-21.029966 7.656377-43.016723 13.045107-21.988804 5.41022-44.937468 8.070816-68.844971 8.070816-51.395554 0-89.177042-10.994402-113.608477-33.17968-24.343431-22.097274-27.572986-56.147788-27.572986-101.195773L422.605505 467.334731l-89.263 0-0.435928-66.64077c38.480406-12.369725 67.798129-29.734208 88.128153-52.114938 20.332071-22.273283 33.333176-57.021691 38.829354-104.22783l96.853885-0.393973L556.717969 378.027729zM958.70846 243.958244l0 536.105001c0 98.730629-80.013335 178.722474-178.615027 178.722474L243.991502 958.785719c-98.774631 0-178.700985-79.991846-178.700985-178.722474L65.290517 243.958244c0-98.642624 79.925331-178.744987 178.700985-178.744987l536.102954 0C878.695125 65.213257 958.70846 145.31562 958.70846 243.958244zM869.44546 288.612257c0-74.015737-60.033281-133.961014-134.027529-133.961014L288.667004 154.651242c-73.994248 0-134.115534 59.945277-134.115534 133.961014l0 446.775486c0 74.015737 60.121286 133.983527 134.115534 133.983527l446.750927 0c73.994248 0 134.027529-59.96779 134.027529-133.983527L869.44546 288.612257z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="instagram"  target="_blank"
+      >
+      <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M853.333333 277.333333C853.333333 289.28 843.946667 298.666667 832 298.666667L746.666667 298.666667C734.72 298.666667 725.333333 289.28 725.333333 277.333333L725.333333 192C725.333333 180.053333 734.72 170.666667 746.666667 170.666667L832 170.666667C843.946667 170.666667 853.333333 180.053333 853.333333 192M192 853.333333C180.053333 853.333333 170.666667 843.946667 170.666667 832L170.666667 469.333333 259.84 469.333333C257.28 482.986667 256 497.493333 256 512 256 653.226667 370.773333 768 512 768 653.226667 768 768 653.226667 768 512 768 497.493333 766.293333 482.986667 764.16 469.333333L853.333333 469.333333 853.333333 832C853.333333 843.946667 843.946667 853.333333 832 853.333333M512 341.333333C606.293333 341.333333 682.666667 417.706667 682.666667 512 682.666667 606.293333 606.293333 682.666667 512 682.666667 417.706667 682.666667 341.333333 606.293333 341.333333 512 341.333333 417.706667 417.706667 341.333333 512 341.333333M853.333333 85.333333 170.666667 85.333333C123.306667 85.333333 85.333333 123.306667 85.333333 170.666667L85.333333 853.333333C85.333333 900.266667 123.733333 938.666667 170.666667 938.666667L853.333333 938.666667C900.266667 938.666667 938.666667 900.266667 938.666667 853.333333L938.666667 170.666667C938.666667 123.306667 900.266667 85.333333 853.333333 85.333333Z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="gitlab"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36">
+  <path d="M59.544137 403.419429L512.115566 983.405714 16.09728 623.396571a39.936 39.936 0 0 1-14.299429-43.995428l57.709715-176.018286z m264.009143 0h377.161143L512.152137 983.405714zM210.40128 53.723429l113.152 349.696H59.544137l113.152-349.696a20.041143 20.041143 0 0 1 37.705143 0z m754.285714 349.696l57.709715 176.018285a39.862857 39.862857 0 0 1-14.299429 43.995429l-496.018286 360.009143 452.571429-579.986286z m0 0h-264.009143l113.152-349.696a20.041143 20.041143 0 0 1 37.705143 0z"></path>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="goodreads"  target="_blank"
+      >
+      <svg viewBox="0 0 128 128" version="1.1"
+  width="32" height="32">
+  <path d="M 85.685714,45.48571 C 87.142857,56.14286 84.342857,68.05714 75.428571,74.25714 69.057143,78.68571 60.342857,78.28571 55.2,75.88571 44.6,70.94286 41.057143,59.14286 41.828571,48.11429 c 1.228572,-17.4 11.685715,-25.11429 21.514286,-25 13.4,-0.0571 20.514286,9.08571 22.342857,22.37142 z M 128,16 v 96 c 0,8.82857 -7.17143,16 -16,16 H 16 C 7.1714286,128 0,120.82857 0,112 V 16 C 0,7.17143 7.1714286,0 16,0 h 96 c 8.82857,0 16,7.17143 16,16 z M 94.285714,80.34286 c 0,0 -0.02857,-9.71429 -0.02857,-62.08572 H 85.97143 V 29.77143 C 85.742858,29.85713 85.628572,29.62857 85.514287,29.42857 82.771429,23.51429 75.257143,16.2 63.8,16.28571 48.971429,16.4 38.885714,25.2 35.057143,38.51429 33.828571,42.77143 33.4,47.11429 33.485714,51.54286 33.971429,73.8 46.371429,85.2 65.6,84.45714 73.857143,84.14286 81.171429,79.6 85.314286,71.54286 85.457143,71.25714 85.628571,71 85.8,70.71429 c 0.05714,0.0286 0.114286,0.0286 0.171429,0.0571 0.08571,1.08571 0.05714,8.77143 0.02857,9.85714 -0.05714,4.22857 -0.571429,8.42857 -2.057143,12.42857 -2.228571,6 -6.371428,9.91429 -12.714286,11.28572 -5.085714,1.11428 -10.171428,1.08571 -15.2,-0.34286 C 49.885714,102.25714 45.6,98.57143 44.285714,92.05714 44.2,91.6 43.914286,91.68571 43.628571,91.68571 H 35.971429 C 36.2,94.71429 36.885714,97.48571 38.4,100.02857 45.314286,111.6 62.028571,113.88571 75.028571,110.71429 89.285714,107.2 94.257143,95.02857 94.285714,80.34286 Z" />
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="coding"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 1024 1024" version="1.1"
+  width="36" height="36">
+  <path
+      d="m 313.5359,557.51414 c 9.229,0 16.57801,8.88719 16.57801,19.99616 0,11.10899 -7.34901,19.99617 -16.57801,19.99617 -9.229,0 -16.57801,-8.88718 -16.57801,-19.99617 0,-11.10897 7.34901,-19.99616 16.57801,-19.99616 z m 393.7706,0 c 9.22899,0 16.57802,8.88719 16.57802,19.99616 0,11.10899 -7.34903,19.99617 -16.57802,19.99617 -9.229,0 -16.57802,-8.88718 -16.57802,-19.99617 0,-11.10897 7.34902,-19.99616 16.57802,-19.99616 z"
+      id="path6"/>
+  <path
+      d="m 945.8932,448.98796 c -27.17427,0 -51.1013,17.26164 -64.43208,43.23957 C 836.17066,393.44306 741.8298,302.00762 625.27096,264.23708 562.37704,239.1137 518.28294,190.57601 512.8139,134.17657 507.34486,190.74691 463.25077,239.1137 400.35685,264.23708 283.79802,301.83671 189.45714,393.44306 144.16669,492.22753 130.83591,466.2496 107.07979,448.98796 79.734607,448.98796 c -41.701401,0 -75.541066,40.84686 -75.541066,91.26454 0,50.41768 33.839665,91.26454 75.541066,91.26454 12.64715,0 24.610663,-3.75996 35.206923,-10.42536 3.58906,163.55837 180.30728,269.69186 397.87237,270.03367 217.5651,-0.34181 394.28332,-106.4753 397.87238,-270.03367 10.42535,6.6654 22.55977,10.42536 35.20692,10.42536 41.7014,0 75.541,-40.84686 75.541,-91.26454 0.171,-50.41768 -33.6687,-91.26454 -75.541,-91.26454 z M 114.2579,568.79403 c -3.58906,13.15987 -19.312535,18.79981 -35.206921,12.47625 -15.894385,-6.15267 -25.977916,-21.87616 -22.388867,-35.03602 3.58906,-13.15987 19.312533,-18.79981 35.206919,-12.47624 15.894389,6.15267 25.807019,21.87614 22.388869,35.03601 z m 398.556,276.69904 C 338.31748,845.15126 196.97707,762.603 196.97707,644.33509 c 0,-2.56361 0.1709,-4.95631 0.1709,-7.34902 0,-0.85453 0,-1.53817 0.17092,-2.3927 0.1709,-1.70908 0.34181,-3.41814 0.34181,-4.95631 0.1709,-2.22179 0.51273,-4.44359 0.85454,-6.6654 0,-0.1709 0,-0.51271 0.1709,-0.68362 3.58906,-23.2434 12.47624,-58.79214 26.14883,-79.13012 32.64331,-47.51224 90.92273,-78.9592 157.23479,-78.9592 51.1013,0 97.41721,18.79981 130.91506,49.05041 33.49784,-30.2506 79.64283,-49.05041 130.91504,-49.05041 66.48298,0 124.59148,31.61786 157.23479,78.9592 13.67259,20.50889 22.55977,55.88672 26.14883,79.13012 0,0.17091 0,0.51272 0.17091,0.68362 0.34182,2.22181 0.51272,4.44361 0.85453,6.6654 0.17091,1.70907 0.34181,3.24723 0.34181,4.95631 0,0.85453 0.17092,1.53817 0.17092,2.3927 0.17091,2.39271 0.17091,4.95631 0.17091,7.34902 C 828.82165,762.603 687.48124,845.15126 512.8139,845.49307 Z M 946.74774,581.27028 c -15.89439,6.15265 -31.61787,0.68362 -35.20692,-12.47625 -3.58906,-13.15987 6.49448,-28.88334 22.38887,-35.03601 15.89438,-6.15267 31.61786,-0.68363 35.20692,12.47624 3.41815,12.98896 -6.49448,28.71243 -22.38887,35.03602 z"
+      id="path8"/>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="bilibili"  target="_blank"
+      >
+      <svg
+  class="icon" style="" viewBox="0 0 1024 1024" version="1.1" width="36"
+  height="36" id="svg8">
+  <path
+      style=""
+      d="M 744.60599,0.00486267 A 41.779915,41.779915 0 0 0 710.4184,18.673394 L 548.5048,255.32642 h -11.70046 a 41.779915,41.779915 0 0 0 -10.80295,-7.84928 L 235.66,97.084498 a 41.779915,41.779915 0 0 0 -20.07193,-4.960864 41.779915,41.779915 0 0 0 -18.3748,79.145436 L 359.4859,255.32642 H 128.16909 c -49.458302,0 -89.27932,39.82105 -89.27932,89.27932 v 508.65224 c 0,49.4583 39.821018,89.27934 89.27932,89.27934 h 19.48445 C 149.12802,984.5043 179.92773,1024 224.79179,1024 c 44.86407,0 75.66379,-39.4957 77.13826,-81.46268 H 719.98116 C 721.45559,984.5043 752.25533,1024 797.1194,1024 c 44.86406,0 75.6638,-39.4957 77.13824,-81.46268 h 21.57323 c 49.45831,0 89.27936,-39.82104 89.27936,-89.27934 V 344.60574 c 0,-49.45827 -39.82105,-89.27932 -89.27936,-89.27932 H 649.74567 L 779.38103,65.866924 A 41.779915,41.779915 0 0 0 744.60599,0.00486267 Z M 644.49108,418.70871 c 6.29985,0.21538 12.44451,2.01107 17.86888,5.22196 l 171.36218,98.10771 c 18.23417,10.21935 24.63334,33.34627 14.24614,51.48533 -10.38726,18.13909 -33.57344,24.32718 -51.61587,13.77296 L 624.9903,489.18895 c -15.21356,-8.41858 -22.66871,-26.1765 -18.03211,-42.93436 4.63664,-16.75784 20.15573,-28.14465 37.53289,-27.54588 z M 350.2006,432.31846 c 16.89952,0.0317 31.69582,11.33328 36.17844,27.62747 4.48262,16.2942 -2.44981,33.57765 -16.95507,42.24898 l -140.7157,86.91312 c -17.68528,11.18244 -41.09629,5.77692 -52.08912,-12.02686 -10.99282,-17.80373 -5.33855,-41.15658 12.58167,-51.95857 L 329.9002,438.2095 c 6.0643,-3.86439 13.10951,-5.90891 20.3004,-5.89104 z M 501.605,641.53985 c 3.75002,-0.15248 7.48645,0.53903 10.93349,2.0235 0.15842,0.0637 0.31618,0.12888 0.47325,0.19582 0.59328,0.27092 1.17574,0.56489 1.74609,0.88121 0.15868,0.0854 0.31643,0.17233 0.47325,0.2611 0.55694,0.32165 1.10131,0.66458 1.63185,1.02807 0.16455,0.1123 0.32777,0.2265 0.48956,0.34269 0.50382,0.36781 0.99371,0.75428 1.46868,1.15864 0.18724,0.15504 0.37218,0.31282 0.55484,0.47323 0.43271,0.38784 0.8518,0.79061 1.25653,1.20756 0.15449,0.16114 0.30679,0.32437 0.45693,0.48959 0.40798,0.44266 0.79989,0.89988 1.17494,1.37076 0.17799,0.22544 0.35205,0.45395 0.5222,0.68538 0.25932,0.34701 0.50964,0.70071 0.75064,1.06071 0.26712,0.39516 0.52286,0.79784 0.76699,1.20757 0.16907,0.29043 0.33231,0.58424 0.48957,0.88123 0.21836,0.41297 0.42513,0.83199 0.62009,1.25653 0.14836,0.32333 0.28983,0.64976 0.42429,0.97911 0.21319,0.51552 0.40915,1.03801 0.58747,1.5666 0.0677,0.19499 0.13296,0.39085 0.19582,0.58748 0.18652,0.60823 0.34984,1.22334 0.48957,1.84399 0.0397,0.16277 0.0779,0.32601 0.11423,0.48957 0.1436,0.69112 0.25788,1.38801 0.34269,2.08877 0.005,0.0381 0.0111,0.0761 0.0163,0.11424 0.0857,0.78056 0.13474,1.56471 0.14687,2.34988 0.005,0.0543 0.0111,0.10879 0.0163,0.1632 0,0 -0.008,1.12132 0,1.45234 0,0 -0.14697,17.84761 5.89102,34.12231 3.01902,8.13734 7.33278,15.10615 12.61433,19.61501 5.28157,4.50889 11.42894,7.62081 23.64572,7.62081 12.2168,0 18.36416,-3.11192 23.64573,-7.62081 5.28154,-4.50886 9.5953,-11.47767 12.6143,-19.61501 6.03799,-16.2747 5.89103,-34.12231 5.89103,-34.12231 -0.44885,-13.87045 10.45922,-25.46302 24.3311,-25.86506 13.87189,-0.40201 25.42828,10.53953 25.78348,24.41272 0,0 1.11929,25.7226 -9.00791,53.01927 -5.06359,13.64832 -13.1986,28.46036 -27.05631,40.29073 -13.85772,11.83039 -33.5454,19.63135 -56.20142,19.63135 -22.65603,0 -42.34371,-7.80096 -56.20141,-19.63135 -4.1801,-3.56856 -7.78733,-7.42433 -10.99878,-11.42303 -3.21235,4.00037 -6.81703,7.85309 -10.99876,11.42303 -13.85773,11.83039 -33.5454,19.63135 -56.20144,19.63135 -22.65601,0 -42.3437,-7.80096 -56.2014,-19.63135 -13.85775,-11.83037 -21.99272,-26.64241 -27.05632,-40.29073 -10.12725,-27.29667 -9.00789,-53.01928 -9.00789,-53.01927 0.20714,-13.83687 11.58744,-24.88848 25.42444,-24.69013 14.1263,0.19991 25.2971,12.0278 24.69011,26.14247 0,0 -0.14697,17.84761 5.89103,34.12231 3.01902,8.13734 7.31646,15.10615 12.598,19.61501 5.28155,4.50889 11.44526,7.62081 23.66203,7.62081 12.21681,0 18.36418,-3.11192 23.64573,-7.62081 5.28154,-4.50886 9.57899,-11.47767 12.598,-19.61501 5.76352,-15.53489 5.89112,-32.05691 5.89103,-33.56746 0.006,-0.37466 0.0111,-1.05336 0.0163,-1.20759 -0.0117,-0.74583 0.0105,-1.49177 0.0652,-2.23565 0.009,-0.15784 0.0204,-0.31561 0.0327,-0.47324 0.14204,-1.56859 0.43163,-3.12027 0.86487,-4.63449 0.0213,-0.0763 0.0433,-0.15244 0.0652,-0.22848 3.0335,-10.25748 12.24157,-17.46007 22.92769,-17.93417 z"
+      id="rect824"/>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="codeforces"  target="_blank"
+      >
+      <svg width="36" height="36" class="icon" style="" version="1.1" viewBox="0 0 1024 1024">
+<path d="M 192 334.2 C 227.3 334.2 256 369.2 256 412.4 v 547.5 C 256 1003.2 227.3 1038.2 192 1038.2 H 64 C 28.7 1038.2 0 1003.2 0 960 V 412.4 C 0 369.2 28.7 334.2 64 334.2 h 128 z m 384 -234.7 C 611.3 99.6 640 134.5 640 177.8 v 782.2 C 640 1003.2 611.3 1038.2 576 1038.2 H 448 C 412.7 1038.2 384 1003.2 384 960 V 177.8 C 384 134.5 412.7 99.6 448 99.6 h 128 z m 384 391.1 C 995.3 490.6 1024 525.7 1024 568.9 v 391.1 C 1024 1003.2 995.3 1038.2 960 1038.2 h -128 C 796.7 1038.2 768 1003.2 768 960 V 568.9 C 768 525.7 796.7 490.6 832 490.6 h 128 z" />
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="mastodon"  target="_blank"
+      >
+      <svg class="icon" style="" viewBox="0 0 448 512" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="36" height="36"><path fill="currentColor" d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"></path></svg>
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="youtube"  target="_blank"
+      >
+      <svg
+  class="icon" style="" viewBox="0 0 36 36" version="1.1" width="36"
+  height="36" id="svg8">
+  <path
+      style=""
+      d="m 1.8724447,28.346305 c -1.89825625,-2.287259 -1.89825625,-18.4053514 0,-20.6926103 C 3.0356132,6.2521624 5.4948113,6 18,6 35.952296,6 35.5,5.6898541 35.5,18 35.5,30.310146 35.952296,30 18,30 5.4948113,30 3.0356132,29.747838 1.8724447,28.346305 Z M 19.113845,20.815859 C 21.25123,19.614581 23,18.347445 23,18 23,17.348349 15.706815,13 14.613845,13 14.27623,13 14,15.25 14,18 c 0,2.75 0.27623,5 0.613845,5 0.337616,0 2.362616,-0.982863 4.5,-2.184141 z"
+      id="rect824"/>
+</svg>
+
+    </a>
+  
+    <a href="http://localhost:1313" rel="me noopener" class="iconfont"
+      title="twitch"  target="_blank"
+      >
+      <svg
+  class="icon" style="" viewBox="0 0 36 36" version="1.1" width="36" height="36" id="svg8">
+  <path
+      style=""
+      d="M 10,32.5 C 10,30.309524 9.5666667,30 6.5,30 H 3 V 18.196167 6.3923336 L 6.2976072,3.1961668 9.5952145,0 H 21.297607 33 v 9.2813035 9.2813035 l -5.778997,5.718696 C 23.230948,28.229724 20.653654,30 18.895317,30 17.471816,30 15.312792,31.102597 14,32.5 12.708255,33.875 11.279813,35 10.825686,35 10.371559,35 10,33.875 10,32.5 Z M 23.12736,22 c 1.432033,0 3.645397,-1.197147 5.185549,-2.804719 C 30.682196,16.722278 31,15.598708 31,9.6952811 V 3 H 20.5 10 v 9.5 9.5 h 3 c 2.413503,0 3,0.425076 3,2.174314 v 2.174314 l 2.314451,-2.174314 C 19.587399,22.978441 21.753208,22 23.12736,22 Z M 17.666667,14.333333 C 17.3,13.966667 17,12.166667 17,10.333333 17,8.037037 17.466667,7 18.5,7 c 1.083333,0 1.5,1.1111111 1.5,4 0,3.753437 -0.7878,4.878866 -2.333333,3.333333 z m 6.722867,-0.760607 C 23.554137,11.395717 24.34722,7.7069709 25.75,7.2449946 26.613128,6.9607414 27,8.097114 27,10.916667 c 0,3.979702 -1.51214,5.518252 -2.610466,2.656059 z"
+      id="rect824"/>
+</svg>
+
+    </a>
+
+
+<a href="https://huachengzhou.github.io/studyDocument/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+    class="iconfont" title="rss" target="_blank">
+    <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="30" height="30">
+  <path d="M819.157333 1024C819.157333 574.592 449.408 204.8 0 204.8V0c561.706667 0 1024 462.293333 1024 1024h-204.842667zM140.416 743.04a140.8 140.8 0 0 1 140.501333 140.586667A140.928 140.928 0 0 1 140.074667 1024C62.72 1024 0 961.109333 0 883.626667s62.933333-140.544 140.416-140.586667zM678.784 1024h-199.04c0-263.210667-216.533333-479.786667-479.744-479.786667V345.173333c372.352 0 678.784 306.517333 678.784 678.826667z"></path>
+</svg>
+
+  </a>
+   
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2020 -
+    2021
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        zch
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont">
+        
+        <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="35" height="35">
+  <path d="M510.866688 227.694839 95.449397 629.218702l235.761562 0-2.057869 328.796468 362.40389 0L691.55698 628.188232l241.942331-3.089361L510.866688 227.694839zM63.840492 63.962777l894.052392 0 0 131.813095L63.840492 195.775872 63.840492 63.962777 63.840492 63.962777zM63.840492 63.962777"></path>
+</svg>
+
+      </i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/studyDocument/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/studyDocument/lib/slideout/slideout-1.0.1.min.js"></script>
+
+
+
+
+<script type="text/javascript" src="/studyDocument/js/main.dee43230127a73d039a734510fa896c89c3c7ce0cf0be0c7a7433f8fd69b76dc.js" integrity="sha256-3uQyMBJ6c9A5pzRRD6iWyJw8fODPC&#43;DHp0M/j9abdtw=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/studyDocument/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/studyDocument/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/studyDocument/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
